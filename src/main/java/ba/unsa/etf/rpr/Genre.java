@@ -2,6 +2,11 @@ package ba.unsa.etf.rpr;
 
 import java.util.Objects;
 
+/**
+ * List of all possible genres for movies
+ *
+ * @author Kenan Dizdarevic
+ */
 public class Genre {
     private int genre_id;
     private String genre_name;

@@ -2,6 +2,11 @@ package ba.unsa.etf.rpr;
 
 import java.util.Objects;
 
+/**
+ * List of customers who bought movies
+ * @author Kenan Dizdarevic
+ */
+
 public class Customer {
     private int idcustomer;
     private String name,surname;

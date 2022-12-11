@@ -3,6 +3,9 @@ package ba.unsa.etf.rpr;
 import java.util.Date;
 import java.util.Objects;
 
+/**
+ * Class that holds all purchases of movies
+ */
 public class Rent {
     private int rent_id,movie_id,customer_id;
     private Date date_of_rent;

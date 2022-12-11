@@ -3,6 +3,9 @@ package ba.unsa.etf.rpr;
 import java.util.Date;
 import java.util.Objects;
 
+/**
+ * Class that holds all avalaible movies
+ */
 public class Movie {
 
     private int id;
