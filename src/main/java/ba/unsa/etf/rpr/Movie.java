@@ -8,15 +8,15 @@ import java.util.Objects;
  */
 public class Movie {
 
-    private int id;
-    private int title;
+    private int movie_id;
+    private String title;
     private Date release_date;
     private String main_actor;
     private double price;
     private int length;
     private int genre_id;
-    public Movie(int id, int title, Date release_date, String main_actor, double price, int length, int genre_id) {
-        this.id = id;
+    public Movie(int movie_id, String title, Date release_date, String main_actor, double price, int length, int genre_id) {
+        this.movie_id = movie_id;
         this.title = title;
         this.release_date = release_date;
         this.main_actor = main_actor;
@@ -25,19 +25,29 @@ public class Movie {
         this.genre_id = genre_id;
     }
 
-    public int getId() {
-        return id;
+    public Movie() {
+        this.movie_id = 0;
+        this.title = "";
+        this.release_date = new Date();
+        this.main_actor = "";
+        this.price = 0;
+        this.length = 0;
+        this.genre_id = 0;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getMovie_Id() {
+        return movie_id;
     }
 
-    public int getTitle() {
+    public void setMovie_Id(int id) {
+        this.movie_id = id;
+    }
+
+    public String getTitle() {
         return title;
     }
 
-    public void setTitle(int title) {
+    public void setTitle(String title) {
         this.title = title;
     }
 
@@ -86,18 +96,18 @@ public class Movie {
         if (this == o) return true;
         if (!(o instanceof Movie)) return false;
         Movie movie = (Movie) o;
-        return getId() == movie.getId() && getTitle() == movie.getTitle() && Double.compare(movie.getPrice(), getPrice()) == 0 && getLength() == movie.getLength() && getGenre_id() == movie.getGenre_id() && Objects.equals(getRelease_date(), movie.getRelease_date()) && Objects.equals(getMain_actor(), movie.getMain_actor());
+        return getMovie_Id() == movie.getMovie_Id() && getTitle() == movie.getTitle() && Double.compare(movie.getPrice(), getPrice()) == 0 && getLength() == movie.getLength() && getGenre_id() == movie.getGenre_id() && Objects.equals(getRelease_date(), movie.getRelease_date()) && Objects.equals(getMain_actor(), movie.getMain_actor());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getTitle(), getRelease_date(), getMain_actor(), getPrice(), getLength(), getGenre_id());
+        return Objects.hash(getMovie_Id(), getTitle(), getRelease_date(), getMain_actor(), getPrice(), getLength(), getGenre_id());
     }
 
     @Override
     public String toString() {
         return "Movie{" +
-                "id=" + id +
+                "id=" + movie_id +
                 ", title=" + title +
                 ", release_date=" + release_date +
                 ", main_actor='" + main_actor + '\'' +

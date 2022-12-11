@@ -22,7 +22,7 @@ public class CustomerDaoSQLImplementation implements CustomerDao {
             ResultSet rs=s.executeQuery();
             while(rs.next()){
                 Customer c= new Customer();
-                c.setIdcustomer(rs.getInt("customer_id"));
+                c.setCustomer_id(rs.getInt("customer_id"));
                 c.setMail(rs.getString("mail"));
                 c.setAdress(rs.getString("address"));
                 c.setName(rs.getString("name"));
@@ -46,7 +46,7 @@ public class CustomerDaoSQLImplementation implements CustomerDao {
             ResultSet rs=s.executeQuery();
             while(rs.next()){
                 Customer c= new Customer();
-                c.setIdcustomer(rs.getInt("customer_id"));
+                c.setCustomer_id(rs.getInt("customer_id"));
                 c.setMail(rs.getString("mail"));
                 c.setAdress(rs.getString("address"));
                 c.setName(rs.getString("name"));
@@ -69,7 +69,7 @@ public class CustomerDaoSQLImplementation implements CustomerDao {
             ResultSet rs=s.executeQuery();
             if(rs.next()){
                 Customer c= new Customer();
-                c.setIdcustomer(rs.getInt("customer_id"));
+                c.setCustomer_id(rs.getInt("customer_id"));
                 c.setMail(rs.getString("mail"));
                 c.setAdress(rs.getString("address"));
                 c.setName(rs.getString("name"));
@@ -114,7 +114,7 @@ public class CustomerDaoSQLImplementation implements CustomerDao {
             ResultSet rs=s.executeQuery();
             while(rs.next()){
                 Customer c= new Customer();
-                c.setIdcustomer(rs.getInt("customer_id"));
+                c.setCustomer_id(rs.getInt("customer_id"));
                 c.setMail(rs.getString("mail"));
                 c.setAdress(rs.getString("address"));
                 c.setName(rs.getString("name"));

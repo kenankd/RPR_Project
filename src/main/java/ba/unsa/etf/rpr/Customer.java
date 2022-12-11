@@ -31,11 +31,11 @@ public class Customer {
         this.phone_number = "";
     }
 
-    public int getIdcustomer() {
+    public int getCustomer_id() {
         return customer_id;
     }
 
-    public void setIdcustomer(int idcustomer) {
+    public void setCustomer_id(int idcustomer) {
         this.customer_id = idcustomer;
     }
 
@@ -84,12 +84,12 @@ public class Customer {
         if (this == o) return true;
         if (!(o instanceof Customer)) return false;
         Customer customer = (Customer) o;
-        return getIdcustomer() == customer.getIdcustomer() && Objects.equals(getName(), customer.getName()) && Objects.equals(getSurname(), customer.getSurname()) && Objects.equals(getMail(), customer.getMail()) && Objects.equals(getAdress(), customer.getAdress()) && Objects.equals(getPhone_number(), customer.getPhone_number());
+        return getCustomer_id() == customer.getCustomer_id() && Objects.equals(getName(), customer.getName()) && Objects.equals(getSurname(), customer.getSurname()) && Objects.equals(getMail(), customer.getMail()) && Objects.equals(getAdress(), customer.getAdress()) && Objects.equals(getPhone_number(), customer.getPhone_number());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getIdcustomer(), getName(), getSurname(), getMail(), getAdress(), getPhone_number());
+        return Objects.hash(getCustomer_id(), getName(), getSurname(), getMail(), getAdress(), getPhone_number());
     }
 
     @Override
