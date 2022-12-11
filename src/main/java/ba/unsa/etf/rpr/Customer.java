@@ -8,13 +8,13 @@ import java.util.Objects;
  */
 
 public class Customer {
-    private int idcustomer;
+    private int customer_id;
     private String name,surname;
     private String mail;
     private String adress,phone_number;
 
     public Customer(int idcustomer, String name, String surname, String mail, String adress, String phone_number) {
-        this.idcustomer = idcustomer;
+        this.customer_id = idcustomer;
         this.name = name;
         this.surname = surname;
         this.mail = mail;
@@ -22,12 +22,21 @@ public class Customer {
         this.phone_number = phone_number;
     }
 
+    public Customer() {
+        this.customer_id = 0;
+        this.name = "";
+        this.surname = "";
+        this.mail = "";
+        this.adress = "";
+        this.phone_number = "";
+    }
+
     public int getIdcustomer() {
-        return idcustomer;
+        return customer_id;
     }
 
     public void setIdcustomer(int idcustomer) {
-        this.idcustomer = idcustomer;
+        this.customer_id = idcustomer;
     }
 
     public String getName() {
@@ -86,7 +95,7 @@ public class Customer {
     @Override
     public String toString() {
         return "Customer{" +
-                "idcustomer=" + idcustomer +
+                "idcustomer=" + customer_id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", mail='" + mail + '\'' +
