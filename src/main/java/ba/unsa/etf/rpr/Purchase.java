@@ -17,6 +17,13 @@ public class Purchase {
         this.date_of_rent = date_of_rent;
     }
 
+    public Purchase() {
+        rent_id=0;
+        movie_id=0;
+        customer_id=0;
+        date_of_rent=new Date();
+    }
+
     public int getRent_id() {
         return rent_id;
     }
