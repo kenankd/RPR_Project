@@ -4,9 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="CustomerDao interface added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MovieDao.java" afterDir="false" />
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="MovieDao interface added">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/PurchaseDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/Rent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/Purchase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,7 +78,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670777644876</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="MovieDao interface added">
+      <created>1670778615149</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1670778615149</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -95,6 +103,7 @@
     <MESSAGE value="JavaDoc comments added on classes" />
     <MESSAGE value="Dao interface added" />
     <MESSAGE value="CustomerDao interface added" />
-    <option name="LAST_COMMIT_MESSAGE" value="CustomerDao interface added" />
+    <MESSAGE value="MovieDao interface added" />
+    <option name="LAST_COMMIT_MESSAGE" value="MovieDao interface added" />
   </component>
 </project>

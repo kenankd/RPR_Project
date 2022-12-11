@@ -6,11 +6,11 @@ import java.util.Objects;
 /**
  * Class that holds all purchases of movies
  */
-public class Rent {
+public class Purchase {
     private int rent_id,movie_id,customer_id;
     private Date date_of_rent;
 
-    public Rent(int rent_id, int movie_id, int customer_id, Date date_of_rent) {
+    public Purchase(int rent_id, int movie_id, int customer_id, Date date_of_rent) {
         this.rent_id = rent_id;
         this.movie_id = movie_id;
         this.customer_id = customer_id;
@@ -52,9 +52,9 @@ public class Rent {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof Rent)) return false;
-        Rent rent = (Rent) o;
-        return getRent_id() == rent.getRent_id() && getMovie_id() == rent.getMovie_id() && getCustomer_id() == rent.getCustomer_id() && Objects.equals(getDate_of_rent(), rent.getDate_of_rent());
+        if (!(o instanceof Purchase)) return false;
+        Purchase purchase = (Purchase) o;
+        return getRent_id() == purchase.getRent_id() && getMovie_id() == purchase.getMovie_id() && getCustomer_id() == purchase.getCustomer_id() && Objects.equals(getDate_of_rent(), purchase.getDate_of_rent());
     }
 
     @Override
