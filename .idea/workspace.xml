@@ -4,8 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="fixed some errors,added GenreDaoSQLImplementation interface">
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="added methods to MovieDaoSQLImplementation">
       <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MovieDaoSQLImplementation.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,13 +41,16 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/IdeaProjects/Projekat&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "last_opened_file_path": "C:/Users/PC/IdeaProjects/javafx-sdk-19/lib",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
-}</component>
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -133,7 +137,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670796378664</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="added methods to MovieDaoSQLImplementation">
+      <created>1670804496196</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670804496196</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -160,6 +171,7 @@
     <MESSAGE value="fixed some errors added MovieDaoSQLImplementationdao interface" />
     <MESSAGE value="added PurchaseDaoSQLImplementation interface" />
     <MESSAGE value="fixed some errors,added GenreDaoSQLImplementation interface" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed some errors,added GenreDaoSQLImplementation interface" />
+    <MESSAGE value="added methods to MovieDaoSQLImplementation" />
+    <option name="LAST_COMMIT_MESSAGE" value="added methods to MovieDaoSQLImplementation" />
   </component>
 </project>
