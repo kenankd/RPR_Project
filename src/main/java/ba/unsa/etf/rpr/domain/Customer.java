@@ -1,4 +1,4 @@
-package ba.unsa.etf.rpr;
+package ba.unsa.etf.rpr.domain;
 
 import java.util.Objects;
 
@@ -12,6 +12,7 @@ public class Customer {
     private String name,surname;
     private String mail;
     private String adress,phone_number;
+
 
     public Customer(int idcustomer, String name, String surname, String mail, String adress, String phone_number) {
         this.customer_id = idcustomer;

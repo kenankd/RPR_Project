@@ -1,17 +1,19 @@
-package ba.unsa.etf.rpr;
+package ba.unsa.etf.rpr.dao;
+
+import ba.unsa.etf.rpr.GetConnection;
+import ba.unsa.etf.rpr.domain.Movie;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
-
 public class MovieDaoSQLImplementation implements MovieDao {
     private Connection connection;
 
     public MovieDaoSQLImplementation() {
         try {
-            connection = DriverManager.getConnection("jdbc:mysql://sq7.freemysqlhosting.net:3306/sql7584050", "sql7584050", "mVSKqJ5z1H");
-        } catch (SQLException e) {
+            connection= GetConnection.get();
+        } catch (RuntimeException e) {
             e.printStackTrace();
         }
     }

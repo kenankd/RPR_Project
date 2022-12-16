@@ -1,8 +1,10 @@
-package ba.unsa.etf.rpr;
+package ba.unsa.etf.rpr.dao;
+
+import ba.unsa.etf.rpr.domain.Customer;
 
 import java.util.List;
 
-public interface CustomerDao extends Dao<Customer>{
+public interface CustomerDao extends Dao<Customer> {
     /**
      * Returns all customers with given name
      * @param name search based on this parameter

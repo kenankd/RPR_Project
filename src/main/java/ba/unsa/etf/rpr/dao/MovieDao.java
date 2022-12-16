@@ -1,9 +1,11 @@
-package ba.unsa.etf.rpr;
+package ba.unsa.etf.rpr.dao;
+
+import ba.unsa.etf.rpr.domain.Movie;
 
 import java.util.Date;
 import java.util.List;
 
-public interface MovieDao extends Dao<Movie>{
+public interface MovieDao extends Dao<Movie> {
     /**
      * Returns all movies with given title
      * @param title search based on this parameter

@@ -1,9 +1,11 @@
-package ba.unsa.etf.rpr;
+package ba.unsa.etf.rpr.dao;
+
+import ba.unsa.etf.rpr.domain.Purchase;
 
 import java.util.Date;
 import java.util.List;
 
-public interface PurchaseDao extends Dao<Purchase>{
+public interface PurchaseDao extends Dao<Purchase> {
     /**
      * lists all purchases of a given movie
      * @param movie_id title of movie
