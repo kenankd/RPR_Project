@@ -1,14 +1,17 @@
 package ba.unsa.etf.rpr;
 
-import java.io.FileNotFoundException;
+import ba.unsa.etf.rpr.exceptions.ConnectionException;
+
 import java.io.FileReader;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Properties;
 
-public class GetConnection {
+public class SingletonConnection {
+    private static final SingletonConnection instance=new SingletonConnection();
     private static Connection connection;
-    public static Connection get(){
+    private SingletonConnection(){}
+    public static Connection getInstance(){
         if(connection==null){
             try{
                 FileReader fr=new FileReader("src/main/resources/properties");
@@ -21,7 +24,7 @@ public class GetConnection {
                 connection= DriverManager.getConnection(url,user,pw);
                 return connection;
             } catch (Exception e) {
-                throw new RuntimeException(e);
+                throw new ConnectionException("Failed to establish connection");
             }
         }
         else return connection;
