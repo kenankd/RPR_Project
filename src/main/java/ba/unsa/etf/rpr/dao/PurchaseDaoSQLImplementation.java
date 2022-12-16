@@ -2,6 +2,7 @@ package ba.unsa.etf.rpr.dao;
 
 import ba.unsa.etf.rpr.SingletonConnection;
 import ba.unsa.etf.rpr.domain.Purchase;
+import ba.unsa.etf.rpr.exceptions.ConnectionException;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class PurchaseDaoSQLImplementation implements PurchaseDao{
     public PurchaseDaoSQLImplementation() {
         try {
             connection = SingletonConnection.getInstance();
-        } catch (RuntimeException e) {
+        } catch (ConnectionException e) {
             e.printStackTrace();
         }
     }

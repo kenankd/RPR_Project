@@ -1,6 +1,8 @@
 package ba.unsa.etf.rpr.dao;
 
+import ba.unsa.etf.rpr.SingletonConnection;
 import ba.unsa.etf.rpr.domain.Customer;
+import ba.unsa.etf.rpr.exceptions.ConnectionException;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -10,8 +12,8 @@ public class CustomerDaoSQLImplementation implements CustomerDao {
     private Connection connection;
     public CustomerDaoSQLImplementation(){
         try{
-            connection= DriverManager.getConnection("jdbc:mysql://sq7.freemysqlhosting.net:3306/sql7584050","sql7584050","mVSKqJ5z1H");
-        } catch (SQLException e) {
+            connection = SingletonConnection.getInstance();
+        } catch (ConnectionException e) {
             e.printStackTrace();
         }
     }
