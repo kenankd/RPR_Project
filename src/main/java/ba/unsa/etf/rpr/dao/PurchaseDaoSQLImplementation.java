@@ -68,7 +68,7 @@ public class PurchaseDaoSQLImplementation implements PurchaseDao{
         try {
             PreparedStatement s = connection.prepareStatement("select * from Purchase");
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Purchase c = new Purchase();
                 c.setCustomer_id(rs.getInt("customer_id"));
                 c.setMovie_id(rs.getInt("movie_id"));
@@ -90,7 +90,7 @@ public class PurchaseDaoSQLImplementation implements PurchaseDao{
             PreparedStatement s = connection.prepareStatement("select * from Purchase where movie_id= ?");
             s.setInt(1,movie_id);
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Purchase c = new Purchase();
                 c.setCustomer_id(rs.getInt("customer_id"));
                 c.setMovie_id(rs.getInt("movie_id"));
@@ -112,7 +112,7 @@ public class PurchaseDaoSQLImplementation implements PurchaseDao{
             PreparedStatement s = connection.prepareStatement("select * from Purchase where customer_id= ?");
             s.setInt(1,customer_id);
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Purchase c = new Purchase();
                 c.setCustomer_id(rs.getInt("customer_id"));
                 c.setMovie_id(rs.getInt("movie_id"));
@@ -134,7 +134,7 @@ public class PurchaseDaoSQLImplementation implements PurchaseDao{
             PreparedStatement s = connection.prepareStatement("select * from Purchase where purchase_date= ?");
             s.setDate(1, (java.sql.Date) date);
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Purchase c = new Purchase();
                 c.setCustomer_id(rs.getInt("customer_id"));
                 c.setMovie_id(rs.getInt("movie_id"));

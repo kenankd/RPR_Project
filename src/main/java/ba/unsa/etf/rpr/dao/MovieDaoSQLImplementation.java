@@ -44,6 +44,7 @@ public class MovieDaoSQLImplementation implements MovieDao {
 
     @Override
     public Movie add(Movie item) {
+
         return null;
     }
 
@@ -70,7 +71,7 @@ public class MovieDaoSQLImplementation implements MovieDao {
         try {
             PreparedStatement s = connection.prepareStatement("select * from Movie");
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Movie c = new Movie();
                 c.setMovie_Id(rs.getInt("movie_id"));
                 c.setTitle(rs.getString("movie_title"));
@@ -95,7 +96,7 @@ public class MovieDaoSQLImplementation implements MovieDao {
             PreparedStatement s = connection.prepareStatement("select * from Movie where movie_title = ?");
             s.setString(1, title);
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Movie c = new Movie();
                 c.setMovie_Id(rs.getInt("movie_id"));
                 c.setTitle(rs.getString("movie_title"));
@@ -119,7 +120,7 @@ public class MovieDaoSQLImplementation implements MovieDao {
             PreparedStatement s = connection.prepareStatement("select * from Movie where main_actor = ?");
             s.setString(1, main_actor);
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Movie c = new Movie();
                 c.setMovie_Id(rs.getInt("movie_id"));
                 c.setTitle(rs.getString("movie_title"));
@@ -143,7 +144,7 @@ public class MovieDaoSQLImplementation implements MovieDao {
             PreparedStatement s = connection.prepareStatement("select * from Movie where release_date > ?");
             s.setDate(1, (java.sql.Date) date);
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Movie c = new Movie();
                 c.setMovie_Id(rs.getInt("movie_id"));
                 c.setTitle(rs.getString("movie_title"));
@@ -167,7 +168,7 @@ public class MovieDaoSQLImplementation implements MovieDao {
             PreparedStatement s = connection.prepareStatement("select * from Movie where length < ?");
             s.setInt(1, length);
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Movie c = new Movie();
                 c.setMovie_Id(rs.getInt("movie_id"));
                 c.setTitle(rs.getString("movie_title"));
@@ -191,7 +192,7 @@ public class MovieDaoSQLImplementation implements MovieDao {
             PreparedStatement s = connection.prepareStatement("select * from Movie where length > ?");
             s.setInt(1, length);
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Movie c = new Movie();
                 c.setMovie_Id(rs.getInt("movie_id"));
                 c.setTitle(rs.getString("movie_title"));
@@ -215,7 +216,7 @@ public class MovieDaoSQLImplementation implements MovieDao {
             PreparedStatement s = connection.prepareStatement("select * from Movie where price<= ?");
             s.setDouble(1, price);
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Movie c = new Movie();
                 c.setMovie_Id(rs.getInt("movie_id"));
                 c.setTitle(rs.getString("movie_title"));
@@ -239,7 +240,7 @@ public class MovieDaoSQLImplementation implements MovieDao {
             PreparedStatement s = connection.prepareStatement("select * from Movie where genre = ?");
             s.setString(1, genre);
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Movie c = new Movie();
                 c.setMovie_Id(rs.getInt("movie_id"));
                 c.setTitle(rs.getString("movie_title"));

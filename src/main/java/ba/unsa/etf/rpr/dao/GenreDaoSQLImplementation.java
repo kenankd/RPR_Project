@@ -64,7 +64,7 @@ public class GenreDaoSQLImplementation implements GenreDao{
         try {
             PreparedStatement s = connection.prepareStatement("select * from Genre");
             ResultSet rs = s.executeQuery();
-            if (rs.next()) {
+            while (rs.next()) {
                 Genre c = new Genre();
                 c.setGenre_id(rs.getInt("genre_id"));
                 c.setGenre_name(rs.getString("genre_name"));

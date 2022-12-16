@@ -7,10 +7,19 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.util.Properties;
 
+/**
+ * Class for establishing connection with server, based on singleton design pattern
+ * @author Kenan Dizdarevic
+ */
 public class SingletonConnection {
     private static final SingletonConnection instance=new SingletonConnection();
     private static Connection connection;
     private SingletonConnection(){}
+
+    /**
+     * establishes connection if it's null, if it's already established just returns it
+     * @return connection
+     */
     public static Connection getInstance(){
         if(connection==null){
             try{
