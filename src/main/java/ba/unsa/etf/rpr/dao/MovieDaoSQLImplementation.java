@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
-import ba.unsa.etf.rpr.GetConnection;
+import ba.unsa.etf.rpr.SingletonConnection;
 import ba.unsa.etf.rpr.domain.Movie;
 
 import java.sql.*;
@@ -12,7 +12,7 @@ public class MovieDaoSQLImplementation implements MovieDao {
 
     public MovieDaoSQLImplementation() {
         try {
-            connection= GetConnection.get();
+            connection= SingletonConnection.getInstance();
         } catch (RuntimeException e) {
             e.printStackTrace();
         }
