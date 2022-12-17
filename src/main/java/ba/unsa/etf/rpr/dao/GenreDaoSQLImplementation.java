@@ -38,11 +38,34 @@ public class GenreDaoSQLImplementation implements GenreDao{
 
     @Override
     public Genre add(Genre item) {
+        String add = "INSERT INTO Genre(genre_name) VALUES(?)";
+        try{
+            PreparedStatement ps=this.connection.prepareStatement(add,Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1,item.getGenre_name());
+            ps.executeUpdate();
+            ResultSet rs=ps.getGeneratedKeys();
+            rs.next();
+            item.setGenre_id(rs.getInt(1));
+            return item;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
     @Override
     public Genre update(Genre item) {
+        try{
+            PreparedStatement ps=connection.prepareStatement("UPDATE Genre SET genre_name=? where genre_id=?");
+            ps.setString(1,item.getGenre_name());
+            ps.setInt(2,item.getGenre_id());
+            ps.executeUpdate();
+            return item;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 

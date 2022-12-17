@@ -44,12 +44,45 @@ public class MovieDaoSQLImplementation implements MovieDao {
 
     @Override
     public Movie add(Movie item) {
+        String add = "INSERT INTO Movie(movie_title,main_actor,release_date,price,length,genre_id) VALUES(?,?,?,?,?,?)";
+        try{
+            PreparedStatement ps=this.connection.prepareStatement(add,Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1,item.getTitle());
+            ps.setString(2,item.getMain_actor());
+            ps.setDate(3, (java.sql.Date) item.getRelease_date());
+            ps.setDouble(4,item.getPrice());
+            ps.setInt(5,item.getLength());
+            ps.setInt(6,item.getGenre_id());
+            ps.executeUpdate();
+            ResultSet rs=ps.getGeneratedKeys();
+            rs.next();
+            item.setMovie_Id(rs.getInt(1));
+            return item;
 
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
     @Override
     public Movie update(Movie item) {
+        try{
+            PreparedStatement ps=connection.prepareStatement("UPDATE Movie SET movie_title=?,main_actor=?,release_date=?,price=?,length=?,genre_id=? where movie_id=?");
+            ps.setString(1,item.getTitle());
+            ps.setString(2,item.getMain_actor());
+            ps.setDate(3, (java.sql.Date) item.getRelease_date());
+            ps.setDouble(4,item.getPrice());
+            ps.setInt(5,item.getLength());
+            ps.setInt(6,item.getGenre_id());
+            ps.setInt(7,item.getMovie_Id());
+            ps.executeUpdate();
+            return item;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
         return null;
     }
 

@@ -42,11 +42,39 @@ public class PurchaseDaoSQLImplementation implements PurchaseDao{
 
     @Override
     public Purchase add(Purchase item) {
+        String add = "INSERT INTO Purchase(customer_id,movie_id,purchase_date) VALUES(?,?,?)";
+        try{
+            PreparedStatement ps=this.connection.prepareStatement(add,Statement.RETURN_GENERATED_KEYS);
+            ps.setInt(1,item.getCustomer_id());
+            ps.setInt(2,item.getMovie_id());
+            ps.setDate(3, (java.sql.Date) item.getDate_of_rent());
+            ps.executeUpdate();
+            ResultSet rs=ps.getGeneratedKeys();
+            rs.next();
+            item.setCustomer_id(rs.getInt(1));
+            return item;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
     @Override
     public Purchase update(Purchase item) {
+        try{
+            PreparedStatement ps=connection.prepareStatement("UPDATE Purchase SET customer_id=?,movie_id=?,purchase_date=? where purchase_id=?");
+            ps.setInt(1,item.getCustomer_id());
+            ps.setInt(2,item.getMovie_id());
+            ps.setDate(3, (java.sql.Date) item.getDate_of_rent());
+            ps.setInt(4,item.getRent_id());
+            ps.executeUpdate();
+            return item;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
         return null;
     }
 

@@ -90,11 +90,43 @@ public class CustomerDaoSQLImplementation implements CustomerDao {
 
     @Override
     public Customer add(Customer item) {
+        String add = "INSERT INTO Customer(name,surname,mail,address,phone_number) VALUES(?,?,?,?,?)";
+        try{
+            PreparedStatement ps=this.connection.prepareStatement(add,Statement.RETURN_GENERATED_KEYS);
+            ps.setString(1,item.getName());
+            ps.setString(2,item.getSurname());
+            ps.setString(3,item.getMail());
+            ps.setString(4,item.getAdress());
+            ps.setString(5,item.getPhone_number());
+            ps.executeUpdate();
+            ResultSet rs=ps.getGeneratedKeys();
+            rs.next();
+            item.setCustomer_id(rs.getInt(1));
+            return item;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         return null;
     }
 
     @Override
     public Customer update(Customer item) {
+        try{
+            PreparedStatement ps=connection.prepareStatement("UPDATE Customer SET name=?,surname=?,mail=?,address=?,phone_number=? where customer_id=?");
+            ps.setString(1,item.getName());
+            ps.setString(2,item.getSurname());
+            ps.setString(3,item.getMail());
+            ps.setString(4,item.getAdress());
+            ps.setString(5,item.getPhone_number());
+            ps.setInt(6,item.getCustomer_id());
+            ps.executeUpdate();
+            return item;
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+
+        }
         return null;
     }
 
