@@ -7,11 +7,11 @@ import java.util.Objects;
  * @author Kenan Dizdarevic
  */
 
-public class Customer {
+public class Customer implements Idable{
     private int customer_id;
     private String name,surname;
     private String mail;
-    private String adress,phone_number;
+    private String address,phone_number;
 
 
     public Customer(int idcustomer, String name, String surname, String mail, String adress, String phone_number) {
@@ -19,7 +19,7 @@ public class Customer {
         this.name = name;
         this.surname = surname;
         this.mail = mail;
-        this.adress = adress;
+        this.address = adress;
         this.phone_number = phone_number;
     }
 
@@ -28,14 +28,17 @@ public class Customer {
         this.name = "";
         this.surname = "";
         this.mail = "";
-        this.adress = "";
+        this.address = "";
         this.phone_number = "";
     }
-
-    public int getCustomer_id() {
+    @Override
+    public int getId() {
         return customer_id;
     }
-
+    @Override
+    public void setId(int id){
+        this.customer_id=id;
+    }
     public void setCustomer_id(int idcustomer) {
         this.customer_id = idcustomer;
     }
@@ -64,12 +67,12 @@ public class Customer {
         this.mail = mail;
     }
 
-    public String getAdress() {
-        return adress;
+    public String getAddress() {
+        return address;
     }
 
-    public void setAdress(String adress) {
-        this.adress = adress;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
     public String getPhone_number() {
@@ -85,14 +88,12 @@ public class Customer {
         if (this == o) return true;
         if (!(o instanceof Customer)) return false;
         Customer customer = (Customer) o;
-        return getCustomer_id() == customer.getCustomer_id() && Objects.equals(getName(), customer.getName()) && Objects.equals(getSurname(), customer.getSurname()) && Objects.equals(getMail(), customer.getMail()) && Objects.equals(getAdress(), customer.getAdress()) && Objects.equals(getPhone_number(), customer.getPhone_number());
+        return getId() == customer.getId() && Objects.equals(getName(), customer.getName()) && Objects.equals(getSurname(), customer.getSurname()) && Objects.equals(getMail(), customer.getMail()) && Objects.equals(getAddress(), customer.getAddress()) && Objects.equals(getPhone_number(), customer.getPhone_number());
     }
-
     @Override
     public int hashCode() {
-        return Objects.hash(getCustomer_id(), getName(), getSurname(), getMail(), getAdress(), getPhone_number());
+        return Objects.hash(getId(), getName(), getSurname(), getMail(), getAddress(), getPhone_number());
     }
-
     @Override
     public String toString() {
         return "Customer{" +
@@ -100,8 +101,10 @@ public class Customer {
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", mail='" + mail + '\'' +
-                ", adress='" + adress + '\'' +
+                ", adress='" + address + '\'' +
                 ", phone_number='" + phone_number + '\'' +
                 '}';
     }
+
+
 }
