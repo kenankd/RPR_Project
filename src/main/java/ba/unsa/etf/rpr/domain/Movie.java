@@ -6,41 +6,40 @@ import java.util.Objects;
 /**
  * Class that holds all avalaible movies
  */
-public class Movie {
-
-    private int movie_id;
+public class Movie implements Idable{
+    private int id;
     private String title;
     private Date release_date;
     private String main_actor;
     private double price;
     private int length;
-    private int genre_id;
-    public Movie(int movie_id, String title, Date release_date, String main_actor, double price, int length, int genre_id) {
-        this.movie_id = movie_id;
+    private Genre genre;
+    public Movie(int movie_id, String title, Date release_date, String main_actor, double price, int length, Genre genre_id) {
+        this.id = movie_id;
         this.title = title;
         this.release_date = release_date;
         this.main_actor = main_actor;
         this.price = price;
         this.length = length;
-        this.genre_id = genre_id;
+        this.genre = genre_id;
     }
 
     public Movie() {
-        this.movie_id = 0;
+        this.id = 0;
         this.title = "";
         this.release_date = new Date();
         this.main_actor = "";
         this.price = 0;
         this.length = 0;
-        this.genre_id = 0;
+        this.genre = new Genre();
     }
 
     public int getMovie_Id() {
-        return movie_id;
+        return id;
     }
 
     public void setMovie_Id(int id) {
-        this.movie_id = id;
+        this.id = id;
     }
 
     public String getTitle() {
@@ -83,12 +82,12 @@ public class Movie {
         this.length = length;
     }
 
-    public int getGenre_id() {
-        return genre_id;
+    public Genre getGenre() {
+        return genre;
     }
 
-    public void setGenre_id(int genre_id) {
-        this.genre_id = genre_id;
+    public void setGenre(Genre genre_id) {
+        this.genre = genre_id;
     }
 
     @Override
@@ -101,19 +100,29 @@ public class Movie {
 
     @Override
     public int hashCode() {
-        return Objects.hash(getMovie_Id(), getTitle(), getRelease_date(), getMain_actor(), getPrice(), getLength(), getGenre_id());
+        return Objects.hash(getMovie_Id(), getTitle(), getRelease_date(), getMain_actor(), getPrice(), getLength(), getGenre());
     }
 
     @Override
     public String toString() {
         return "Movie{" +
-                "id=" + movie_id +
+                "id=" + id +
                 ", title=" + title +
                 ", release_date=" + release_date +
                 ", main_actor='" + main_actor + '\'' +
                 ", price=" + price +
                 ", length=" + length +
-                ", genre_id=" + genre_id +
+                ", genre=" + genre +
                 '}';
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id=id;
+    }
+
+    @Override
+    public int getId() {
+        return id;
     }
 }
