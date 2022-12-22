@@ -6,46 +6,39 @@ import java.util.Objects;
 /**
  * Class that holds all purchases of movies
  */
-public class Purchase {
-    private int rent_id,movie_id,customer_id;
+public class Purchase implements Idable{
+    private int id;
+    private Movie movie;
+    private Customer customer;
     private Date date_of_rent;
-
-    public Purchase(int rent_id, int movie_id, int customer_id, Date date_of_rent) {
-        this.rent_id = rent_id;
-        this.movie_id = movie_id;
-        this.customer_id = customer_id;
+    public Purchase(int rent_id, Movie movie, Customer customer, Date date_of_rent) {
+        this.id= rent_id;
+        this.movie = movie;
+        this.customer = customer;
         this.date_of_rent = date_of_rent;
     }
 
     public Purchase() {
-        rent_id=0;
-        movie_id=0;
-        customer_id=0;
+        id=0;
+        movie=new Movie();
+        customer=new Customer();
         date_of_rent=new Date();
     }
 
-    public int getRent_id() {
-        return rent_id;
+    public Movie getMovie() {
+        return movie;
     }
 
-    public void setRent_id(int rent_id) {
-        this.rent_id = rent_id;
+    public void setMovie(Movie movie) {
+        this.movie = movie;
     }
 
-    public int getMovie_id() {
-        return movie_id;
+    public Customer getCustomer() {
+        return customer;
     }
 
-    public void setMovie_id(int movie_id) {
-        this.movie_id = movie_id;
-    }
-
-    public int getCustomer_id() {
-        return customer_id;
-    }
-
-    public void setCustomer_id(int customer_id) {
-        this.customer_id = customer_id;
+    public void setCustomer(Customer customer) {
+        this.customer = customer;
     }
 
     public Date getDate_of_rent() {
@@ -61,21 +54,31 @@ public class Purchase {
         if (this == o) return true;
         if (!(o instanceof Purchase)) return false;
         Purchase purchase = (Purchase) o;
-        return getRent_id() == purchase.getRent_id() && getMovie_id() == purchase.getMovie_id() && getCustomer_id() == purchase.getCustomer_id() && Objects.equals(getDate_of_rent(), purchase.getDate_of_rent());
+        return getId() == purchase.getId() && Objects.equals(getMovie(), purchase.getMovie()) && Objects.equals(getCustomer(), purchase.getCustomer()) && Objects.equals(getDate_of_rent(), purchase.getDate_of_rent());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getRent_id(), getMovie_id(), getCustomer_id(), getDate_of_rent());
+        return Objects.hash(getId(), getMovie(), getCustomer(), getDate_of_rent());
     }
 
     @Override
     public String toString() {
-        return "Rent{" +
-                "rent_id=" + rent_id +
-                ", movie_id=" + movie_id +
-                ", customer_id=" + customer_id +
+        return "Purchase{" +
+                "id=" + id +
+                ", movie=" + movie +
+                ", customer=" + customer +
                 ", date_of_rent=" + date_of_rent +
                 '}';
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id=id;
+    }
+
+    @Override
+    public int getId() {
+        return id;
     }
 }
