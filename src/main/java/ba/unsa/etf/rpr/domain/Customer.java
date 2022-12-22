@@ -8,39 +8,38 @@ import java.util.Objects;
  */
 
 public class Customer implements Idable{
-    private int customer_id;
+    private int id;
     private String name,surname;
-    private String mail;
-    private String address,phone_number;
+    private String mail,pw,username;
 
 
-    public Customer(int idcustomer, String name, String surname, String mail, String adress, String phone_number) {
-        this.customer_id = idcustomer;
+    public Customer(int id, String name, String surname, String mail, String pw, String username) {
+        this.id = id;
         this.name = name;
         this.surname = surname;
         this.mail = mail;
-        this.address = adress;
-        this.phone_number = phone_number;
+        this.pw = pw;
+        this.username = username;
     }
 
     public Customer() {
-        this.customer_id = 0;
+        this.id = 0;
         this.name = "";
         this.surname = "";
         this.mail = "";
-        this.address = "";
-        this.phone_number = "";
+        this.pw = "";
+        this.username = "";
     }
     @Override
     public int getId() {
-        return customer_id;
+        return id;
     }
     @Override
     public void setId(int id){
-        this.customer_id=id;
+        this.id=id;
     }
     public void setCustomer_id(int idcustomer) {
-        this.customer_id = idcustomer;
+        this.id = idcustomer;
     }
 
     public String getName() {
@@ -67,20 +66,20 @@ public class Customer implements Idable{
         this.mail = mail;
     }
 
-    public String getAddress() {
-        return address;
+    public String getPw() {
+        return pw;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setPw(String pw) {
+        this.pw = pw;
     }
 
-    public String getPhone_number() {
-        return phone_number;
+    public String getUsername() {
+        return username;
     }
 
-    public void setPhone_number(String phone_number) {
-        this.phone_number = phone_number;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     @Override
@@ -88,23 +87,23 @@ public class Customer implements Idable{
         if (this == o) return true;
         if (!(o instanceof Customer)) return false;
         Customer customer = (Customer) o;
-        return getId() == customer.getId() && Objects.equals(getName(), customer.getName()) && Objects.equals(getSurname(), customer.getSurname()) && Objects.equals(getMail(), customer.getMail()) && Objects.equals(getAddress(), customer.getAddress()) && Objects.equals(getPhone_number(), customer.getPhone_number());
+        return getId() == customer.getId() && Objects.equals(getName(), customer.getName()) && Objects.equals(getSurname(), customer.getSurname()) && Objects.equals(getMail(), customer.getMail()) && Objects.equals(getPw(), customer.getPw()) && Objects.equals(getUsername(), customer.getUsername());
     }
+
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getName(), getSurname(), getMail(), getAddress(), getPhone_number());
+        return Objects.hash(getId(), getName(), getSurname(), getMail(), getPw(), getUsername());
     }
+
     @Override
     public String toString() {
         return "Customer{" +
-                "idcustomer=" + customer_id +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", surname='" + surname + '\'' +
                 ", mail='" + mail + '\'' +
-                ", adress='" + address + '\'' +
-                ", phone_number='" + phone_number + '\'' +
+                ", pw='" + pw + '\'' +
+                ", username='" + username + '\'' +
                 '}';
     }
-
-
 }
