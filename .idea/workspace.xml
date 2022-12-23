@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="updated exception handling">
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="updated searchbygenre method">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/PurchaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/PurchaseDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/PurchaseDaoSQLImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/PurchaseDaoSQLImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/exceptions/ConnectionException.java" beforeDir="false" />
     </list>
@@ -404,7 +406,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671819992567</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="updated searchbygenre method">
+      <created>1671820205758</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1671820205758</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -419,7 +428,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="mainfx" />
     <MESSAGE value="added mainfx,connection,properties" />
     <MESSAGE value="added mainfx,connection,properties,manifest" />
     <MESSAGE value="added SingletonConnection" />
@@ -444,6 +452,7 @@
     <MESSAGE value="updated expection handling in MovieDaoSQLImplementation" />
     <MESSAGE value="throw new MovieException(e.getMessage(), e);" />
     <MESSAGE value="updated exception handling" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated exception handling" />
+    <MESSAGE value="updated searchbygenre method" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated searchbygenre method" />
   </component>
 </project>
