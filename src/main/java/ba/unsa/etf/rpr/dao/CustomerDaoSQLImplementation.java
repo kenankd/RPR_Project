@@ -2,37 +2,28 @@ package ba.unsa.etf.rpr.dao;
 
 import ba.unsa.etf.rpr.SingletonConnection;
 import ba.unsa.etf.rpr.domain.Customer;
-import ba.unsa.etf.rpr.exceptions.ConnectionException;
+import ba.unsa.etf.rpr.exceptions.MovieException;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.TreeMap;
 
-public class CustomerDaoSQLImplementation implements CustomerDao {
-    private Connection connection;
+public class CustomerDaoSQLImplementation extends AbstractDao<Customer> implements CustomerDao {
+
     public CustomerDaoSQLImplementation(){
-        try{
-            connection = SingletonConnection.getInstance();
-        } catch (ConnectionException e) {
-            e.printStackTrace();
-        }
+        super("Customer");
     }
     @Override
-    public List<Customer> searchByName(String name) {
+    public List<Customer> searchByName(String name) throws MovieException {
         List<Customer> list=new ArrayList<>();
         try{
-            PreparedStatement s=connection.prepareStatement("select * from Customer where name = ?");
+            PreparedStatement s=getConnection().prepareStatement("select * from Customer where name LIKE concat('%',?,'%')");
             s.setString(1,name);
             ResultSet rs=s.executeQuery();
             while(rs.next()){
-                Customer c= new Customer();
-                c.setCustomer_id(rs.getInt("customer_id"));
-                c.setMail(rs.getString("mail"));
-                c.setAdress(rs.getString("address"));
-                c.setName(rs.getString("name"));
-                c.setSurname(rs.getString("surname"));
-                c.setPhone_number(rs.getString("phone_number"));
-                list.add(c);
+                list.add(row2object(rs));
             }
             rs.close();
         } catch (SQLException e) {
@@ -45,18 +36,11 @@ public class CustomerDaoSQLImplementation implements CustomerDao {
     public List<Customer> searchBySurname(String surname) {
         List<Customer> list=new ArrayList<>();
         try{
-            PreparedStatement s=connection.prepareStatement("select * from Customer where surname = ?");
+            PreparedStatement s=getConnection().prepareStatement("select * from Customer where surname LIKE concat('%',?,'%')");
             s.setString(1,surname);
             ResultSet rs=s.executeQuery();
             while(rs.next()){
-                Customer c= new Customer();
-                c.setCustomer_id(rs.getInt("customer_id"));
-                c.setMail(rs.getString("mail"));
-                c.setAdress(rs.getString("address"));
-                c.setName(rs.getString("name"));
-                c.setSurname(rs.getString("surname"));
-                c.setPhone_number(rs.getString("phone_number"));
-                list.add(c);
+                list.add(row2object(rs));
             }
             rs.close();
         } catch (SQLException e) {
@@ -65,103 +49,32 @@ public class CustomerDaoSQLImplementation implements CustomerDao {
         return list;
     }
 
-    @Override
-    public Customer getById(int id) {
-        try{
-            PreparedStatement s=connection.prepareStatement("select * from Customer where customer_id _= ?");
-            s.setInt(1,id);
-            ResultSet rs=s.executeQuery();
-            if(rs.next()){
-                Customer c= new Customer();
-                c.setCustomer_id(rs.getInt("customer_id"));
-                c.setMail(rs.getString("mail"));
-                c.setAdress(rs.getString("address"));
-                c.setName(rs.getString("name"));
-                c.setSurname(rs.getString("surname"));
-                c.setPhone_number(rs.getString("phone_number"));
-                rs.close();
-                return c;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
 
     @Override
-    public Customer add(Customer item) {
-        String add = "INSERT INTO Customer(name,surname,mail,address,phone_number) VALUES(?,?,?,?,?)";
+    public Customer row2object(ResultSet rs) throws MovieException {
         try{
-            PreparedStatement ps=this.connection.prepareStatement(add,Statement.RETURN_GENERATED_KEYS);
-            ps.setString(1,item.getName());
-            ps.setString(2,item.getSurname());
-            ps.setString(3,item.getMail());
-            ps.setString(4,item.getAdress());
-            ps.setString(5,item.getPhone_number());
-            ps.executeUpdate();
-            ResultSet rs=ps.getGeneratedKeys();
-            rs.next();
-            item.setCustomer_id(rs.getInt(1));
-            return item;
-
+            Customer c = new Customer();
+            c.setId(rs.getInt("id"));
+            c.setName(rs.getString("name"));
+            c.setSurname(rs.getString("surname"));
+            c.setMail(rs.getString("mail"));
+            c.setPw(rs.getString("pw"));
+            c.setUsername(rs.getString("username"));
+            return c;
         } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
-    }
-
-    @Override
-    public Customer update(Customer item) {
-        try{
-            PreparedStatement ps=connection.prepareStatement("UPDATE Customer SET name=?,surname=?,mail=?,address=?,phone_number=? where customer_id=?");
-            ps.setString(1,item.getName());
-            ps.setString(2,item.getSurname());
-            ps.setString(3,item.getMail());
-            ps.setString(4,item.getAdress());
-            ps.setString(5,item.getPhone_number());
-            ps.setInt(6,item.getCustomer_id());
-            ps.executeUpdate();
-            return item;
-
-        } catch (SQLException e) {
-            e.printStackTrace();
-
-        }
-        return null;
-    }
-
-    @Override
-    public void delete(int id) {
-        String delete="DELETE FROM Customer WHERE customer_id = ?";
-        try{
-            PreparedStatement s=connection.prepareStatement(delete);
-            s.setInt(1,id);
-            s.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
+            throw new MovieException(e.getMessage(),e);
         }
     }
 
     @Override
-    public List<Customer> getAll() {
-        List<Customer> list=new ArrayList<>();
-        try{
-            PreparedStatement s= connection.prepareStatement("Select * from Customer");
-            ResultSet rs=s.executeQuery();
-            while(rs.next()){
-                Customer c= new Customer();
-                c.setCustomer_id(rs.getInt("customer_id"));
-                c.setMail(rs.getString("mail"));
-                c.setAdress(rs.getString("address"));
-                c.setName(rs.getString("name"));
-                c.setSurname(rs.getString("surname"));
-                c.setPhone_number(rs.getString("phone_number"));
-                list.add(c);
-            }
-            rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return list;
+    public Map<String, Object> object2row(Customer object) {
+        Map<String,Object> map=new TreeMap<>();
+        map.put("id",object.getId());
+        map.put("name",object.getName());
+        map.put("surname",object.getSurname());
+        map.put("mail",object.getMail());
+        map.put("pw",object.getPw());
+        map.put("username",object.getUsername());
+        return map;
     }
 }
