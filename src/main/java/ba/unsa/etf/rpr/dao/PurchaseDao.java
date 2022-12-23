@@ -27,4 +27,6 @@ public interface PurchaseDao extends Dao<Purchase> {
      * @return list of purchases
      */
     List<Purchase> getByDate(Date date) throws MovieException;
+
+
 }
