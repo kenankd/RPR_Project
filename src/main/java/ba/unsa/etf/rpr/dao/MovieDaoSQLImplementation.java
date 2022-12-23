@@ -56,7 +56,7 @@ public class MovieDaoSQLImplementation extends AbstractDao<Movie> implements Mov
             }
             rs.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new MovieException(e.getMessage(), e);
         }
         return list;
     }
