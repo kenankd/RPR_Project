@@ -13,7 +13,7 @@ public class Customer implements Idable{
     private String mail,pw,username;
 
 
-    public Customer(int id, String name, String surname, String mail, String pw, String username) {
+   /* public Customer(int id, String name, String surname, String mail, String pw, String username) {
         this.id = id;
         this.name = name;
         this.surname = surname;
@@ -29,7 +29,7 @@ public class Customer implements Idable{
         this.mail = "";
         this.pw = "";
         this.username = "";
-    }
+    }*/
     @Override
     public int getId() {
         return id;
@@ -38,9 +38,7 @@ public class Customer implements Idable{
     public void setId(int id){
         this.id=id;
     }
-    public void setCustomer_id(int idcustomer) {
-        this.id = idcustomer;
-    }
+
 
     public String getName() {
         return name;
