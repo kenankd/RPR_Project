@@ -1,12 +1,9 @@
 package ba.unsa.etf.rpr.dao;
 
-import ba.unsa.etf.rpr.SingletonConnection;
 import ba.unsa.etf.rpr.domain.Genre;
 import ba.unsa.etf.rpr.exceptions.MovieException;
 
 import java.sql.*;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
