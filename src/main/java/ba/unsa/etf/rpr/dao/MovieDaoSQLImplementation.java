@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
+import ba.unsa.etf.rpr.domain.Genre;
 import ba.unsa.etf.rpr.domain.Movie;
 import ba.unsa.etf.rpr.exceptions.MovieException;
 
@@ -147,11 +148,11 @@ public class MovieDaoSQLImplementation extends AbstractDao<Movie> implements Mov
     }
 
     @Override
-    public List<Movie> searchByGenre(String genre) throws MovieException {
+    public List<Movie> searchByGenre(Genre genre) throws MovieException {
         List<Movie> list = new ArrayList<>();
         try {
             PreparedStatement s = getConnection().prepareStatement("select * from Movie where genre = ?");
-            s.setString(1, genre);
+            s.setInt(1, genre.getId());
             ResultSet rs = s.executeQuery();
             while (rs.next()) {
                 list.add(row2object(rs));
