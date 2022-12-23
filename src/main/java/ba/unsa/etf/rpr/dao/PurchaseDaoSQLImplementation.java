@@ -16,47 +16,6 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
         super("Purchase");
     }
 
-
-/*
-    @Override
-    public List<Purchase> getByMovieId(int movie_id) {
-        List<Purchase> list = new ArrayList<>();
-        try {
-            PreparedStatement s = getConnection().prepareStatement("select * from Purchase where title LIKE concat('%',?,'%')");
-            s.setString(1, title);
-            ResultSet rs = s.executeQuery();
-            while (rs.next()) {
-                list.add(row2object(rs));
-            }
-            rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return list;
-    }
-
-    @Override
-    public List<Purchase> getByCustomerId(int customer_id) {
-        List<Purchase> lista = new ArrayList<>();
-        try {
-            PreparedStatement s = connection.prepareStatement("select * from Purchase where customer_id= ?");
-            s.setInt(1,customer_id);
-            ResultSet rs = s.executeQuery();
-            while (rs.next()) {
-                Purchase c = new Purchase();
-                c.setCustomer_id(rs.getInt("customer_id"));
-                c.setMovie_id(rs.getInt("movie_id"));
-                c.setDate_of_rent(rs.getDate("purchase_date"));
-                c.setRent_id(rs.getInt("rent_id"));
-                lista.add(c);
-            }
-            rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return lista;
-    }
-*/
     @Override
     public List<Purchase> getByMovie(Movie movie) throws MovieException {
         List<Purchase> list = new ArrayList<>();
