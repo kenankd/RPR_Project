@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="Added throws Movie exception for methods in CustomerDao">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/AbstractDao.java" afterDir="false" />
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="updated MovieDao">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/CustomerDaoSQLImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/CustomerDaoSQLImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/MovieDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/MovieDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/MovieDaoSQLImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/MovieDaoSQLImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/exceptions/ConnectionException.java" beforeDir="false" />
     </list>
@@ -322,7 +322,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671801004772</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="updated CustomerDaoSQLImplementation">
+      <created>1671801416381</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1671801416381</updated>
+    </task>
+    <task id="LOCAL-00034" summary="updated MovieDao">
+      <created>1671801512651</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1671801512651</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -337,8 +351,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed some errors" />
-    <MESSAGE value="fixed some errors added MovieDaoSQLImplementationdao interface" />
     <MESSAGE value="added PurchaseDaoSQLImplementation interface" />
     <MESSAGE value="fixed some errors,added GenreDaoSQLImplementation interface" />
     <MESSAGE value="added methods to MovieDaoSQLImplementation" />
@@ -362,6 +374,8 @@
     <MESSAGE value="changed database" />
     <MESSAGE value="Customer class updated" />
     <MESSAGE value="Added throws Movie exception for methods in CustomerDao" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added throws Movie exception for methods in CustomerDao" />
+    <MESSAGE value="updated CustomerDaoSQLImplementation" />
+    <MESSAGE value="updated MovieDao" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated MovieDao" />
   </component>
 </project>

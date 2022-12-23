@@ -25,7 +25,8 @@ public interface MovieDao extends Dao<Movie> {
      * @param date search based on this parameter
      * @return list of movies
      */
-    List<Movie> getMoviesReleasedAfter(Date date)throws MovieException;
+    List<Movie> getMoviesReleasedAfter(Date date) throws MovieException;
+
     /**
      * Returns all movies shorter than given number of minutes
      * @param length movie length in minutes
