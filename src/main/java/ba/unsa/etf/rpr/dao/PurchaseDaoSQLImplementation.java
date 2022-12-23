@@ -103,7 +103,7 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
             }
             rs.close();
         } catch (SQLException e) {
-            e.printStackTrace();
+            throw new MovieException(e.getMessage(),e);
         }
         return list;
     }
