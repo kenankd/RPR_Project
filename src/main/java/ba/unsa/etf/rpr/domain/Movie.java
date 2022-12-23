@@ -34,13 +34,6 @@ public class Movie implements Idable{
         this.genre = new Genre();
     }
 
-    public int getMovie_Id() {
-        return id;
-    }
-
-    public void setMovie_Id(int id) {
-        this.id = id;
-    }
 
     public String getTitle() {
         return title;
@@ -95,12 +88,12 @@ public class Movie implements Idable{
         if (this == o) return true;
         if (!(o instanceof Movie)) return false;
         Movie movie = (Movie) o;
-        return getMovie_Id() == movie.getMovie_Id() && getTitle() == movie.getTitle() && Double.compare(movie.getPrice(), getPrice()) == 0 && getLength() == movie.getLength() && getGenre_id() == movie.getGenre_id() && Objects.equals(getRelease_date(), movie.getRelease_date()) && Objects.equals(getMain_actor(), movie.getMain_actor());
+        return getId() == movie.getId() && getTitle() == movie.getTitle() && Double.compare(movie.getPrice(), getPrice()) == 0 && getLength() == movie.getLength() && getGenre() == movie.getGenre() && Objects.equals(getRelease_date(), movie.getRelease_date()) && Objects.equals(getMain_actor(), movie.getMain_actor());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getMovie_Id(), getTitle(), getRelease_date(), getMain_actor(), getPrice(), getLength(), getGenre());
+        return Objects.hash(getId(), getTitle(), getRelease_date(), getMain_actor(), getPrice(), getLength(), getGenre());
     }
 
     @Override
