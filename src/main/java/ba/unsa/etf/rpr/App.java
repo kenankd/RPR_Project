@@ -1,33 +1,34 @@
 package ba.unsa.etf.rpr;
 
-import ba.unsa.etf.rpr.dao.AbstractDao;
-import ba.unsa.etf.rpr.dao.CustomerDaoSQLImplementation;
-import ba.unsa.etf.rpr.dao.DaoFactory;
-import ba.unsa.etf.rpr.dao.MovieDaoSQLImplementation;
-import ba.unsa.etf.rpr.domain.Customer;
-import ba.unsa.etf.rpr.domain.Movie;
+import javafx.application.Application;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.image.Image;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
-import java.util.List;
+import java.util.Objects;
+
+import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
 /**
  * Hello world!
  *
  */
-public class App {
+public class App extends Application {
     public static void main(String[] args) {
-        CustomerDaoSQLImplementation c = new CustomerDaoSQLImplementation();
-        Customer cc = new Customer();
-        cc.setUsername("kenankd");
-        cc.setPw("aaa");
-        cc.setMail("ss");
-        cc.setSurname("diz");
-        cc.setName("ken");
-        cc.setId(1);
-        List<Customer> a=c.searchByName("ke");
-        System.out.println(a.size()+ ","+a.get(0));
-
-
-
+    launch();
+    }
+    @Override
+    public void start(Stage stage) throws Exception {
+        FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/sample.fxml"));
+        Parent root = fxmlloader.load();
+        stage.setTitle("Hello World");
+      //  stage.getIcons().add(new Image("/img/download"));
+        stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+        stage.show();
     }
 }
 
