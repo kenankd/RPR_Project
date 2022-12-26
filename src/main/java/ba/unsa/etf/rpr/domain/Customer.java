@@ -10,11 +10,11 @@ import java.util.Objects;
 public class Customer implements Idable{
     private int id;
     private String name,surname;
-    private String mail,pw,username;
+    private String mail,username,pw;
 
 
-   /* public Customer(int id, String name, String surname, String mail, String pw, String username) {
-        this.id = id;
+   public Customer( String name, String surname, String mail, String username, String pw) {
+        this.id = 0;
         this.name = name;
         this.surname = surname;
         this.mail = mail;
@@ -29,7 +29,7 @@ public class Customer implements Idable{
         this.mail = "";
         this.pw = "";
         this.username = "";
-    }*/
+    }
     @Override
     public int getId() {
         return id;
