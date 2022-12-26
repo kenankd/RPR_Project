@@ -26,9 +26,9 @@ public interface CustomerDao extends Dao<Customer> {
     /**
      * Returns all customers with given username
      * @param username search based on this parameter
-     * @return list of customers
+     * @return one customer because username is unique
      * @throws MovieException
      */
-    List<Customer> searchByUsername(String username) throws MovieException;
+    Customer searchByUsername(String username) throws MovieException;
 
 }
