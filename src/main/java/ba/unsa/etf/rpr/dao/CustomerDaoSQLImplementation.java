@@ -49,20 +49,19 @@ public class CustomerDaoSQLImplementation extends AbstractDao<Customer> implemen
     }
 
     @Override
-    public List<Customer> searchByUsername(String username) throws MovieException {
-        List<Customer> list=new ArrayList<>();
+    public Customer searchByUsername(String username) throws MovieException {
         try{
             PreparedStatement s=getConnection().prepareStatement("select * from Customer where username = ?");
             s.setString(1,username);
             ResultSet rs=s.executeQuery();
-            while(rs.next()){
-                list.add(row2object(rs));
+            if(rs.next()){
+                return row2object(rs);
             }
             rs.close();
         } catch (SQLException e) {
             e.printStackTrace();
         }
-        return list;
+        return null;
     }
 
 
@@ -89,8 +88,8 @@ public class CustomerDaoSQLImplementation extends AbstractDao<Customer> implemen
         map.put("name",object.getName());
         map.put("surname",object.getSurname());
         map.put("mail",object.getMail());
-        map.put("pw",object.getPw());
         map.put("username",object.getUsername());
+        map.put("pw",object.getPw());
         return map;
     }
 }
