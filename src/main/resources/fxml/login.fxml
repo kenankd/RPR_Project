@@ -44,7 +44,7 @@
             <Button layoutX="45.0" layoutY="134.0" mnemonicParsing="false" onAction="#buttonLogIn" prefHeight="30.0" prefWidth="97.0" text="Log in" />
             <Button layoutX="100.0" layoutY="179.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="75.0" style="-fx-background-color: transparent;" text="Register" textFill="#111111" underline="true" />
             <Label layoutX="8.0" layoutY="186.0" text="Not a member yet?" />
-            <PasswordField fx:id="fieldPassword" layoutX="100.0" layoutY="88.0" prefHeight="25.0" prefWidth="97.0" />
+            <PasswordField fx:id="fieldPassword" layoutX="100.0" layoutY="88.0" prefHeight="25.0" prefWidth="97.0" text=" " />
          </children>
       </AnchorPane>
       <Label />
