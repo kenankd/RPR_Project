@@ -1,3 +1,6 @@
 #anchorPane {
 -fx-background-color: lightpink;
 }
+.root {
+ -fx-background-image: url("/img/opa.jpg");
+}
