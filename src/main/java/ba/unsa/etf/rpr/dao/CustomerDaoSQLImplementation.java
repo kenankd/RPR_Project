@@ -48,6 +48,23 @@ public class CustomerDaoSQLImplementation extends AbstractDao<Customer> implemen
         return list;
     }
 
+    @Override
+    public List<Customer> searchByUsername(String username) throws MovieException {
+        List<Customer> list=new ArrayList<>();
+        try{
+            PreparedStatement s=getConnection().prepareStatement("select * from Customer where username = ?");
+            s.setString(1,username);
+            ResultSet rs=s.executeQuery();
+            while(rs.next()){
+                list.add(row2object(rs));
+            }
+            rs.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return list;
+    }
+
 
     @Override
     public Customer row2object(ResultSet rs) throws MovieException {
