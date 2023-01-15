@@ -4,15 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="Fixed username and password order">
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="dummy LoginController finished">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MainFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MainFX.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/ControllerHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/ControllerHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/RegisterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/CustomerDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/CustomerDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/CustomerDaoSQLImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/CustomerDaoSQLImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/register.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/register.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,19 +44,19 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/PC/quote-maker",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.import"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/quote-maker&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.import&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PC\IdeaProjects\Projekat\src\main\resources\img" />
@@ -118,55 +112,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670772332253</updated>
-    </task>
-    <task id="LOCAL-00022" summary="Idable interface added">
-      <created>1671451375339</created>
-      <option name="number" value="00022" />
-      <option name="presentableId" value="LOCAL-00022" />
-      <option name="project" value="LOCAL" />
-      <updated>1671451375339</updated>
-    </task>
-    <task id="LOCAL-00023" summary="movie class updated bugs fixed">
-      <created>1671742564112</created>
-      <option name="number" value="00023" />
-      <option name="presentableId" value="LOCAL-00023" />
-      <option name="project" value="LOCAL" />
-      <updated>1671742564112</updated>
-    </task>
-    <task id="LOCAL-00024" summary="genre class updated bugs fixed">
-      <created>1671742574248</created>
-      <option name="number" value="00024" />
-      <option name="presentableId" value="LOCAL-00024" />
-      <option name="project" value="LOCAL" />
-      <updated>1671742574248</updated>
-    </task>
-    <task id="LOCAL-00025" summary="purchase class updated">
-      <created>1671742592082</created>
-      <option name="number" value="00025" />
-      <option name="presentableId" value="LOCAL-00025" />
-      <option name="project" value="LOCAL" />
-      <updated>1671742592082</updated>
-    </task>
-    <task id="LOCAL-00026" summary="customer class updated">
-      <created>1671742604204</created>
-      <option name="number" value="00026" />
-      <option name="presentableId" value="LOCAL-00026" />
-      <option name="project" value="LOCAL" />
-      <updated>1671742604204</updated>
-    </task>
-    <task id="LOCAL-00027" summary="MovieException added">
-      <created>1671742922466</created>
-      <option name="number" value="00027" />
-      <option name="presentableId" value="LOCAL-00027" />
-      <option name="project" value="LOCAL" />
-      <updated>1671742922466</updated>
-    </task>
-    <task id="LOCAL-00028" summary="MovieException added">
-      <created>1671743390722</created>
-      <option name="number" value="00028" />
-      <option name="presentableId" value="LOCAL-00028" />
-      <option name="project" value="LOCAL" />
-      <updated>1671743390722</updated>
     </task>
     <task id="LOCAL-00029" summary="changed database">
       <created>1671799383596</created>
@@ -462,7 +407,56 @@
       <option name="project" value="LOCAL" />
       <updated>1672093280900</updated>
     </task>
-    <option name="localTasksCounter" value="71" />
+    <task id="LOCAL-00071" summary="implemented method to showAlert in ControllerHelper">
+      <created>1672093416909</created>
+      <option name="number" value="00071" />
+      <option name="presentableId" value="LOCAL-00071" />
+      <option name="project" value="LOCAL" />
+      <updated>1672093416909</updated>
+    </task>
+    <task id="LOCAL-00072" summary="updated CustomerDao">
+      <created>1672093435303</created>
+      <option name="number" value="00072" />
+      <option name="presentableId" value="LOCAL-00072" />
+      <option name="project" value="LOCAL" />
+      <updated>1672093435303</updated>
+    </task>
+    <task id="LOCAL-00073" summary="updated CustomerDaoSQLImplementation">
+      <created>1672093442898</created>
+      <option name="number" value="00073" />
+      <option name="presentableId" value="LOCAL-00073" />
+      <option name="project" value="LOCAL" />
+      <updated>1672093442899</updated>
+    </task>
+    <task id="LOCAL-00074" summary="dummy login fxml finished">
+      <created>1672093461772</created>
+      <option name="number" value="00074" />
+      <option name="presentableId" value="LOCAL-00074" />
+      <option name="project" value="LOCAL" />
+      <updated>1672093461772</updated>
+    </task>
+    <task id="LOCAL-00075" summary="dummy register fxml finished">
+      <created>1672093472226</created>
+      <option name="number" value="00075" />
+      <option name="presentableId" value="LOCAL-00075" />
+      <option name="project" value="LOCAL" />
+      <updated>1672093472226</updated>
+    </task>
+    <task id="LOCAL-00076" summary="dummy registercontroller  finished">
+      <created>1672093488222</created>
+      <option name="number" value="00076" />
+      <option name="presentableId" value="LOCAL-00076" />
+      <option name="project" value="LOCAL" />
+      <updated>1672093488222</updated>
+    </task>
+    <task id="LOCAL-00077" summary="dummy LoginController finished">
+      <created>1672093498660</created>
+      <option name="number" value="00077" />
+      <option name="presentableId" value="LOCAL-00077" />
+      <option name="project" value="LOCAL" />
+      <updated>1672093498660</updated>
+    </task>
+    <option name="localTasksCounter" value="78" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -477,13 +471,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated expection handling in MovieDaoSQLImplementation" />
-    <MESSAGE value="throw new MovieException(e.getMessage(), e);" />
-    <MESSAGE value="updated exception handling" />
-    <MESSAGE value="updated searchbygenre method" />
-    <MESSAGE value="updated PurchaseDaoSQLImplementation" />
-    <MESSAGE value="updated PurchaseDao" />
-    <MESSAGE value="updated expection handling in PurchaseDaoSQLImplementation" />
     <MESSAGE value="finished PurchaseDaoSQLImplementation" />
     <MESSAGE value="updated GenreDaoSQLImplementation" />
     <MESSAGE value="updated properties" />
@@ -502,6 +489,13 @@
     <MESSAGE value="login.css updated" />
     <MESSAGE value="ControllerHelper added" />
     <MESSAGE value="Fixed username and password order" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed username and password order" />
+    <MESSAGE value="implemented method to showAlert in ControllerHelper" />
+    <MESSAGE value="updated CustomerDao" />
+    <MESSAGE value="updated CustomerDaoSQLImplementation" />
+    <MESSAGE value="dummy login fxml finished" />
+    <MESSAGE value="dummy register fxml finished" />
+    <MESSAGE value="dummy registercontroller  finished" />
+    <MESSAGE value="dummy LoginController finished" />
+    <option name="LAST_COMMIT_MESSAGE" value="dummy LoginController finished" />
   </component>
 </project>
