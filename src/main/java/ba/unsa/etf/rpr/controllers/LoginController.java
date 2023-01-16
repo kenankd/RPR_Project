@@ -21,6 +21,7 @@ public class LoginController {
     public PasswordField fieldPassword;
 
     public void buttonLogIn(ActionEvent actionevent) {
+
         if (fieldUsername.getText().trim().isEmpty() || fieldPassword.getText().trim().isEmpty()) {
             ControllerHelper.showAlert("Error","Text field blank","Text fields cannot be blank!");
             return;
