@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
@@ -28,34 +31,66 @@
       </VBox>
    </left>
    <center>
-      <VBox prefHeight="535.0" prefWidth="594.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="510.0" prefWidth="555.0" BorderPane.alignment="CENTER">
          <children>
             <VBox prefHeight="29.0" prefWidth="493.0">
                <children>
                   <TextField prefHeight="25.0" prefWidth="540.0" promptText="Search by title...">
                      <VBox.margin>
-                        <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                        <Insets bottom="5.0" left="5.0" top="5.0" />
                      </VBox.margin>
                   </TextField>
                </children>
             </VBox>
-            <TableView prefHeight="462.0" prefWidth="530.0">
+            <TableView prefHeight="462.0" prefWidth="537.0">
               <columns>
                 <TableColumn prefWidth="96.0" text="Title" />
                 <TableColumn prefWidth="119.0" text="Main Actor" />
                   <TableColumn minWidth="2.0" prefWidth="89.0" text="Genre" />
-                  <TableColumn prefWidth="92.0" text="Release Date" />
-                  <TableColumn prefWidth="67.0" text="Length" />
-                  <TableColumn minWidth="0.0" prefWidth="68.0" text="Price" />
+                  <TableColumn prefWidth="108.0" text="Release Date" />
+                  <TableColumn prefWidth="78.0" text="Length" />
+                  <TableColumn minWidth="0.0" prefWidth="83.0" text="Price" />
               </columns>
                <VBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="20.0" top="5.0" />
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
                </VBox.margin>
             </TableView>
          </children>
       </VBox>
    </center>
    <right>
-      <VBox prefHeight="535.0" prefWidth="81.0" BorderPane.alignment="CENTER" />
+      <VBox prefHeight="468.0" prefWidth="81.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+         <children>
+            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="68.0" text="Buy">
+               <VBox.margin>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
    </right>
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem mnemonicParsing="false" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </top>
 </BorderPane>

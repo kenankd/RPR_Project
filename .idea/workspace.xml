@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="added table and menu in movies">
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="fixed bug movies.fxml">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MainFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MainFX.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,13 +112,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670772332253</updated>
-    </task>
-    <task id="LOCAL-00041" summary="throw new MovieException(e.getMessage(), e);">
-      <created>1671819943018</created>
-      <option name="number" value="00041" />
-      <option name="presentableId" value="LOCAL-00041" />
-      <option name="project" value="LOCAL" />
-      <updated>1671819943018</updated>
     </task>
     <task id="LOCAL-00042" summary="updated exception handling">
       <created>1671819977078</created>
@@ -456,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673906474202</updated>
     </task>
-    <option name="localTasksCounter" value="90" />
+    <task id="LOCAL-00090" summary="fixed bug movies.fxml">
+      <created>1673906881541</created>
+      <option name="number" value="00090" />
+      <option name="presentableId" value="LOCAL-00090" />
+      <option name="project" value="LOCAL" />
+      <updated>1673906881541</updated>
+    </task>
+    <option name="localTasksCounter" value="91" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -471,7 +471,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added register.fxml" />
     <MESSAGE value="updated logincontroller" />
     <MESSAGE value="added searchbyusername" />
     <MESSAGE value="implemented searchbyusername" />
@@ -496,6 +495,7 @@
     <MESSAGE value="added controller for movies.fxml" />
     <MESSAGE value="added menubar for movies.fxml" />
     <MESSAGE value="added table and menu in movies" />
-    <option name="LAST_COMMIT_MESSAGE" value="added table and menu in movies" />
+    <MESSAGE value="fixed bug movies.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixed bug movies.fxml" />
   </component>
 </project>
