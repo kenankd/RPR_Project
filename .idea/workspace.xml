@@ -4,9 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="added buy movie button">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="removed initalizable interface from homecontroller">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MainFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MainFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/HomeController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -113,20 +113,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670772332253</updated>
-    </task>
-    <task id="LOCAL-00043" summary="updated exception handling">
-      <created>1671819985088</created>
-      <option name="number" value="00043" />
-      <option name="presentableId" value="LOCAL-00043" />
-      <option name="project" value="LOCAL" />
-      <updated>1671819985088</updated>
-    </task>
-    <task id="LOCAL-00044" summary="updated exception handling">
-      <created>1671819992567</created>
-      <option name="number" value="00044" />
-      <option name="presentableId" value="LOCAL-00044" />
-      <option name="project" value="LOCAL" />
-      <updated>1671819992567</updated>
     </task>
     <task id="LOCAL-00045" summary="updated searchbygenre method">
       <created>1671820205758</created>
@@ -457,7 +443,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673907381217</updated>
     </task>
-    <option name="localTasksCounter" value="92" />
+    <task id="LOCAL-00092" summary="removed initalizable interface from homecontroller">
+      <created>1673913044425</created>
+      <option name="number" value="00092" />
+      <option name="presentableId" value="LOCAL-00092" />
+      <option name="project" value="LOCAL" />
+      <updated>1673913044425</updated>
+    </task>
+    <task id="LOCAL-00093" summary="removed initalizable interface from homecontroller">
+      <created>1673913059995</created>
+      <option name="number" value="00093" />
+      <option name="presentableId" value="LOCAL-00093" />
+      <option name="project" value="LOCAL" />
+      <updated>1673913059995</updated>
+    </task>
+    <option name="localTasksCounter" value="94" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -472,7 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added searchbyusername" />
     <MESSAGE value="implemented searchbyusername" />
     <MESSAGE value="login.css updated" />
     <MESSAGE value="ControllerHelper added" />
@@ -497,6 +496,7 @@
     <MESSAGE value="added table and menu in movies" />
     <MESSAGE value="fixed bug movies.fxml" />
     <MESSAGE value="added buy movie button" />
-    <option name="LAST_COMMIT_MESSAGE" value="added buy movie button" />
+    <MESSAGE value="removed initalizable interface from homecontroller" />
+    <option name="LAST_COMMIT_MESSAGE" value="removed initalizable interface from homecontroller" />
   </component>
 </project>

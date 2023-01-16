@@ -26,11 +26,11 @@ public class HomeController{
 
     public void showMovies(ActionEvent actionEvent) throws IOException {
         Stage stage1=(Stage) menu.getScene().getWindow();
-        FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/register.fxml"));
+        FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/movies.fxml"));
         Parent root = fxmlloader.load();
-        stage1.setTitle("Movie");
+        stage1.setTitle("Movies");
         //  stage.getIcons().add(new Image("/src/main/resources/img/download"));
-        stage1.setScene(new Scene(root,500,500));
+        stage1.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
         stage1.show();
     }
 
@@ -38,6 +38,7 @@ public class HomeController{
     }
 
     public void showHome(ActionEvent actionEvent) {
+
     }
 
     public void showLogin(ActionEvent actionEvent) throws IOException {
