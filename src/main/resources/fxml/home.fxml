@@ -79,9 +79,9 @@
                   <Insets bottom="20.0" left="40.0" right="20.0" top="20.0" />
                </VBox.margin>
             </ImageView>
-            <Label alignment="CENTER" prefHeight="70.0" prefWidth="261.0" style="-fx-background-color: #a43b3b;" text="WELCOME !">
+            <Label fx:id="labelWelcome" alignment="CENTER" prefHeight="70.0" prefWidth="596.0" text="Welcome, ">
                <VBox.margin>
-                  <Insets bottom="20.0" left="148.0" top="20.0" />
+                  <Insets bottom="20.0" left="20.0" top="20.0" />
                </VBox.margin>
                <font>
                   <Font size="48.0" />
