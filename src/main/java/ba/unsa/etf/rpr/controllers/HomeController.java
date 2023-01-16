@@ -32,4 +32,15 @@ public class HomeController {
 
     public void showHome(ActionEvent actionEvent) {
     }
+
+    public void showLogin(ActionEvent actionEvent) throws IOException {
+        Stage stage = (Stage) menu.getScene().getWindow();
+        Stage stage1 = new Stage();
+        FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/login.fxml"));
+        Parent root = fxmlloader.load();
+        stage.setTitle("Movie");
+        stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+        stage.close();
+        stage.show();
+    }
 }
