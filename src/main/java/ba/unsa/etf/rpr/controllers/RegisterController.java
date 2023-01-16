@@ -27,7 +27,7 @@ public class RegisterController {
 
     }
 
-    public void buttonRegister(ActionEvent actionEvent) {
+    public void buttonRegister(ActionEvent actionEvent) throws IOException {
         if(buttonRegister.getText().trim().isEmpty() || fieldName.getText().trim().isEmpty() || fieldSurname.getText().trim().isEmpty() ||
                 fieldMail.getText().trim().isEmpty() || fieldUsername.getText().trim().isEmpty() || fieldPassword.getText().trim().isEmpty()) {
             ControllerHelper.showAlert("Error", "Text field blank", "Text fields cannot be blank!");
@@ -41,6 +41,15 @@ public class RegisterController {
         else{
             DaoFactory.customerDao().add(new Customer(fieldName.getText().trim(),fieldSurname.getText().trim(),fieldMail.getText().trim(),fieldUsername.getText().trim()
                     ,fieldPassword.getText().trim()));
+            Stage stage=(Stage) fieldUsername.getScene().getWindow();
+            stage.close();
+            Stage stage1 = new Stage();
+            FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
+            Parent root = fxmlloader.load();
+            stage1.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+            HomeController homecontroller = fxmlloader.getController();
+            homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+fieldUsername.getText() + "!");
+            stage1.show();
         }
     }
 
