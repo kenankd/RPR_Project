@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="added more to home screen">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MoviesController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/movies.fxml" afterDir="false" />
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="added controller for movies.fxml">
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MainFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MainFX.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,20 +112,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670772332253</updated>
-    </task>
-    <task id="LOCAL-00036" summary="updated MovieDaoSQLImplementation">
-      <created>1671817984549</created>
-      <option name="number" value="00036" />
-      <option name="presentableId" value="LOCAL-00036" />
-      <option name="project" value="LOCAL" />
-      <updated>1671817984549</updated>
-    </task>
-    <task id="LOCAL-00037" summary="updated PurchaseDao">
-      <created>1671819645450</created>
-      <option name="number" value="00037" />
-      <option name="presentableId" value="LOCAL-00037" />
-      <option name="project" value="LOCAL" />
-      <updated>1671819645450</updated>
     </task>
     <task id="LOCAL-00038" summary="updated expection handling in MovieDaoSQLImplementation">
       <created>1671819886295</created>
@@ -458,7 +442,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673900247952</updated>
     </task>
-    <option name="localTasksCounter" value="85" />
+    <task id="LOCAL-00085" summary="added movies.fxml">
+      <created>1673900376590</created>
+      <option name="number" value="00085" />
+      <option name="presentableId" value="LOCAL-00085" />
+      <option name="project" value="LOCAL" />
+      <updated>1673900376590</updated>
+    </task>
+    <task id="LOCAL-00086" summary="added controller for movies.fxml">
+      <created>1673900385077</created>
+      <option name="number" value="00086" />
+      <option name="presentableId" value="LOCAL-00086" />
+      <option name="project" value="LOCAL" />
+      <updated>1673900385077</updated>
+    </task>
+    <option name="localTasksCounter" value="87" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -473,8 +471,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="logincontroller added" />
-    <MESSAGE value="loginfxml updated" />
     <MESSAGE value="added dummy logincontroller" />
     <MESSAGE value="Revert &quot;added dummy logincontroller&quot;&#10;&#10;This reverts commit 6075f810" />
     <MESSAGE value="added register.fxml" />
@@ -498,6 +494,8 @@
     <MESSAGE value="added home option to menu button" />
     <MESSAGE value="first version of home screen" />
     <MESSAGE value="added more to home screen" />
-    <option name="LAST_COMMIT_MESSAGE" value="added more to home screen" />
+    <MESSAGE value="added movies.fxml" />
+    <MESSAGE value="added controller for movies.fxml" />
+    <option name="LAST_COMMIT_MESSAGE" value="added controller for movies.fxml" />
   </component>
 </project>
