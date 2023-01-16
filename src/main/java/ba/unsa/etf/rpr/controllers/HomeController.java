@@ -17,7 +17,7 @@ import java.util.ResourceBundle;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
-public class HomeController implements Initializable {
+public class HomeController{
     public MenuItem buttonMovies;
     public MenuItem buttonMyMovies;
     public MenuButton menu;
@@ -51,10 +51,7 @@ public class HomeController implements Initializable {
         stage.show();
     }
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
 
-    }
     public  void setInformation(String username){
         labelWelcome.setText("Welcome, " + username + "!");
     }
