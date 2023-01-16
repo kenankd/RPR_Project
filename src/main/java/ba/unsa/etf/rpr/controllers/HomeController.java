@@ -51,8 +51,4 @@ public class HomeController{
         stage.show();
     }
 
-
-    public  void setInformation(String username){
-        labelWelcome.setText("Welcome, " + username + "!");
-    }
 }
