@@ -44,12 +44,12 @@
             </VBox>
             <TableView prefHeight="462.0" prefWidth="537.0">
               <columns>
-                <TableColumn prefWidth="96.0" text="Title" />
-                <TableColumn prefWidth="119.0" text="Main Actor" />
-                  <TableColumn minWidth="2.0" prefWidth="89.0" text="Genre" />
-                  <TableColumn prefWidth="108.0" text="Release Date" />
-                  <TableColumn prefWidth="78.0" text="Length" />
-                  <TableColumn minWidth="0.0" prefWidth="83.0" text="Price" />
+                <TableColumn fx:id="column_title" prefWidth="96.0" text="Title" />
+                <TableColumn fx:id="column_mainactor" prefWidth="119.0" text="Main Actor" />
+                  <TableColumn fx:id="column_genre" minWidth="2.0" prefWidth="89.0" text="Genre" />
+                  <TableColumn fx:id="column_date" prefWidth="108.0" text="Release Date" />
+                  <TableColumn fx:id="column_length" prefWidth="78.0" text="Length" />
+                  <TableColumn fx:id="column_price" minWidth="0.0" prefWidth="83.0" text="Price" />
               </columns>
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" top="5.0" />
