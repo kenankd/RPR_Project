@@ -1,6 +1,5 @@
 package ba.unsa.etf.rpr.dao;
 
-import ba.unsa.etf.rpr.domain.Genre;
 import ba.unsa.etf.rpr.domain.Movie;
 import ba.unsa.etf.rpr.exceptions.MovieException;
 
@@ -51,6 +50,6 @@ public interface MovieDao extends Dao<Movie> {
      * @param genre price of movie
      * @return list of movies
      */
-    List<Movie> searchByGenre(Genre genre)throws MovieException;
+
 
 }

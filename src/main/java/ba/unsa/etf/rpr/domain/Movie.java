@@ -13,8 +13,8 @@ public class Movie implements Idable{
     private String main_actor;
     private double price;
     private int length;
-    private Genre genre;
-    public Movie(int movie_id, String title, Date release_date, String main_actor, double price, int length, Genre genre_id) {
+    private String genre;
+    public Movie(int movie_id, String title, Date release_date, String main_actor, double price, int length, String genre_id) {
         this.id = movie_id;
         this.title = title;
         this.release_date = release_date;
@@ -31,7 +31,7 @@ public class Movie implements Idable{
         this.main_actor = "";
         this.price = 0;
         this.length = 0;
-        this.genre = new Genre();
+        this.genre = "";
     }
 
 
@@ -75,11 +75,11 @@ public class Movie implements Idable{
         this.length = length;
     }
 
-    public Genre getGenre() {
+    public String getGenre() {
         return genre;
     }
 
-    public void setGenre(Genre genre_id) {
+    public void setGenre(String genre_id) {
         this.genre = genre_id;
     }
 

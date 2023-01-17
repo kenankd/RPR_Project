@@ -1,6 +1,5 @@
 package ba.unsa.etf.rpr.dao;
 
-import ba.unsa.etf.rpr.domain.Genre;
 import ba.unsa.etf.rpr.domain.Movie;
 import ba.unsa.etf.rpr.exceptions.MovieException;
 
@@ -24,7 +23,7 @@ public class MovieDaoSQLImplementation extends AbstractDao<Movie> implements Mov
             c.setPrice(rs.getDouble("double"));
             c.setMain_actor(rs.getString("main_actor"));
             c.setRelease_date(rs.getDate("release_date"));
-            //   c.setGenre((Genre) rs.getObject("genre"));
+            c.setGenre(rs.getString("genre"));
             return c;
         } catch (SQLException e) {
             throw new MovieException(e.getMessage(), e);
@@ -40,7 +39,6 @@ public class MovieDaoSQLImplementation extends AbstractDao<Movie> implements Mov
         map.put("price", object.getPrice());
         map.put("length", object.getLength());
         map.put("main_actor", object.getMain_actor());
-        map.put("genre", object.getGenre());
         return map;
     }
 
