@@ -4,7 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="changed mainfx">
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="added fxid's for table columns">
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MoviesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/movies.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/movies.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -46,6 +47,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "OverrideImplement.generate.javadoc": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
@@ -112,20 +114,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670772332253</updated>
-    </task>
-    <task id="LOCAL-00048" summary="updated expection handling in PurchaseDaoSQLImplementation">
-      <created>1671821003599</created>
-      <option name="number" value="00048" />
-      <option name="presentableId" value="LOCAL-00048" />
-      <option name="project" value="LOCAL" />
-      <updated>1671821003599</updated>
-    </task>
-    <task id="LOCAL-00049" summary="updated expection handling in PurchaseDaoSQLImplementation">
-      <created>1671821011152</created>
-      <option name="number" value="00049" />
-      <option name="presentableId" value="LOCAL-00049" />
-      <option name="project" value="LOCAL" />
-      <updated>1671821011152</updated>
     </task>
     <task id="LOCAL-00050" summary="updated expection handling in PurchaseDaoSQLImplementation">
       <created>1671821021157</created>
@@ -456,7 +444,21 @@
       <option name="project" value="LOCAL" />
       <updated>1673913915855</updated>
     </task>
-    <option name="localTasksCounter" value="97" />
+    <task id="LOCAL-00097" summary="added fxid's for table columns">
+      <created>1673914556730</created>
+      <option name="number" value="00097" />
+      <option name="presentableId" value="LOCAL-00097" />
+      <option name="project" value="LOCAL" />
+      <updated>1673914556730</updated>
+    </task>
+    <task id="LOCAL-00098" summary="added fxid's for table columns">
+      <created>1673914685952</created>
+      <option name="number" value="00098" />
+      <option name="presentableId" value="LOCAL-00098" />
+      <option name="project" value="LOCAL" />
+      <updated>1673914685952</updated>
+    </task>
+    <option name="localTasksCounter" value="99" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -471,7 +473,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Fixed username and password order" />
     <MESSAGE value="implemented method to showAlert in ControllerHelper" />
     <MESSAGE value="updated CustomerDao" />
     <MESSAGE value="updated CustomerDaoSQLImplementation" />
@@ -496,6 +497,7 @@
     <MESSAGE value="showmovies method implemented" />
     <MESSAGE value="added from registration to home screen" />
     <MESSAGE value="changed mainfx" />
-    <option name="LAST_COMMIT_MESSAGE" value="changed mainfx" />
+    <MESSAGE value="added fxid's for table columns" />
+    <option name="LAST_COMMIT_MESSAGE" value="added fxid's for table columns" />
   </component>
 </project>
