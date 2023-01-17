@@ -12,11 +12,10 @@ public class MainFX extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root= FXMLLoader.load(getClass().getResource("/resources/login.fxml"));
+        Parent root= FXMLLoader.load(getClass().getResource("/fxml/login.fxml"));
         stage.setTitle("Hello, World!");
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
-        stage.getScene().getStylesheets().add
-                (getClass().getResource("login.css").toExternalForm());
+
         stage.show();
     }
 
