@@ -42,7 +42,7 @@
                   </TextField>
                </children>
             </VBox>
-            <TableView prefHeight="462.0" prefWidth="537.0">
+            <TableView fx:id="customer_table" prefHeight="462.0" prefWidth="537.0">
               <columns>
                 <TableColumn fx:id="column_title" prefWidth="96.0" text="Title" />
                 <TableColumn fx:id="column_mainactor" prefWidth="119.0" text="Main Actor" />
