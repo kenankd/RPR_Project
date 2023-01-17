@@ -20,7 +20,7 @@ public class MovieDaoSQLImplementation extends AbstractDao<Movie> implements Mov
             c.setId(rs.getInt("id"));
             c.setTitle(rs.getString("title"));
             c.setLength(rs.getInt("length"));
-            c.setPrice(rs.getDouble("double"));
+            c.setPrice(rs.getDouble("price"));
             c.setMain_actor(rs.getString("main_actor"));
             c.setRelease_date(rs.getDate("release_date"));
             c.setGenre(rs.getString("genre"));
@@ -39,6 +39,7 @@ public class MovieDaoSQLImplementation extends AbstractDao<Movie> implements Mov
         map.put("price", object.getPrice());
         map.put("length", object.getLength());
         map.put("main_actor", object.getMain_actor());
+        map.put("genre",object.getGenre());
         return map;
     }
 
@@ -145,21 +146,6 @@ public class MovieDaoSQLImplementation extends AbstractDao<Movie> implements Mov
         return list;
     }
 
-    @Override
-    public List<Movie> searchByGenre(Genre genre) throws MovieException {
-        List<Movie> list = new ArrayList<>();
-        try {
-            PreparedStatement s = getConnection().prepareStatement("select * from Movie where genre = ?");
-            s.setInt(1, genre.getId());
-            ResultSet rs = s.executeQuery();
-            while (rs.next()) {
-                list.add(row2object(rs));
-            }
-            rs.close();
-        } catch (SQLException e) {
-            throw new MovieException(e.getMessage(), e);
-        }
-        return list;
-    }
+
 }
 

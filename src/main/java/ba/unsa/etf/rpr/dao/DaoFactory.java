@@ -5,7 +5,7 @@ import ba.unsa.etf.rpr.domain.Customer;
 public class DaoFactory {
     private static final CustomerDao customerDao=new CustomerDaoSQLImplementation();
     private static final MovieDao movieDao=new MovieDaoSQLImplementation();
-    private static final GenreDao genreDao=new GenreDaoSQLImplementation();
+
     private static final PurchaseDao purchaseDao=new PurchaseDaoSQLImplementation();
     private DaoFactory(){}
     public static CustomerDao customerDao(){
@@ -17,7 +17,5 @@ public class DaoFactory {
     public static PurchaseDao purchaseDao(){
         return purchaseDao;
     }
-    public static GenreDao genreDao(){
-        return genreDao;
-    }
+
 }
