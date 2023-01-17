@@ -12,14 +12,13 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 
-
-<BorderPane fx:controller="ba.unsa.etf.rpr.controllers.MoviesController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:controller="ba.unsa.etf.rpr.controllers.MoviesController" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="535.0" prefWidth="740.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" >
    <left>
       <VBox prefHeight="337.0" prefWidth="80.0" BorderPane.alignment="CENTER">
          <children>
             <MenuButton mnemonicParsing="false" text="Menu">
               <items>
-                <MenuItem mnemonicParsing="false" text="Home" />
+                <MenuItem mnemonicParsing="false" onAction="#showHome" text="Home" />
                 <MenuItem mnemonicParsing="false" text="Movies" />
                   <MenuItem mnemonicParsing="false" text="My movies" />
               </items>

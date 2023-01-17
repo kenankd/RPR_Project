@@ -31,7 +31,7 @@ public class HomeController{
         stage1.setTitle("Movies");
         //  stage.getIcons().add(new Image("/src/main/resources/img/download"));
         stage1.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
-        stage1.show();
+
     }
 
     public void showMyMovies(ActionEvent actionEvent) {

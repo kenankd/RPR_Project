@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="refactoring started, table genre deleted">
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="refactoring done, genre table and class removed">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/DaoFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/DaoFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/MovieDaoSQLImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/MovieDaoSQLImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MoviesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/movies.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/movies.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,13 +115,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670772332253</updated>
-    </task>
-    <task id="LOCAL-00052" summary="updated GenreDaoSQLImplementation">
-      <created>1671821355784</created>
-      <option name="number" value="00052" />
-      <option name="presentableId" value="LOCAL-00052" />
-      <option name="project" value="LOCAL" />
-      <updated>1671821355784</updated>
     </task>
     <task id="LOCAL-00053" summary="updated properties">
       <created>1671824175682</created>
@@ -459,7 +452,14 @@
       <option name="project" value="LOCAL" />
       <updated>1673916478232</updated>
     </task>
-    <option name="localTasksCounter" value="101" />
+    <task id="LOCAL-00101" summary="refactoring done, genre table and class removed">
+      <created>1673917583680</created>
+      <option name="number" value="00101" />
+      <option name="presentableId" value="LOCAL-00101" />
+      <option name="project" value="LOCAL" />
+      <updated>1673917583680</updated>
+    </task>
+    <option name="localTasksCounter" value="102" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -474,7 +474,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="updated CustomerDaoSQLImplementation" />
     <MESSAGE value="dummy login fxml finished" />
     <MESSAGE value="dummy register fxml finished" />
     <MESSAGE value="dummy registercontroller  finished" />
@@ -499,7 +498,8 @@
     <MESSAGE value="added fxid's for table columns" />
     <MESSAGE value="added fields for moviescontroller" />
     <MESSAGE value="refactoring started, table genre deleted" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring started, table genre deleted" />
+    <MESSAGE value="refactoring done, genre table and class removed" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactoring done, genre table and class removed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
