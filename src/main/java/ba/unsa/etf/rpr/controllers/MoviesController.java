@@ -4,16 +4,23 @@ import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Movie;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
+
+import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
 public class MoviesController implements Initializable {
     @FXML
@@ -51,7 +58,15 @@ public class MoviesController implements Initializable {
         column_price.setCellValueFactory(new PropertyValueFactory<>("price"));
         customer_table.setItems(movieList);
 
+    }
+    public void showHome(ActionEvent actionEvent) throws Exception{
+        Stage stage=(Stage) customer_table.getScene().getWindow();
+        FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
+        Parent root = fxmlloader.load();
+        stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
 
+
+        //stage.show();
 
     }
 
