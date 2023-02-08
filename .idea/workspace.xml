@@ -4,10 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="refactoring done, genre table and class removed">
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="added searchtextfield to controller">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MoviesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/movies.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/movies.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +57,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "editor.preferences.import"
+    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -115,27 +115,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670772332253</updated>
-    </task>
-    <task id="LOCAL-00053" summary="updated properties">
-      <created>1671824175682</created>
-      <option name="number" value="00053" />
-      <option name="presentableId" value="LOCAL-00053" />
-      <option name="project" value="LOCAL" />
-      <updated>1671824175682</updated>
-    </task>
-    <task id="LOCAL-00054" summary="added test">
-      <created>1671824204326</created>
-      <option name="number" value="00054" />
-      <option name="presentableId" value="LOCAL-00054" />
-      <option name="project" value="LOCAL" />
-      <updated>1671824204326</updated>
-    </task>
-    <task id="LOCAL-00055" summary="fxml started">
-      <created>1671997388496</created>
-      <option name="number" value="00055" />
-      <option name="presentableId" value="LOCAL-00055" />
-      <option name="project" value="LOCAL" />
-      <updated>1671997388497</updated>
     </task>
     <task id="LOCAL-00056" summary="loginfxml">
       <created>1672016733064</created>
@@ -459,7 +438,28 @@
       <option name="project" value="LOCAL" />
       <updated>1673917583680</updated>
     </task>
-    <option name="localTasksCounter" value="102" />
+    <task id="LOCAL-00102" summary="updated going from home to movies">
+      <created>1673918272767</created>
+      <option name="number" value="00102" />
+      <option name="presentableId" value="LOCAL-00102" />
+      <option name="project" value="LOCAL" />
+      <updated>1673918272767</updated>
+    </task>
+    <task id="LOCAL-00103" summary="updated going from movies to home">
+      <created>1673918288040</created>
+      <option name="number" value="00103" />
+      <option name="presentableId" value="LOCAL-00103" />
+      <option name="project" value="LOCAL" />
+      <updated>1673918288040</updated>
+    </task>
+    <task id="LOCAL-00104" summary="added searchtextfield to controller">
+      <created>1675873019445</created>
+      <option name="number" value="00104" />
+      <option name="presentableId" value="LOCAL-00104" />
+      <option name="project" value="LOCAL" />
+      <updated>1675873019445</updated>
+    </task>
+    <option name="localTasksCounter" value="105" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -474,9 +474,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dummy login fxml finished" />
-    <MESSAGE value="dummy register fxml finished" />
-    <MESSAGE value="dummy registercontroller  finished" />
     <MESSAGE value="dummy LoginController finished" />
     <MESSAGE value="added home.fxml" />
     <MESSAGE value="added controller for home.fxml" />
@@ -499,7 +496,10 @@
     <MESSAGE value="added fields for moviescontroller" />
     <MESSAGE value="refactoring started, table genre deleted" />
     <MESSAGE value="refactoring done, genre table and class removed" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactoring done, genre table and class removed" />
+    <MESSAGE value="updated going from home to movies" />
+    <MESSAGE value="updated going from movies to home" />
+    <MESSAGE value="added searchtextfield to controller" />
+    <option name="LAST_COMMIT_MESSAGE" value="added searchtextfield to controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -524,5 +524,10 @@
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Projekat$MainFX.ic" NAME="MainFX Coverage Results" MODIFIED="1673980511925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>ba.unsa.etf.rpr.*</FILTER>
+    </SUITE>
   </component>
 </project>

@@ -5,6 +5,7 @@ import ba.unsa.etf.rpr.domain.Movie;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
+import javafx.collections.transformation.SortedList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -62,8 +63,18 @@ public class MoviesController implements Initializable {
         customer_table.setItems(movieList);
 
         FilteredList<Movie> filteredData = new FilteredList<>(movieList);
+        searchTextField.textProperty().addListener((observable,oldValue,newValue) ->{
+            filteredData.setPredicate(Movie -> {
 
-
+                if(newValue==null || newValue.isEmpty()) return true;
+                String lowerCaseFilter=newValue.toLowerCase();
+                if(Movie.getTitle().toLowerCase().indexOf(lowerCaseFilter)!=-1) return true;
+                else return false;
+            });
+        });
+        SortedList<Movie> sortedData = new SortedList<>(filteredData);
+        sortedData.comparatorProperty().bind(customer_table.comparatorProperty());
+        customer_table.setItems(sortedData);
     }
     public void showHome(ActionEvent actionEvent) throws Exception{
         Stage stage=(Stage) customer_table.getScene().getWindow();
