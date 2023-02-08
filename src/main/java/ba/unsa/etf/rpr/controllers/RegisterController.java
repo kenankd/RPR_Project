@@ -37,7 +37,7 @@ public class RegisterController {
         else if(fieldPassword.getText().trim().length()<8 || fieldPassword.getText().trim().length()>20)
             ControllerHelper.showAlert("Error", "Password length invalid", "Password needs to be between 8 and 20 characters long!");
         else if(DaoFactory.customerDao().searchByUsername(fieldUsername.getText().trim()) != null)
-            ControllerHelper.showAlert("Error", "Username taken", "Someone has already registrated with entered username");
+            ControllerHelper.showAlert("Error", "Username taken", "Someone has already registered with entered username");
         else{
             DaoFactory.customerDao().add(new Customer(fieldName.getText().trim(),fieldSurname.getText().trim(),fieldMail.getText().trim(),fieldUsername.getText().trim()
                     ,fieldPassword.getText().trim()));
