@@ -4,6 +4,7 @@ import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Movie;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,6 +13,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
@@ -35,6 +37,7 @@ public class MoviesController implements Initializable {
     public TableColumn column_length;
     @FXML
     public TableColumn column_price;
+    public TextField searchTextField;
     @FXML
     private TableView customer_table;
     @FXML
@@ -58,6 +61,9 @@ public class MoviesController implements Initializable {
         column_price.setCellValueFactory(new PropertyValueFactory<>("price"));
         customer_table.setItems(movieList);
 
+        FilteredList<Movie> filteredData = new FilteredList<>(movieList);
+
+
     }
     public void showHome(ActionEvent actionEvent) throws Exception{
         Stage stage=(Stage) customer_table.getScene().getWindow();
@@ -66,7 +72,7 @@ public class MoviesController implements Initializable {
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
 
 
-        //stage.show();
+        //stage.show();   
 
     }
 
