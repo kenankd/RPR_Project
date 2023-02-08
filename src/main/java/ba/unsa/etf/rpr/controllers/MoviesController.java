@@ -12,6 +12,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
@@ -39,6 +40,7 @@ public class MoviesController implements Initializable {
     @FXML
     public TableColumn column_price;
     public TextField searchTextField;
+    public Button buttonBuy;
     @FXML
     private TableView customer_table;
     @FXML
@@ -65,7 +67,6 @@ public class MoviesController implements Initializable {
         FilteredList<Movie> filteredData = new FilteredList<>(movieList);
         searchTextField.textProperty().addListener((observable,oldValue,newValue) ->{
             filteredData.setPredicate(Movie -> {
-
                 if(newValue==null || newValue.isEmpty()) return true;
                 String lowerCaseFilter=newValue.toLowerCase();
                 if(Movie.getTitle().toLowerCase().indexOf(lowerCaseFilter)!=-1) return true;
@@ -87,4 +88,8 @@ public class MoviesController implements Initializable {
 
     }
 
+    public void actionBuy(ActionEvent actionEvent) {
+        Movie movie = (Movie) customer_table.getSelectionModel().getSelectedItem();
+
+    }
 }
