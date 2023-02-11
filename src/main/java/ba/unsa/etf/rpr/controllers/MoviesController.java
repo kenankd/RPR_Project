@@ -85,7 +85,11 @@ public class MoviesController implements Initializable {
         Stage stage=(Stage) customer_table.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
         Parent root = fxmlloader.load();
+        HomeController homecontroller = fxmlloader.getController();
+        homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getS() + "!");
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+
+
 
 
         //stage.show();   
