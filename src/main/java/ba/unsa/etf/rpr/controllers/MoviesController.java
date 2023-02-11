@@ -21,6 +21,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDate;
 import java.util.ArrayList;
@@ -88,12 +89,6 @@ public class MoviesController implements Initializable {
         HomeController homecontroller = fxmlloader.getController();
         homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getS() + "!");
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
-
-
-
-
-        //stage.show();   
-
     }
 
     public void actionBuy(ActionEvent actionEvent) {
@@ -104,5 +99,13 @@ public class MoviesController implements Initializable {
         java.sql.Date date=new java.sql.Date(System.currentTimeMillis());
         System.out.println(customer.getName() + customer.getId() + movie.getTitle() + movie.getId());
         DaoFactory.purchaseDao().add(new Purchase(movie,customer,date));
+    }
+
+    public void showMyMovies(ActionEvent actionEvent) throws IOException {
+        Stage stage=(Stage) customer_table.getScene().getWindow();
+        FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/mymovies.fxml"));
+        Parent root = fxmlloader.load();
+        stage.setTitle("My Movies");
+        stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
     }
 }
