@@ -16,14 +16,14 @@
    <left>
       <VBox prefHeight="337.0" prefWidth="80.0" BorderPane.alignment="CENTER">
          <children>
-            <MenuButton mnemonicParsing="false" text="Menu">
+            <MenuButton mnemonicParsing="false" prefHeight="39.0" prefWidth="63.0" text="Menu">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#showHome" text="Home" />
                 <MenuItem mnemonicParsing="false" text="Movies" />
-                  <MenuItem mnemonicParsing="false" onAction = "#showMyMovies" text="My movies" />
+                  <MenuItem mnemonicParsing="false" onAction="#showMyMovies" text="My movies" />
               </items>
                <VBox.margin>
-                  <Insets bottom="5.0" left="8.0" right="5.0" top="5.0" />
+                  <Insets bottom="5.0" left="8.0" right="3.0" top="5.0" />
                </VBox.margin>
             </MenuButton>
          </children>
