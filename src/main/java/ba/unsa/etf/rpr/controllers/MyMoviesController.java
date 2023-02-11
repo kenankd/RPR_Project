@@ -17,12 +17,17 @@ public class MyMoviesController {
         Stage stage=(Stage) myMoviesTable.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/"+fxml+".fxml"));
         Parent root = fxmlloader.load();
-        stage.setTitle("Home");
+        stage.setTitle(fxml);
+        if(fxml.equals("home")){
+            HomeController homecontroller = fxmlloader.getController();
+            homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getS() + "!");
+        }
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
     }
 
     public void showHome(ActionEvent actionEvent) throws IOException {
         switchScene("home");
+
     }
 
     public void showMovies(ActionEvent actionEvent) throws IOException {
