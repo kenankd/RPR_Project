@@ -20,7 +20,7 @@
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#showHome" text="Home" />
                 <MenuItem mnemonicParsing="false" text="Movies" />
-                  <MenuItem mnemonicParsing="false" text="My movies" />
+                  <MenuItem mnemonicParsing="false" onAction = "#showMyMovies" text="My movies" />
               </items>
                <VBox.margin>
                   <Insets bottom="5.0" left="8.0" right="5.0" top="5.0" />
