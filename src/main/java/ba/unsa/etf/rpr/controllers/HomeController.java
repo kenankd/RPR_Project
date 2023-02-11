@@ -31,10 +31,14 @@ public class HomeController{
         stage1.setTitle("Movies");
         //  stage.getIcons().add(new Image("/src/main/resources/img/download"));
         stage1.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
-
     }
 
-    public void showMyMovies(ActionEvent actionEvent) {
+    public void showMyMovies(ActionEvent actionEvent) throws IOException {
+        Stage stage1=(Stage) menu.getScene().getWindow();
+        FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/mymovies.fxml"));
+        Parent root = fxmlloader.load();
+        stage1.setTitle("My Movies");
+        stage1.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
     }
 
     public void showHome(ActionEvent actionEvent) {
