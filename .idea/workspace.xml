@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="added searchtextfield to controller">
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="added actionBuy method">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MoviesController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Purchase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Purchase.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,34 +116,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670772332253</updated>
-    </task>
-    <task id="LOCAL-00056" summary="loginfxml">
-      <created>1672016733064</created>
-      <option name="number" value="00056" />
-      <option name="presentableId" value="LOCAL-00056" />
-      <option name="project" value="LOCAL" />
-      <updated>1672016733064</updated>
-    </task>
-    <task id="LOCAL-00057" summary="login.css added">
-      <created>1672017213928</created>
-      <option name="number" value="00057" />
-      <option name="presentableId" value="LOCAL-00057" />
-      <option name="project" value="LOCAL" />
-      <updated>1672017213928</updated>
-    </task>
-    <task id="LOCAL-00058" summary="logincontroller added">
-      <created>1672017224428</created>
-      <option name="number" value="00058" />
-      <option name="presentableId" value="LOCAL-00058" />
-      <option name="project" value="LOCAL" />
-      <updated>1672017224428</updated>
-    </task>
-    <task id="LOCAL-00059" summary="loginfxml updated">
-      <created>1672017234359</created>
-      <option name="number" value="00059" />
-      <option name="presentableId" value="LOCAL-00059" />
-      <option name="project" value="LOCAL" />
-      <updated>1672017234359</updated>
     </task>
     <task id="LOCAL-00060" summary="loginfxml updated">
       <created>1672018875567</created>
@@ -459,7 +432,35 @@
       <option name="project" value="LOCAL" />
       <updated>1675873019445</updated>
     </task>
-    <option name="localTasksCounter" value="105" />
+    <task id="LOCAL-00105" summary="implemented search  by title for movies">
+      <created>1675879753949</created>
+      <option name="number" value="00105" />
+      <option name="presentableId" value="LOCAL-00105" />
+      <option name="project" value="LOCAL" />
+      <updated>1675879753949</updated>
+    </task>
+    <task id="LOCAL-00106" summary="text mistake fixed">
+      <created>1675880040901</created>
+      <option name="number" value="00106" />
+      <option name="presentableId" value="LOCAL-00106" />
+      <option name="project" value="LOCAL" />
+      <updated>1675880040901</updated>
+    </task>
+    <task id="LOCAL-00107" summary="added fxid and onaction for buy button">
+      <created>1675880796733</created>
+      <option name="number" value="00107" />
+      <option name="presentableId" value="LOCAL-00107" />
+      <option name="project" value="LOCAL" />
+      <updated>1675880796733</updated>
+    </task>
+    <task id="LOCAL-00108" summary="added actionBuy method">
+      <created>1675880811662</created>
+      <option name="number" value="00108" />
+      <option name="presentableId" value="LOCAL-00108" />
+      <option name="project" value="LOCAL" />
+      <updated>1675880811663</updated>
+    </task>
+    <option name="localTasksCounter" value="109" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -474,10 +475,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="dummy LoginController finished" />
-    <MESSAGE value="added home.fxml" />
-    <MESSAGE value="added controller for home.fxml" />
-    <MESSAGE value="started home" />
     <MESSAGE value="added menu to home screen" />
     <MESSAGE value="added home option to menu button" />
     <MESSAGE value="first version of home screen" />
@@ -499,7 +496,11 @@
     <MESSAGE value="updated going from home to movies" />
     <MESSAGE value="updated going from movies to home" />
     <MESSAGE value="added searchtextfield to controller" />
-    <option name="LAST_COMMIT_MESSAGE" value="added searchtextfield to controller" />
+    <MESSAGE value="implemented search  by title for movies" />
+    <MESSAGE value="text mistake fixed" />
+    <MESSAGE value="added fxid and onaction for buy button" />
+    <MESSAGE value="added actionBuy method" />
+    <option name="LAST_COMMIT_MESSAGE" value="added actionBuy method" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

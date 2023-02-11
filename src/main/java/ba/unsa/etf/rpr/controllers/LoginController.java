@@ -20,6 +20,8 @@ public class LoginController {
     public TextField fieldUsername;
     public PasswordField fieldPassword;
 
+    public static String s ;
+
     public void buttonLogIn(ActionEvent actionevent) throws IOException {
 
         if (fieldUsername.getText().trim().isEmpty() || fieldPassword.getText().trim().isEmpty()) {
@@ -41,8 +43,11 @@ public class LoginController {
             HomeController homecontroller = fxmlloader.getController();
             homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+fieldUsername.getText() + "!");
             stage1.show();
-
+            s=fieldUsername.getText();
         }
+    }
+    public static String getS(){
+        return s;
     }
     public void registerButton(ActionEvent actionevent) throws IOException {
         Stage stage1=(Stage) fieldUsername.getScene().getWindow();

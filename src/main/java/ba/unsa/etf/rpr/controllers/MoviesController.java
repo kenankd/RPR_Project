@@ -1,7 +1,9 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.dao.DaoFactory;
+import ba.unsa.etf.rpr.domain.Customer;
 import ba.unsa.etf.rpr.domain.Movie;
+import ba.unsa.etf.rpr.domain.Purchase;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -20,7 +22,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
 import java.net.URL;
+import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -90,6 +94,11 @@ public class MoviesController implements Initializable {
 
     public void actionBuy(ActionEvent actionEvent) {
         Movie movie = (Movie) customer_table.getSelectionModel().getSelectedItem();
-
+        if(movie==null) return;
+        movie.setId(movie.getId()+1);
+        Customer customer = DaoFactory.customerDao().searchByUsername(LoginController.getS());
+        java.sql.Date date=new java.sql.Date(System.currentTimeMillis());
+        System.out.println(customer.getName() + customer.getId() + movie.getTitle() + movie.getId());
+        DaoFactory.purchaseDao().add(new Purchase(movie,customer,date));
     }
 }

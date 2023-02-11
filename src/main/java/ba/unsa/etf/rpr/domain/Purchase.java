@@ -11,18 +11,15 @@ public class Purchase implements Idable{
     private Movie movie;
     private Customer customer;
     private Date date_of_rent;
-    public Purchase(int rent_id, Movie movie, Customer customer, Date date_of_rent) {
-        this.id= rent_id;
+
+    public Purchase( Movie movie, Customer customer, Date date_of_rent) {
         this.movie = movie;
         this.customer = customer;
         this.date_of_rent = date_of_rent;
     }
 
     public Purchase() {
-        id=0;
-        movie=new Movie();
-        customer=new Customer();
-        date_of_rent=new Date();
+
     }
 
     public Movie getMovie() {
