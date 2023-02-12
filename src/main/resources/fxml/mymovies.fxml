@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuButton?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.MyMoviesController">
    <left>
@@ -34,11 +35,14 @@
    <center>
       <VBox prefHeight="448.0" prefWidth="553.0" BorderPane.alignment="CENTER">
          <children>
-            <TextField prefHeight="25.0" prefWidth="522.0" promptText="Search by title...">
+            <Label prefHeight="27.0" prefWidth="235.0" text="My movies" textAlignment="CENTER" underline="true">
                <VBox.margin>
-                  <Insets right="25.0" top="13.0" />
+                  <Insets left="220.0" top="15.0" />
                </VBox.margin>
-            </TextField>
+               <font>
+                  <Font name="Broadway" size="18.0" />
+               </font>
+            </Label>
             <TableView fx:id="myMoviesTable" prefHeight="417.0" prefWidth="510.0">
               <columns>
                 <TableColumn fx:id="column_itle" prefWidth="92.0" text="Title" />
@@ -48,7 +52,7 @@
                   <TableColumn fx:id="column_date" prefWidth="138.0" text="Date of Purchase" />
               </columns>
                <VBox.margin>
-                  <Insets right="25.0" top="5.0" />
+                  <Insets right="25.0" top="10.0" />
                </VBox.margin>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
