@@ -41,11 +41,11 @@
             </TextField>
             <TableView fx:id="myMoviesTable" prefHeight="417.0" prefWidth="510.0">
               <columns>
-                <TableColumn fx:id="title" prefWidth="92.0" text="Title" />
-                <TableColumn fx:id="main_actor" prefWidth="111.0" text="Main Actor" />
-                  <TableColumn fx:id="genre" prefWidth="87.0" text="Genre" />
-                  <TableColumn fx:id="price" prefWidth="54.0" text="Price" />
-                  <TableColumn fx:id="date_purchase" prefWidth="138.0" text="Date of Purchase" />
+                <TableColumn fx:id="column_itle" prefWidth="92.0" text="Title" />
+                <TableColumn fx:id="column_main_actor" prefWidth="111.0" text="Main Actor" />
+                  <TableColumn fx:id="column_genre" prefWidth="87.0" text="Genre" />
+                  <TableColumn fx:id="column_price" prefWidth="54.0" text="Price" />
+                  <TableColumn fx:id="column_date" prefWidth="138.0" text="Date of Purchase" />
               </columns>
                <VBox.margin>
                   <Insets right="25.0" top="5.0" />
