@@ -38,7 +38,7 @@ public class LoginController {
             Stage stage1 = new Stage();
             FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
             Parent root = fxmlloader.load();
-            stage1.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+            stage1.setScene(new Scene(root,600,390));
             HomeController homecontroller = fxmlloader.getController();
             homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+fieldUsername.getText() + "!");
             stage1.show();
