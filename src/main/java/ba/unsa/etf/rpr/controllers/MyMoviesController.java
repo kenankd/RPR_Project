@@ -46,7 +46,9 @@ public class MyMoviesController implements Initializable {
         stage.setTitle(fxml);
         if(fxml.equals("home")){
             HomeController homecontroller = fxmlloader.getController();
+            if(LoginController.getUsername() != null)
             homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getUsername() + "!");
+            else homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+RegisterController.username + "!");
         }
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
     }

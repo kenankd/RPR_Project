@@ -89,7 +89,9 @@ public class MoviesController implements Initializable {
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
         Parent root = fxmlloader.load();
         HomeController homecontroller = fxmlloader.getController();
-        homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getUsername() + "!");
+        if(LoginController.getUsername() != null)
+            homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getUsername() + "!");
+        else homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+RegisterController.username + "!");
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
     }
 
