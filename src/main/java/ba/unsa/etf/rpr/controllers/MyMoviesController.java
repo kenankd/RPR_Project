@@ -1,6 +1,7 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.business.PurchaseTableViewModel;
+import ba.unsa.etf.rpr.business.PurchaseTableViewModelManager;
 import ba.unsa.etf.rpr.dao.DaoFactory;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -37,6 +38,7 @@ public class MyMoviesController implements Initializable {
     public TableColumn column_date;
     @FXML
     private ObservableList<PurchaseTableViewModel> movieList = FXCollections.observableArrayList();
+    private final PurchaseTableViewModelManager purchaseTableViewModelManager=new PurchaseTableViewModelManager();
     private void switchScene(String fxml) throws IOException {
         Stage stage=(Stage) myMoviesTable.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/"+fxml+".fxml"));
@@ -63,7 +65,7 @@ public class MyMoviesController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        List<PurchaseTableViewModel> list = DaoFactory.purchaseDao().getMyMovies(LoginController.getUsername());
+        List<PurchaseTableViewModel> list = purchaseTableViewModelManager.getMyMovies(LoginController.getUsername());
         for(int i=0;i<list.size();i++){
             movieList.add(new PurchaseTableViewModel(list.get(i).getTitle(),list.get(i).getMain_actor(),list.get(i).getGenre(),list.get(i).getPrice(),list.get(i).getPurchase_date()));
         }
