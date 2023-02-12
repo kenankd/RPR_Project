@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
+import ba.unsa.etf.rpr.controllers.PurchaseTableViewModel;
 import ba.unsa.etf.rpr.domain.Customer;
 import ba.unsa.etf.rpr.domain.Movie;
 import ba.unsa.etf.rpr.domain.Purchase;
@@ -27,6 +28,10 @@ public interface PurchaseDao extends Dao<Purchase> {
      * @return list of purchases
      */
     List<Purchase> getByDate(Date date) throws MovieException;
+    /**
+     *
+     */
+    List<PurchaseTableViewModel> getMyMovies(String username) throws MovieException;
 
 
 }
