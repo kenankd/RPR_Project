@@ -1,5 +1,8 @@
 package ba.unsa.etf.rpr.controllers;
 
+import ba.unsa.etf.rpr.business.CustomerManager;
+import ba.unsa.etf.rpr.business.MovieManager;
+import ba.unsa.etf.rpr.business.PurchaseManager;
 import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Customer;
 import ba.unsa.etf.rpr.domain.Movie;
@@ -47,6 +50,9 @@ public class MoviesController implements Initializable {
     private TableView customer_table;
     @FXML
     private ObservableList<Movie> movieList =FXCollections.observableArrayList();
+    private final MovieManager movieManager = new MovieManager();
+    private final PurchaseManager purchaseManager = new PurchaseManager();
+    private final CustomerManager customerManager = new CustomerManager();
 
     /**
      * @param url
@@ -90,8 +96,8 @@ public class MoviesController implements Initializable {
     public void actionBuy(ActionEvent actionEvent) {
         Movie movie = (Movie) customer_table.getSelectionModel().getSelectedItem();
         if(movie==null) return;
-        List<Purchase> purchaseList=DaoFactory.purchaseDao().getAll();
-        Customer customer = DaoFactory.customerDao().searchByUsername(LoginController.getUsername());
+        List<Purchase> purchaseList=purchaseManager.getAll();
+        Customer customer = customerManager.searchByUsername(LoginController.getUsername());
         for(int i=0;i< purchaseList.size();i++){
             if(purchaseList.get(i).getMovie().getId()==movie.getId() && purchaseList.get(i).getCustomer().getId()==customer.getId()) {
                 ControllerHelper.showAlert("Warning", "Movie purchase error", "You already purchased this movie");
@@ -99,7 +105,7 @@ public class MoviesController implements Initializable {
             }
         }
         java.sql.Date date=new java.sql.Date(System.currentTimeMillis());
-        DaoFactory.purchaseDao().add(new Purchase(movie,customer,date));
+        purchaseManager.add(new Purchase(movie,customer,date));
     }
 
     public void showMyMovies(ActionEvent actionEvent) throws IOException {
