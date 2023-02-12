@@ -59,7 +59,7 @@ public class MoviesController implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         List<Movie> list = DaoFactory.movieDao().getAll();
         for(int i=0;i<list.size();i++){
-            movieList.add(new Movie(i,list.get(i).getTitle(),list.get(i).getRelease_date(),list.get(i).getMain_actor(),list.get(i).getPrice(),list.get(i).getLength(),list.get(i).getGenre()));
+            movieList.add(new Movie(list.get(i).getId(),list.get(i).getTitle(),list.get(i).getRelease_date(),list.get(i).getMain_actor(),list.get(i).getPrice(),list.get(i).getLength(),list.get(i).getGenre()));
         }
         column_title.setCellValueFactory(new PropertyValueFactory<>("title"));
         column_mainactor.setCellValueFactory(new PropertyValueFactory<>("main_actor"));
@@ -68,7 +68,6 @@ public class MoviesController implements Initializable {
         column_length.setCellValueFactory(new PropertyValueFactory<>("length"));
         column_price.setCellValueFactory(new PropertyValueFactory<>("price"));
         customer_table.setItems(movieList);
-
         FilteredList<Movie> filteredData = new FilteredList<>(movieList);
         searchTextField.textProperty().addListener((observable,oldValue,newValue) ->{
             filteredData.setPredicate(Movie -> {
@@ -97,7 +96,6 @@ public class MoviesController implements Initializable {
         movie.setId(movie.getId()+1);
         Customer customer = DaoFactory.customerDao().searchByUsername(LoginController.getS());
         java.sql.Date date=new java.sql.Date(System.currentTimeMillis());
-        System.out.println(customer.getName() + customer.getId() + movie.getTitle() + movie.getId());
         DaoFactory.purchaseDao().add(new Purchase(movie,customer,date));
     }
 
