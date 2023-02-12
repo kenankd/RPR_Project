@@ -20,4 +20,10 @@ public class CustomerManager {
     public Customer add(Customer item) throws MovieException{
         return DaoFactory.customerDao().add(item);
     }
+    public Customer update(Customer item) throws MovieException{
+        return DaoFactory.customerDao().update(item);
+    }
+    public Customer searchByUsername(String username) throws MovieException {
+        return DaoFactory.customerDao().searchByUsername(username);
+    }
 }
