@@ -94,7 +94,7 @@ public class MoviesController implements Initializable {
         Customer customer = DaoFactory.customerDao().searchByUsername(LoginController.getUsername());
         for(int i=0;i< purchaseList.size();i++){
             if(purchaseList.get(i).getMovie().getId()==movie.getId() && purchaseList.get(i).getCustomer().getId()==customer.getId()) {
-                ControllerHelper.showAlert("Warning", "Movie already purchased", "You already purchased this movie");
+                ControllerHelper.showAlert("Warning", "Movie purchase error", "You already purchased this movie");
                 return;
             }
         }
