@@ -75,7 +75,7 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
     public List<PurchaseTableViewModel> getMyMovies(String username) throws MovieException {
         List<PurchaseTableViewModel> list = new ArrayList<>();
         try {
-            PreparedStatement s = getConnection().prepareStatement("select m.title,m.main_actor,m.genre,m.price,p.date_of_rent from Movies m, Purchase p where m.id=p.movie and m.username=?");
+            PreparedStatement s = getConnection().prepareStatement("select m.title as title,m.main_actor as main_actor,m.genre as genre,m.price as price,p.date_of_rent as date_of_rent  from Movie m, Purchase p, Customer c where m.id=p.movie and c.id=p.customer and c.username=?");
             s.setString(1, username);
             ResultSet rs = s.executeQuery();
             while (rs.next()) {
@@ -86,6 +86,7 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
                     p.setGenre(rs.getString("genre"));
                     p.setPrice(rs.getDouble("price"));
                     p.setPurchase_date(rs.getDate("date_of_rent"));
+                    list.add(p);
                 } catch (SQLException e) {
                     throw new MovieException(e.getMessage(),e);
                 }
