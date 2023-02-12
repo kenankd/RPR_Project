@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
+import ba.unsa.etf.rpr.controllers.PurchaseTableViewModel;
 import ba.unsa.etf.rpr.domain.Customer;
 import ba.unsa.etf.rpr.domain.Movie;
 import ba.unsa.etf.rpr.domain.Purchase;
@@ -67,6 +68,34 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
         return list;
     }
 
+    /**
+     * @param username
+     */
+    @Override
+    public List<PurchaseTableViewModel> getMyMovies(String username) throws MovieException {
+        List<PurchaseTableViewModel> list = new ArrayList<>();
+        try {
+            PreparedStatement s = getConnection().prepareStatement("select m.title,m.main_actor,m.genre,m.price,p.date_of_rent from Movies m, Purchase p where m.id=p.movie and m.username=?");
+            s.setString(1, username);
+            ResultSet rs = s.executeQuery();
+            while (rs.next()) {
+                try{
+                    PurchaseTableViewModel p = new PurchaseTableViewModel();
+                    p.setTitle(rs.getString("title"));
+                    p.setMain_actor(rs.getString("main_actor"));
+                    p.setGenre(rs.getString("genre"));
+                    p.setPrice(rs.getDouble("price"));
+                    p.setPurchase_date(rs.getDate("date_of_rent"));
+                } catch (SQLException e) {
+                    throw new MovieException(e.getMessage(),e);
+                }
+            }
+            rs.close();
+        } catch (SQLException e) {
+            throw new MovieException(e.getMessage(),e);
+        }
+        return list;
+    }
 
 
     @Override
