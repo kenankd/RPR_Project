@@ -17,4 +17,7 @@ public class CustomerManager {
     public void delete(int id) throws MovieException {
         DaoFactory.customerDao().delete(id);
     }
+    public Customer add(Customer item) throws MovieException{
+        return DaoFactory.customerDao().add(item);
+    }
 }

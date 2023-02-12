@@ -27,7 +27,7 @@ public class LoginController {
             ControllerHelper.showAlert("Error","Text field blank","Text fields cannot be blank!");
             return;
         }
-        Customer c= DaoFactory.customerDao().searchByUsername(fieldUsername.getText());
+        Customer c = DaoFactory.customerDao().searchByUsername(fieldUsername.getText());
         if(c==null)
             ControllerHelper.showAlert("Error","Username not found!","No user is registered with given username");
         else if(!fieldPassword.getText().equals(c.getPw()))
