@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.controllers;
 
+import ba.unsa.etf.rpr.business.CustomerManager;
 import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Customer;
 import javafx.event.ActionEvent;
@@ -20,6 +21,7 @@ public class LoginController {
     public PasswordField fieldPassword;
 
     public static String s ;
+    private final CustomerManager customerManager=new CustomerManager();
 
     public void buttonLogIn(ActionEvent actionevent) throws IOException {
 
@@ -27,7 +29,7 @@ public class LoginController {
             ControllerHelper.showAlert("Error","Text field blank","Text fields cannot be blank!");
             return;
         }
-        Customer c = DaoFactory.customerDao().searchByUsername(fieldUsername.getText());
+        Customer c = customerManager.searchByUsername(fieldUsername.getText());
         if(c==null)
             ControllerHelper.showAlert("Error","Username not found!","No user is registered with given username");
         else if(!fieldPassword.getText().equals(c.getPw()))
