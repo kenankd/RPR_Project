@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="fixed actionbuy id error" />
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="updated moviescontroller">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -111,237 +113,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670772332253</updated>
-    </task>
-    <task id="LOCAL-00061" summary="added dummy logincontroller">
-      <created>1672018892019</created>
-      <option name="number" value="00061" />
-      <option name="presentableId" value="LOCAL-00061" />
-      <option name="project" value="LOCAL" />
-      <updated>1672018892019</updated>
-    </task>
-    <task id="LOCAL-00062" summary="added dummy logincontroller">
-      <created>1672019161782</created>
-      <option name="number" value="00062" />
-      <option name="presentableId" value="LOCAL-00062" />
-      <option name="project" value="LOCAL" />
-      <updated>1672019161783</updated>
-    </task>
-    <task id="LOCAL-00063" summary="Revert &quot;added dummy logincontroller&quot;&#10;&#10;This reverts commit 6075f810">
-      <created>1672019186106</created>
-      <option name="number" value="00063" />
-      <option name="presentableId" value="LOCAL-00063" />
-      <option name="project" value="LOCAL" />
-      <updated>1672019186106</updated>
-    </task>
-    <task id="LOCAL-00064" summary="added register.fxml">
-      <created>1672057529592</created>
-      <option name="number" value="00064" />
-      <option name="presentableId" value="LOCAL-00064" />
-      <option name="project" value="LOCAL" />
-      <updated>1672057529593</updated>
-    </task>
-    <task id="LOCAL-00065" summary="updated logincontroller">
-      <created>1672057546266</created>
-      <option name="number" value="00065" />
-      <option name="presentableId" value="LOCAL-00065" />
-      <option name="project" value="LOCAL" />
-      <updated>1672057546266</updated>
-    </task>
-    <task id="LOCAL-00066" summary="added searchbyusername">
-      <created>1672084126001</created>
-      <option name="number" value="00066" />
-      <option name="presentableId" value="LOCAL-00066" />
-      <option name="project" value="LOCAL" />
-      <updated>1672084126001</updated>
-    </task>
-    <task id="LOCAL-00067" summary="implemented searchbyusername">
-      <created>1672084137248</created>
-      <option name="number" value="00067" />
-      <option name="presentableId" value="LOCAL-00067" />
-      <option name="project" value="LOCAL" />
-      <updated>1672084137248</updated>
-    </task>
-    <task id="LOCAL-00068" summary="login.css updated">
-      <created>1672084151534</created>
-      <option name="number" value="00068" />
-      <option name="presentableId" value="LOCAL-00068" />
-      <option name="project" value="LOCAL" />
-      <updated>1672084151534</updated>
-    </task>
-    <task id="LOCAL-00069" summary="ControllerHelper added">
-      <created>1672089881831</created>
-      <option name="number" value="00069" />
-      <option name="presentableId" value="LOCAL-00069" />
-      <option name="project" value="LOCAL" />
-      <updated>1672089881831</updated>
-    </task>
-    <task id="LOCAL-00070" summary="Fixed username and password order">
-      <created>1672093280899</created>
-      <option name="number" value="00070" />
-      <option name="presentableId" value="LOCAL-00070" />
-      <option name="project" value="LOCAL" />
-      <updated>1672093280900</updated>
-    </task>
-    <task id="LOCAL-00071" summary="implemented method to showAlert in ControllerHelper">
-      <created>1672093416909</created>
-      <option name="number" value="00071" />
-      <option name="presentableId" value="LOCAL-00071" />
-      <option name="project" value="LOCAL" />
-      <updated>1672093416909</updated>
-    </task>
-    <task id="LOCAL-00072" summary="updated CustomerDao">
-      <created>1672093435303</created>
-      <option name="number" value="00072" />
-      <option name="presentableId" value="LOCAL-00072" />
-      <option name="project" value="LOCAL" />
-      <updated>1672093435303</updated>
-    </task>
-    <task id="LOCAL-00073" summary="updated CustomerDaoSQLImplementation">
-      <created>1672093442898</created>
-      <option name="number" value="00073" />
-      <option name="presentableId" value="LOCAL-00073" />
-      <option name="project" value="LOCAL" />
-      <updated>1672093442899</updated>
-    </task>
-    <task id="LOCAL-00074" summary="dummy login fxml finished">
-      <created>1672093461772</created>
-      <option name="number" value="00074" />
-      <option name="presentableId" value="LOCAL-00074" />
-      <option name="project" value="LOCAL" />
-      <updated>1672093461772</updated>
-    </task>
-    <task id="LOCAL-00075" summary="dummy register fxml finished">
-      <created>1672093472226</created>
-      <option name="number" value="00075" />
-      <option name="presentableId" value="LOCAL-00075" />
-      <option name="project" value="LOCAL" />
-      <updated>1672093472226</updated>
-    </task>
-    <task id="LOCAL-00076" summary="dummy registercontroller  finished">
-      <created>1672093488222</created>
-      <option name="number" value="00076" />
-      <option name="presentableId" value="LOCAL-00076" />
-      <option name="project" value="LOCAL" />
-      <updated>1672093488222</updated>
-    </task>
-    <task id="LOCAL-00077" summary="dummy LoginController finished">
-      <created>1672093498660</created>
-      <option name="number" value="00077" />
-      <option name="presentableId" value="LOCAL-00077" />
-      <option name="project" value="LOCAL" />
-      <updated>1672093498660</updated>
-    </task>
-    <task id="LOCAL-00078" summary="added home.fxml">
-      <created>1673822787141</created>
-      <option name="number" value="00078" />
-      <option name="presentableId" value="LOCAL-00078" />
-      <option name="project" value="LOCAL" />
-      <updated>1673822787141</updated>
-    </task>
-    <task id="LOCAL-00079" summary="added controller for home.fxml">
-      <created>1673822854580</created>
-      <option name="number" value="00079" />
-      <option name="presentableId" value="LOCAL-00079" />
-      <option name="project" value="LOCAL" />
-      <updated>1673822854580</updated>
-    </task>
-    <task id="LOCAL-00080" summary="started home">
-      <created>1673833336511</created>
-      <option name="number" value="00080" />
-      <option name="presentableId" value="LOCAL-00080" />
-      <option name="project" value="LOCAL" />
-      <updated>1673833336511</updated>
-    </task>
-    <task id="LOCAL-00081" summary="added menu to home screen">
-      <created>1673869674724</created>
-      <option name="number" value="00081" />
-      <option name="presentableId" value="LOCAL-00081" />
-      <option name="project" value="LOCAL" />
-      <updated>1673869674725</updated>
-    </task>
-    <task id="LOCAL-00082" summary="added home option to menu button">
-      <created>1673870633431</created>
-      <option name="number" value="00082" />
-      <option name="presentableId" value="LOCAL-00082" />
-      <option name="project" value="LOCAL" />
-      <updated>1673870633431</updated>
-    </task>
-    <task id="LOCAL-00083" summary="first version of home screen">
-      <created>1673871641755</created>
-      <option name="number" value="00083" />
-      <option name="presentableId" value="LOCAL-00083" />
-      <option name="project" value="LOCAL" />
-      <updated>1673871641756</updated>
-    </task>
-    <task id="LOCAL-00084" summary="added more to home screen">
-      <created>1673900247952</created>
-      <option name="number" value="00084" />
-      <option name="presentableId" value="LOCAL-00084" />
-      <option name="project" value="LOCAL" />
-      <updated>1673900247952</updated>
-    </task>
-    <task id="LOCAL-00085" summary="added movies.fxml">
-      <created>1673900376590</created>
-      <option name="number" value="00085" />
-      <option name="presentableId" value="LOCAL-00085" />
-      <option name="project" value="LOCAL" />
-      <updated>1673900376590</updated>
-    </task>
-    <task id="LOCAL-00086" summary="added controller for movies.fxml">
-      <created>1673900385077</created>
-      <option name="number" value="00086" />
-      <option name="presentableId" value="LOCAL-00086" />
-      <option name="project" value="LOCAL" />
-      <updated>1673900385077</updated>
-    </task>
-    <task id="LOCAL-00087" summary="added menubar for movies.fxml">
-      <created>1673901016941</created>
-      <option name="number" value="00087" />
-      <option name="presentableId" value="LOCAL-00087" />
-      <option name="project" value="LOCAL" />
-      <updated>1673901016941</updated>
-    </task>
-    <task id="LOCAL-00088" summary="added menubar for movies.fxml">
-      <created>1673901096548</created>
-      <option name="number" value="00088" />
-      <option name="presentableId" value="LOCAL-00088" />
-      <option name="project" value="LOCAL" />
-      <updated>1673901096548</updated>
-    </task>
-    <task id="LOCAL-00089" summary="added table and menu in movies">
-      <created>1673906474202</created>
-      <option name="number" value="00089" />
-      <option name="presentableId" value="LOCAL-00089" />
-      <option name="project" value="LOCAL" />
-      <updated>1673906474202</updated>
-    </task>
-    <task id="LOCAL-00090" summary="fixed bug movies.fxml">
-      <created>1673906881541</created>
-      <option name="number" value="00090" />
-      <option name="presentableId" value="LOCAL-00090" />
-      <option name="project" value="LOCAL" />
-      <updated>1673906881541</updated>
-    </task>
-    <task id="LOCAL-00091" summary="added buy movie button">
-      <created>1673907381217</created>
-      <option name="number" value="00091" />
-      <option name="presentableId" value="LOCAL-00091" />
-      <option name="project" value="LOCAL" />
-      <updated>1673907381217</updated>
-    </task>
-    <task id="LOCAL-00092" summary="removed initalizable interface from homecontroller">
-      <created>1673913044425</created>
-      <option name="number" value="00092" />
-      <option name="presentableId" value="LOCAL-00092" />
-      <option name="project" value="LOCAL" />
-      <updated>1673913044425</updated>
-    </task>
-    <task id="LOCAL-00093" summary="removed initalizable interface from homecontroller">
-      <created>1673913059995</created>
-      <option name="number" value="00093" />
-      <option name="presentableId" value="LOCAL-00093" />
-      <option name="project" value="LOCAL" />
-      <updated>1673913059995</updated>
     </task>
     <task id="LOCAL-00094" summary="showmovies method implemented">
       <created>1673913267793</created>
@@ -455,7 +226,238 @@
       <option name="project" value="LOCAL" />
       <updated>1676132902562</updated>
     </task>
-    <option name="localTasksCounter" value="110" />
+    <task id="LOCAL-00110" summary="fixed bug going from movies to home">
+      <created>1676133175465</created>
+      <option name="number" value="00110" />
+      <option name="presentableId" value="LOCAL-00110" />
+      <option name="project" value="LOCAL" />
+      <updated>1676133175465</updated>
+    </task>
+    <task id="LOCAL-00111" summary="created mymovies fxml">
+      <created>1676133188667</created>
+      <option name="number" value="00111" />
+      <option name="presentableId" value="LOCAL-00111" />
+      <option name="project" value="LOCAL" />
+      <updated>1676133188667</updated>
+    </task>
+    <task id="LOCAL-00112" summary="updated mymovies fxml">
+      <created>1676133303310</created>
+      <option name="number" value="00112" />
+      <option name="presentableId" value="LOCAL-00112" />
+      <option name="project" value="LOCAL" />
+      <updated>1676133303310</updated>
+    </task>
+    <task id="LOCAL-00113" summary="created mymovies controller">
+      <created>1676133312160</created>
+      <option name="number" value="00113" />
+      <option name="presentableId" value="LOCAL-00113" />
+      <option name="project" value="LOCAL" />
+      <updated>1676133312160</updated>
+    </task>
+    <task id="LOCAL-00114" summary="updated mymovies">
+      <created>1676133575961</created>
+      <option name="number" value="00114" />
+      <option name="presentableId" value="LOCAL-00114" />
+      <option name="project" value="LOCAL" />
+      <updated>1676133575961</updated>
+    </task>
+    <task id="LOCAL-00115" summary="updated menubar on top for movies">
+      <created>1676134168421</created>
+      <option name="number" value="00115" />
+      <option name="presentableId" value="LOCAL-00115" />
+      <option name="project" value="LOCAL" />
+      <updated>1676134168421</updated>
+    </task>
+    <task id="LOCAL-00116" summary="updated mymovies.fxml">
+      <created>1676134266498</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1676134266498</updated>
+    </task>
+    <task id="LOCAL-00117" summary="updated mymovies.fxml">
+      <created>1676135674917</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1676135674917</updated>
+    </task>
+    <task id="LOCAL-00118" summary="updated mymovies.fxml">
+      <created>1676136128149</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1676136128149</updated>
+    </task>
+    <task id="LOCAL-00119" summary="updated home to mymovies">
+      <created>1676136143864</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1676136143864</updated>
+    </task>
+    <task id="LOCAL-00120" summary="updated MyMoviesController">
+      <created>1676136155357</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1676136155357</updated>
+    </task>
+    <task id="LOCAL-00121" summary="added from movie to mymovies option">
+      <created>1676136440180</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1676136440180</updated>
+    </task>
+    <task id="LOCAL-00122" summary="added id's for  movie to mymovies option">
+      <created>1676136450845</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1676136450845</updated>
+    </task>
+    <task id="LOCAL-00123" summary="added from mymovies to home and movies options">
+      <created>1676136739822</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1676136739822</updated>
+    </task>
+    <task id="LOCAL-00124" summary="updated movies.fxml, menu button bigger">
+      <created>1676137713133</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1676137713133</updated>
+    </task>
+    <task id="LOCAL-00125" summary="removed right blank part of the window">
+      <created>1676137730555</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1676137730555</updated>
+    </task>
+    <task id="LOCAL-00126" summary="updated switching scenes">
+      <created>1676137745612</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1676137745612</updated>
+    </task>
+    <task id="LOCAL-00127" summary="added helping method for tableview for mymovies">
+      <created>1676160073996</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1676160073997</updated>
+    </task>
+    <task id="LOCAL-00128" summary="added helping method for tableview for mymovies">
+      <created>1676160083307</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1676160083307</updated>
+    </task>
+    <task id="LOCAL-00129" summary="fixed bug">
+      <created>1676160095577</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1676160095577</updated>
+    </task>
+    <task id="LOCAL-00130" summary="fixed bug">
+      <created>1676160110094</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1676160110094</updated>
+    </task>
+    <task id="LOCAL-00131" summary="fixed opening first window">
+      <created>1676160123979</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1676160123979</updated>
+    </task>
+    <task id="LOCAL-00132" summary="implemented method for mymovie tableview">
+      <created>1676160154603</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1676160154603</updated>
+    </task>
+    <task id="LOCAL-00133" summary="updated mymovies.fxml">
+      <created>1676161394186</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1676161394186</updated>
+    </task>
+    <task id="LOCAL-00134" summary="added purchasetableview update">
+      <created>1676161405291</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1676161405291</updated>
+    </task>
+    <task id="LOCAL-00135" summary="implemented mymovies tableview helper correctly">
+      <created>1676161424935</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1676161424935</updated>
+    </task>
+    <task id="LOCAL-00136" summary="fixed purchase table">
+      <created>1676161438911</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1676161438911</updated>
+    </task>
+    <task id="LOCAL-00137" summary="implemented tableview for bought movies">
+      <created>1676161458439</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1676161458439</updated>
+    </task>
+    <task id="LOCAL-00138" summary="fixed bug in MoviesController">
+      <created>1676161472891</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1676161472891</updated>
+    </task>
+    <task id="LOCAL-00139" summary="log in window not resizable">
+      <created>1676161484541</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1676161484541</updated>
+    </task>
+    <task id="LOCAL-00140" summary="prohibited purchasing the same movie more than once">
+      <created>1676162125944</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1676162125944</updated>
+    </task>
+    <task id="LOCAL-00141" summary="updated mymovies">
+      <created>1676162666402</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1676162666402</updated>
+    </task>
+    <task id="LOCAL-00142" summary="updated moviescontroller">
+      <created>1676162678017</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1676162678017</updated>
+    </task>
+    <option name="localTasksCounter" value="143" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -470,32 +472,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="added home option to menu button" />
-    <MESSAGE value="first version of home screen" />
-    <MESSAGE value="added more to home screen" />
-    <MESSAGE value="added movies.fxml" />
-    <MESSAGE value="added controller for movies.fxml" />
-    <MESSAGE value="added menubar for movies.fxml" />
-    <MESSAGE value="added table and menu in movies" />
-    <MESSAGE value="fixed bug movies.fxml" />
-    <MESSAGE value="added buy movie button" />
-    <MESSAGE value="removed initalizable interface from homecontroller" />
-    <MESSAGE value="showmovies method implemented" />
-    <MESSAGE value="added from registration to home screen" />
-    <MESSAGE value="changed mainfx" />
-    <MESSAGE value="added fxid's for table columns" />
-    <MESSAGE value="added fields for moviescontroller" />
-    <MESSAGE value="refactoring started, table genre deleted" />
-    <MESSAGE value="refactoring done, genre table and class removed" />
-    <MESSAGE value="updated going from home to movies" />
-    <MESSAGE value="updated going from movies to home" />
-    <MESSAGE value="added searchtextfield to controller" />
-    <MESSAGE value="implemented search  by title for movies" />
-    <MESSAGE value="text mistake fixed" />
-    <MESSAGE value="added fxid and onaction for buy button" />
-    <MESSAGE value="added actionBuy method" />
-    <MESSAGE value="fixed actionbuy id error" />
-    <option name="LAST_COMMIT_MESSAGE" value="fixed actionbuy id error" />
+    <MESSAGE value="created mymovies controller" />
+    <MESSAGE value="updated menubar on top for movies" />
+    <MESSAGE value="updated home to mymovies" />
+    <MESSAGE value="updated MyMoviesController" />
+    <MESSAGE value="added from movie to mymovies option" />
+    <MESSAGE value="added id's for  movie to mymovies option" />
+    <MESSAGE value="added from mymovies to home and movies options" />
+    <MESSAGE value="updated movies.fxml, menu button bigger" />
+    <MESSAGE value="removed right blank part of the window" />
+    <MESSAGE value="updated switching scenes" />
+    <MESSAGE value="mymovies updated" />
+    <MESSAGE value="added helping method for tableview for mymovies" />
+    <MESSAGE value="fixed bug" />
+    <MESSAGE value="fixed opening first window" />
+    <MESSAGE value="implemented method for mymovie tableview" />
+    <MESSAGE value="updated mymovies.fxml" />
+    <MESSAGE value="added purchasetableview update" />
+    <MESSAGE value="implemented mymovies tableview helper correctly" />
+    <MESSAGE value="fixed purchase table" />
+    <MESSAGE value="implemented tableview for bought movies" />
+    <MESSAGE value="fixed bug in MoviesController" />
+    <MESSAGE value="log in window not resizable" />
+    <MESSAGE value="prohibited purchasing the same movie more than once" />
+    <MESSAGE value="updated mymovies" />
+    <MESSAGE value="updated moviescontroller" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated moviescontroller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
