@@ -97,7 +97,11 @@ public class MoviesController implements Initializable {
         Movie movie = (Movie) customer_table.getSelectionModel().getSelectedItem();
         if(movie==null) return;
         List<Purchase> purchaseList=purchaseManager.getAll();
-        Customer customer = customerManager.searchByUsername(LoginController.getUsername());
+        Customer customer;
+        if(LoginController.getUsername() != null)
+            customer = customerManager.searchByUsername(LoginController.getUsername());
+        else
+            customer = customerManager.searchByUsername(RegisterController.username);
         for(int i=0;i< purchaseList.size();i++){
             if(purchaseList.get(i).getMovie().getId()==movie.getId() && purchaseList.get(i).getCustomer().getId()==customer.getId()) {
                 ControllerHelper.showAlert("Warning", "Movie purchase error", "You already purchased this movie");

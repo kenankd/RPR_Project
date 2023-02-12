@@ -65,7 +65,10 @@ public class MyMoviesController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        List<PurchaseTableViewModel> list = purchaseTableViewModelManager.getMyMovies(LoginController.getUsername());
+        List<PurchaseTableViewModel> list;
+        if(LoginController.getUsername() != null)
+        list = purchaseTableViewModelManager.getMyMovies(LoginController.getUsername());
+        else list = purchaseTableViewModelManager.getMyMovies(RegisterController.username);
         for(int i=0;i<list.size();i++){
             movieList.add(new PurchaseTableViewModel(list.get(i).getTitle(),list.get(i).getMain_actor(),list.get(i).getGenre(),list.get(i).getPrice(),list.get(i).getPurchase_date()));
         }

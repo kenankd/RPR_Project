@@ -20,7 +20,7 @@ public class LoginController {
     public TextField fieldUsername;
     public PasswordField fieldPassword;
 
-    public static String s ;
+    public static String username ;
     private final CustomerManager customerManager=new CustomerManager();
 
     public void buttonLogIn(ActionEvent actionevent) throws IOException {
@@ -44,11 +44,11 @@ public class LoginController {
             HomeController homecontroller = fxmlloader.getController();
             homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+fieldUsername.getText() + "!");
             stage1.show();
-            s=fieldUsername.getText();
+            username=fieldUsername.getText();
         }
     }
     public static String getUsername(){
-        return s;
+        return username;
     }
     public void registerButton(ActionEvent actionevent) throws IOException {
         Stage stage1=(Stage) fieldUsername.getScene().getWindow();
