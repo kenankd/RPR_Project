@@ -38,9 +38,8 @@
    <left>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
          <children>
-            <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="Menu">
+            <MenuButton fx:id="menu" mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="Home">
               <items>
-                  <MenuItem fx:id="buttonHome" mnemonicParsing="false" onAction="#showHome" text="Home" />
                 <MenuItem fx:id="buttonMovies" mnemonicParsing="false" onAction="#showMovies" text="Movies" />
                 <MenuItem fx:id="buttonMyMovies" mnemonicParsing="false" onAction="#showMyMovies" text="My movies" />
               </items>
