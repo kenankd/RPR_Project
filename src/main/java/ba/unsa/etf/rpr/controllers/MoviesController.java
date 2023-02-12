@@ -90,8 +90,14 @@ public class MoviesController implements Initializable {
     public void actionBuy(ActionEvent actionEvent) {
         Movie movie = (Movie) customer_table.getSelectionModel().getSelectedItem();
         if(movie==null) return;
-        movie.setId(movie.getId()+1);
+        List<Purchase> purchaseList=DaoFactory.purchaseDao().getAll();
         Customer customer = DaoFactory.customerDao().searchByUsername(LoginController.getUsername());
+        for(int i=0;i< purchaseList.size();i++){
+            if(purchaseList.get(i).getMovie().getId()==movie.getId() && purchaseList.get(i).getCustomer().getId()==customer.getId()) {
+                ControllerHelper.showAlert("Warning", "Movie already purchased", "You already purchased this movie");
+                return;
+            }
+        }
         java.sql.Date date=new java.sql.Date(System.currentTimeMillis());
         DaoFactory.purchaseDao().add(new Purchase(movie,customer,date));
     }
