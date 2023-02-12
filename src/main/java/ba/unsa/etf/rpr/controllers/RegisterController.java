@@ -1,5 +1,6 @@
 package ba.unsa.etf.rpr.controllers;
 
+import ba.unsa.etf.rpr.business.CustomerManager;
 import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Customer;
 import javafx.event.ActionEvent;
@@ -22,6 +23,7 @@ public class RegisterController {
     public TextField fieldMail;
     public TextField fieldUsername;
     public PasswordField fieldPassword;
+    private final CustomerManager customerManager = new CustomerManager();
 
     public void Register(ActionEvent actionEvent) {
 
@@ -36,10 +38,10 @@ public class RegisterController {
             ControllerHelper.showAlert("Error", "Username length invalid", "Username needs to be between 5 and 15 characters long!");
         else if(fieldPassword.getText().trim().length()<8 || fieldPassword.getText().trim().length()>20)
             ControllerHelper.showAlert("Error", "Password length invalid", "Password needs to be between 8 and 20 characters long!");
-        else if(DaoFactory.customerDao().searchByUsername(fieldUsername.getText().trim()) != null)
+        else if(customerManager.searchByUsername(fieldUsername.getText().trim()) != null)
             ControllerHelper.showAlert("Error", "Username taken", "Someone has already registered with entered username");
         else{
-            DaoFactory.customerDao().add(new Customer(fieldName.getText().trim(),fieldSurname.getText().trim(),fieldMail.getText().trim(),fieldUsername.getText().trim()
+            customerManager.add(new Customer(fieldName.getText().trim(),fieldSurname.getText().trim(),fieldMail.getText().trim(),fieldUsername.getText().trim()
                     ,fieldPassword.getText().trim()));
             Stage stage=(Stage) fieldUsername.getScene().getWindow();
             stage.close();
