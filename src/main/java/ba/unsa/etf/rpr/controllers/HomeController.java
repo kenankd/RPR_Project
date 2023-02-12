@@ -41,10 +41,6 @@ public class HomeController{
         stage1.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
     }
 
-    public void showHome(ActionEvent actionEvent) {
-
-    }
-
     public void showLogin(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) menu.getScene().getWindow();
         Stage stage1 = new Stage();
