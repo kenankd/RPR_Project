@@ -56,7 +56,6 @@ public class LoginController {
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/register.fxml"));
         Parent root = fxmlloader.load();
         stage.setTitle("Movie");
-        //  stage.getIcons().add(new Image("/src/main/resources/img/download"));
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
         stage.show();
     }
