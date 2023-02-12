@@ -23,9 +23,6 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
-import java.time.LocalDate;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 import java.util.ResourceBundle;
 
@@ -86,7 +83,7 @@ public class MoviesController implements Initializable {
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
         Parent root = fxmlloader.load();
         HomeController homecontroller = fxmlloader.getController();
-        homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getS() + "!");
+        homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getUsername() + "!");
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
     }
 
@@ -94,7 +91,7 @@ public class MoviesController implements Initializable {
         Movie movie = (Movie) customer_table.getSelectionModel().getSelectedItem();
         if(movie==null) return;
         movie.setId(movie.getId()+1);
-        Customer customer = DaoFactory.customerDao().searchByUsername(LoginController.getS());
+        Customer customer = DaoFactory.customerDao().searchByUsername(LoginController.getUsername());
         java.sql.Date date=new java.sql.Date(System.currentTimeMillis());
         DaoFactory.purchaseDao().add(new Purchase(movie,customer,date));
     }
