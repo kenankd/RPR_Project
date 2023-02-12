@@ -14,13 +14,12 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.0" prefWidth="648.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ba.unsa.etf.rpr.controllers.MyMoviesController">
    <left>
-      <VBox prefHeight="375.0" prefWidth="80.0" BorderPane.alignment="CENTER">
+      <VBox prefHeight="464.0" prefWidth="111.0" BorderPane.alignment="CENTER">
          <children>
-            <MenuButton mnemonicParsing="false" prefHeight="37.0" prefWidth="64.0" text="Menu">
+            <MenuButton mnemonicParsing="false" prefHeight="37.0" prefWidth="90.0" text="My movies">
               <items>
                 <MenuItem mnemonicParsing="false" onAction="#showHome" text="Home" />
                 <MenuItem fx:id="showMovies" mnemonicParsing="false" onAction="#showMovies" text="Movies" />
-                  <MenuItem mnemonicParsing="false" text="MyMovies" />
               </items>
                <VBox.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -35,9 +34,9 @@
    <center>
       <VBox prefHeight="448.0" prefWidth="553.0" BorderPane.alignment="CENTER">
          <children>
-            <Label prefHeight="27.0" prefWidth="235.0" text="My movies" textAlignment="CENTER" underline="true">
+            <Label prefHeight="25.0" prefWidth="109.0" text="My movies" textAlignment="CENTER" underline="true">
                <VBox.margin>
-                  <Insets left="220.0" top="15.0" />
+                  <Insets left="185.0" top="10.0" />
                </VBox.margin>
                <font>
                   <Font name="Broadway" size="18.0" />
