@@ -26,4 +26,5 @@ public class CustomerManager {
     public Customer searchByUsername(String username) throws MovieException {
         return DaoFactory.customerDao().searchByUsername(username);
     }
+
 }

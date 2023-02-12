@@ -1,6 +1,6 @@
 package ba.unsa.etf.rpr.dao;
 
-import ba.unsa.etf.rpr.controllers.PurchaseTableViewModel;
+import ba.unsa.etf.rpr.business.PurchaseTableViewModel;
 import ba.unsa.etf.rpr.domain.Customer;
 import ba.unsa.etf.rpr.domain.Movie;
 import ba.unsa.etf.rpr.domain.Purchase;
