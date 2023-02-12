@@ -22,6 +22,8 @@ public class Purchase implements Idable{
 
     }
 
+
+
     public Movie getMovie() {
         return movie;
     }
