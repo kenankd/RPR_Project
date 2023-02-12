@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="updated moviescontroller">
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="WORKSPACE">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -113,20 +113,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670772332253</updated>
-    </task>
-    <task id="LOCAL-00094" summary="showmovies method implemented">
-      <created>1673913267793</created>
-      <option name="number" value="00094" />
-      <option name="presentableId" value="LOCAL-00094" />
-      <option name="project" value="LOCAL" />
-      <updated>1673913267793</updated>
-    </task>
-    <task id="LOCAL-00095" summary="added from registration to home screen">
-      <created>1673913587914</created>
-      <option name="number" value="00095" />
-      <option name="presentableId" value="LOCAL-00095" />
-      <option name="project" value="LOCAL" />
-      <updated>1673913587914</updated>
     </task>
     <task id="LOCAL-00096" summary="changed mainfx">
       <created>1673913915855</created>
@@ -457,7 +443,21 @@
       <option name="project" value="LOCAL" />
       <updated>1676162678017</updated>
     </task>
-    <option name="localTasksCounter" value="143" />
+    <task id="LOCAL-00143" summary="updated mymovies margin from bottom">
+      <created>1676162756200</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1676162756200</updated>
+    </task>
+    <task id="LOCAL-00144" summary="WORKSPACE">
+      <created>1676162837459</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1676162837459</updated>
+    </task>
+    <option name="localTasksCounter" value="145" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -472,8 +472,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="created mymovies controller" />
-    <MESSAGE value="updated menubar on top for movies" />
     <MESSAGE value="updated home to mymovies" />
     <MESSAGE value="updated MyMoviesController" />
     <MESSAGE value="added from movie to mymovies option" />
@@ -497,7 +495,9 @@
     <MESSAGE value="prohibited purchasing the same movie more than once" />
     <MESSAGE value="updated mymovies" />
     <MESSAGE value="updated moviescontroller" />
-    <option name="LAST_COMMIT_MESSAGE" value="updated moviescontroller" />
+    <MESSAGE value="updated mymovies margin from bottom" />
+    <MESSAGE value="WORKSPACE" />
+    <option name="LAST_COMMIT_MESSAGE" value="WORKSPACE" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
