@@ -10,6 +10,14 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class CustomerDaoSQLImplementation extends AbstractDao<Customer> implements CustomerDao {
+    private static CustomerDaoSQLImplementation instance = null;
+    public static CustomerDaoSQLImplementation getInstance(){
+        if(instance == null) instance = new CustomerDaoSQLImplementation();
+        return instance;
+    }
+    public static void removeInstance(){
+        if(instance!=null) instance=null;
+    }
 
     public CustomerDaoSQLImplementation(){
         super("Customer");
