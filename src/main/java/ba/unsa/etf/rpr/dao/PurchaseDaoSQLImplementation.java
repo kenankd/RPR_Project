@@ -72,6 +72,7 @@ public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implemen
      */
     @Override
     public List<PurchaseTableViewModel> getMyMovies(String username) throws MovieException {
+
         List<PurchaseTableViewModel> list = new ArrayList<>();
         try {
             PreparedStatement s = getConnection().prepareStatement("select m.title as title,m.main_actor as main_actor,m.genre as genre,m.price as price,p.date_of_rent as date_of_rent  from Movie m, Purchase p, Customer c where m.id=p.movie and c.id=p.customer and c.username=?");
