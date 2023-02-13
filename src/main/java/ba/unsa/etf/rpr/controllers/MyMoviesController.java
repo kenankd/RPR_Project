@@ -23,6 +23,9 @@ import java.util.ResourceBundle;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
+/**
+ * Controller class which controls everything behind the mymovies display
+ */
 public class MyMoviesController implements Initializable {
     @FXML
     public TableView myMoviesTable;
@@ -53,15 +56,27 @@ public class MyMoviesController implements Initializable {
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
     }
 
+    /**
+     * method which switches mymovies display to home screen
+     * @param actionEvent
+     * @throws IOException
+     */
     public void showHome(ActionEvent actionEvent) throws IOException {
         switchScene("home");
     }
 
+    /**
+     * method which switches mymovies display to movies screen
+     * @param actionEvent
+     * @throws IOException
+     */
     public void showMovies(ActionEvent actionEvent) throws IOException {
         switchScene("movies");
     }
 
     /**
+     * method which is used to set the tableview before displaying the window
+     *
      * @param url
      * @param resourceBundle
      */

@@ -31,6 +31,9 @@ import java.util.ResourceBundle;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
+/**
+ * Controller class which controls everything behind the movies display
+ */
 public class MoviesController implements Initializable {
     @FXML
     public TableColumn column_title;
