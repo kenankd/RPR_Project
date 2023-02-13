@@ -16,55 +16,19 @@ public class CustomerDaoSQLImplementation extends AbstractDao<Customer> implemen
     }
     @Override
     public List<Customer> searchByName(String name) throws MovieException {
-        List<Customer> list=new ArrayList<>();
-        try{
-            PreparedStatement s=getConnection().prepareStatement("select * from Customer where name LIKE concat('%',?,'%')");
-            s.setString(1,name);
-            ResultSet rs=s.executeQuery();
-            while(rs.next()){
-                list.add(row2object(rs));
-            }
-            rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return list;
+        return executeQuery("select * from Customer where name LIKE concat('%',?,'%')",new Object[]{name});
     }
 
     @Override
     public List<Customer> searchBySurname(String surname) {
-        List<Customer> list=new ArrayList<>();
-        try{
-            PreparedStatement s=getConnection().prepareStatement("select * from Customer where surname LIKE concat('%',?,'%')");
-            s.setString(1,surname);
-            ResultSet rs=s.executeQuery();
-            while(rs.next()){
-                list.add(row2object(rs));
-            }
-            rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return list;
+        return executeQuery("select * from Customer where surname LIKE concat('%',?,'%')",new Object[]{surname});
     }
 
     @Override
     public Customer searchByUsername(String username) throws MovieException {
-        try{
-            PreparedStatement s=getConnection().prepareStatement("select * from Customer where username = ?");
-            s.setString(1,username);
-            ResultSet rs=s.executeQuery();
-            if(rs.next()){
-                return row2object(rs);
-            }
-            rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return null;
+        return executeQueryUnique("select * from Customer where username = ?",new Object[]{username});
+
     }
-
-
     @Override
     public Customer row2object(ResultSet rs) throws MovieException {
         try{
