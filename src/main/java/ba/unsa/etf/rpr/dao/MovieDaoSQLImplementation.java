@@ -46,104 +46,35 @@ public class MovieDaoSQLImplementation extends AbstractDao<Movie> implements Mov
 
     @Override
     public List<Movie> searchByTitle(String title) throws MovieException {
-        List<Movie> list = new ArrayList<>();
-        try {
-            PreparedStatement s = getConnection().prepareStatement("select * from Movie where title LIKE concat('%',?,'%')");
-            s.setString(1, title);
-            ResultSet rs = s.executeQuery();
-            while (rs.next()) {
-                list.add(row2object(rs));
-            }
-            rs.close();
-        } catch (SQLException e) {
-            throw new MovieException(e.getMessage(), e);
-        }
-        return list;
+        return executeQuery("select * from Movie where title LIKE concat('%',?,'%')",new Object[]{title});
+
     }
 
     @Override
     public List<Movie> searchByMainActor(String main_actor) throws MovieException {
-        List<Movie> list = new ArrayList<>();
-        try {
-            PreparedStatement s = getConnection().prepareStatement("select * from Movie where main_actor LIKE concat('%',?,'%')");
-            s.setString(1, main_actor);
-            ResultSet rs = s.executeQuery();
-            while (rs.next()) {
-                list.add(row2object(rs));
-            }
-            rs.close();
-        } catch (SQLException e) {
-            throw new MovieException(e.getMessage(), e);
-        }
-        return list;
+        return executeQuery("select * from Movie where main_actor LIKE concat('%',?,'%')",new Object[]{main_actor});
+
     }
 
     @Override
     public List<Movie> getMoviesReleasedAfter(java.util.Date date) throws MovieException {
-        List<Movie> list = new ArrayList<>();
-        try {
-            PreparedStatement s = getConnection().prepareStatement("select * from Movie where release_date > ?");
-            s.setDate(1, (Date) date);
-            ResultSet rs = s.executeQuery();
-            while (rs.next()) {
-                list.add(row2object(rs));
-            }
-            rs.close();
-        } catch (SQLException e) {
-            throw new MovieException(e.getMessage(), e);
-        }
-        return list;
+        return executeQuery("select * from Movie where release_date > ?",new Object[]{date});
     }
 
     @Override
     public List<Movie> getMoviesShorterThan(int length) throws MovieException {
-        List<Movie> list = new ArrayList<>();
-        try {
-            PreparedStatement s = getConnection().prepareStatement("select * from Movie where length <= ?");
-            s.setInt(1, length);
-            ResultSet rs = s.executeQuery();
-            while (rs.next()) {
-                list.add(row2object(rs));
-            }
-            rs.close();
-        } catch (SQLException e) {
-            throw new MovieException(e.getMessage(), e);
-        }
-        return list;
+        return executeQuery("select * from Movie where length <= ?",new Object[]{length});
     }
 
     @Override
     public List<Movie> getMoviesLongerThan(int length) throws MovieException {
-        List<Movie> list = new ArrayList<>();
-        try {
-            PreparedStatement s = getConnection().prepareStatement("select * from Movie where length >= ?");
-            s.setInt(1, length);
-            ResultSet rs = s.executeQuery();
-            while (rs.next()) {
-                list.add(row2object(rs));
-            }
-            rs.close();
-        } catch (SQLException e) {
-            throw new MovieException(e.getMessage(), e);
-        }
-        return list;
+        return executeQuery("select * from Movie where length >= ?",new Object[]{length});
     }
 
     @Override
     public List<Movie> getMoviesCheaperThan(double price) throws MovieException {
-        List<Movie> list = new ArrayList<>();
-        try {
-            PreparedStatement s = getConnection().prepareStatement("select * from Movie where price <= ?");
-            s.setDouble(1, price);
-            ResultSet rs = s.executeQuery();
-            while (rs.next()) {
-                list.add(row2object(rs));
-            }
-            rs.close();
-        } catch (SQLException e) {
-            throw new MovieException(e.getMessage(), e);
-        }
-        return list;
+        return executeQuery("select * from Movie where price <= ?",new Object[]{price});
+
     }
 
 
