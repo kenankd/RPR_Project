@@ -8,6 +8,14 @@ import java.sql.Date;
 import java.util.*;
 
 public class MovieDaoSQLImplementation extends AbstractDao<Movie> implements MovieDao {
+    private static MovieDaoSQLImplementation instance = null;
+    public static MovieDaoSQLImplementation getInstance(){
+        if(instance == null) instance = new MovieDaoSQLImplementation();
+        return instance;
+    }
+    public static void removeInstance(){
+        if(instance!=null) instance=null;
+    }
 
     public MovieDaoSQLImplementation() {
         super("Movie");
