@@ -54,7 +54,8 @@ public class MoviesController implements Initializable {
     private final PurchaseManager purchaseManager = new PurchaseManager();
     private final CustomerManager customerManager = new CustomerManager();
 
-    /**
+    /** method which is used to set the tableview before displaying the window
+     * it also implements searching of movies using a listener
      * @param url
      * @param resourceBundle
      */
@@ -84,6 +85,12 @@ public class MoviesController implements Initializable {
         sortedData.comparatorProperty().bind(customer_table.comparatorProperty());
         customer_table.setItems(sortedData);
     }
+
+    /**
+     * method which switches movies display to home screen
+     * @param actionEvent
+     * @throws Exception
+     */
     public void showHome(ActionEvent actionEvent) throws Exception{
         Stage stage=(Stage) customer_table.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
@@ -95,9 +102,16 @@ public class MoviesController implements Initializable {
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
     }
 
+    /**
+     * method which adds the selected movie in the registered user's movie collection
+     * @param actionEvent
+     */
     public void actionBuy(ActionEvent actionEvent) {
         Movie movie = (Movie) customer_table.getSelectionModel().getSelectedItem();
-        if(movie==null) return;
+        if(movie==null){
+            AlertDisplay.showAlert("Warning","No movies selected","Please select the movie that you want to purchase");
+            return;
+        }
         List<Purchase> purchaseList=purchaseManager.getAll();
         Customer customer;
         if(LoginController.getUsername() != null)
@@ -106,7 +120,7 @@ public class MoviesController implements Initializable {
             customer = customerManager.searchByUsername(RegisterController.username);
         for(int i=0;i< purchaseList.size();i++){
             if(purchaseList.get(i).getMovie().getId()==movie.getId() && purchaseList.get(i).getCustomer().getId()==customer.getId()) {
-                ControllerHelper.showAlert("Warning", "Movie purchase error", "You already purchased this movie");
+                AlertDisplay.showAlert("Warning", "Movie purchase error", "You already purchased this movie");
                 return;
             }
         }
@@ -114,6 +128,11 @@ public class MoviesController implements Initializable {
         purchaseManager.add(new Purchase(movie,customer,date));
     }
 
+    /**
+     * method which switches display from movies to mymovies
+     * @param actionEvent
+     * @throws IOException
+     */
     public void showMyMovies(ActionEvent actionEvent) throws IOException {
         Stage stage=(Stage) customer_table.getScene().getWindow();
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/mymovies.fxml"));
