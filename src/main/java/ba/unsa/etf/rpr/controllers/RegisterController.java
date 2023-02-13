@@ -1,7 +1,6 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.business.CustomerManager;
-import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -16,6 +15,10 @@ import java.io.IOException;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
+/**
+ * @author Kenan Dizdarevic
+ * Controller class which controls everything behind the register display
+ */
 public class RegisterController {
     public Button buttonRegister;
     public TextField fieldName;
@@ -25,24 +28,26 @@ public class RegisterController {
     public PasswordField fieldPassword;
     private final CustomerManager customerManager = new CustomerManager();
 
-    public void Register(ActionEvent actionEvent) {
+    public static String username ;
 
-    }
-
+    /**
+     * method which adds the new user to the database if the rules are followed
+     * @param actionEvent
+     * @throws IOException
+     */
     public void buttonRegister(ActionEvent actionEvent) throws IOException {
         if(buttonRegister.getText().trim().isEmpty() || fieldName.getText().trim().isEmpty() || fieldSurname.getText().trim().isEmpty() ||
                 fieldMail.getText().trim().isEmpty() || fieldUsername.getText().trim().isEmpty() || fieldPassword.getText().trim().isEmpty()) {
-            ControllerHelper.showAlert("Error", "Text field blank", "Text fields cannot be blank!");
+            AlertDisplay.showAlert("Error", "Text field blank", "Text fields cannot be blank!");
         }
         else if(fieldUsername.getText().trim().length()<5 || fieldUsername.getText().trim().length()>15)
-            ControllerHelper.showAlert("Error", "Username length invalid", "Username needs to be between 5 and 15 characters long!");
+            AlertDisplay.showAlert("Error", "Username length invalid", "Username needs to be between 5 and 15 characters long!");
         else if(fieldPassword.getText().trim().length()<8 || fieldPassword.getText().trim().length()>20)
-            ControllerHelper.showAlert("Error", "Password length invalid", "Password needs to be between 8 and 20 characters long!");
+            AlertDisplay.showAlert("Error", "Password length invalid", "Password needs to be between 8 and 20 characters long!");
         else if(customerManager.searchByUsername(fieldUsername.getText().trim()) != null)
-            ControllerHelper.showAlert("Error", "Username taken", "Someone has already registered with entered username");
+            AlertDisplay.showAlert("Error", "Username taken", "Someone has already registered with entered username");
         else{
-            customerManager.add(new Customer(fieldName.getText().trim(),fieldSurname.getText().trim(),fieldMail.getText().trim(),fieldUsername.getText().trim()
-                    ,fieldPassword.getText().trim()));
+            customerManager.add(new Customer(fieldName.getText().trim(),fieldSurname.getText().trim(),fieldMail.getText().trim(),fieldUsername.getText().trim(),fieldPassword.getText().trim()));
             Stage stage=(Stage) fieldUsername.getScene().getWindow();
             stage.close();
             Stage stage1 = new Stage();
@@ -52,9 +57,15 @@ public class RegisterController {
             HomeController homecontroller = fxmlloader.getController();
             homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+fieldUsername.getText() + "!");
             stage1.show();
+            username=fieldUsername.getText().trim();
         }
     }
 
+    /**
+     * method which displays the login screen if the user is already registered
+     * @param actionEvent
+     * @throws IOException
+     */
     public void buttonLogIn(ActionEvent actionEvent) throws IOException {
         Stage stage = (Stage) fieldPassword.getScene().getWindow();
         stage.close();
