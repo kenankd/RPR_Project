@@ -1,7 +1,6 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.business.CustomerManager;
-import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
@@ -23,17 +22,24 @@ public class LoginController {
     public static String username ;
     private final CustomerManager customerManager=new CustomerManager();
 
+    /**
+     * method which represents logging in the app
+     * if credentials are right the home screen will display
+     * @param actionevent
+     * @throws IOException
+     */
+
     public void buttonLogIn(ActionEvent actionevent) throws IOException {
 
         if (fieldUsername.getText().trim().isEmpty() || fieldPassword.getText().trim().isEmpty()) {
-            ControllerHelper.showAlert("Error","Text field blank","Text fields cannot be blank!");
+            AlertDisplay.showAlert("Error","Text field blank","Text fields cannot be blank!");
             return;
         }
         Customer c = customerManager.searchByUsername(fieldUsername.getText());
         if(c==null)
-            ControllerHelper.showAlert("Error","Username not found!","No user is registered with given username");
+            AlertDisplay.showAlert("Error","Username not found!","No user is registered with given username");
         else if(!fieldPassword.getText().equals(c.getPw()))
-            ControllerHelper.showAlert("Error","Incorrect password!","Your password is not correct, try again!");
+            AlertDisplay.showAlert("Error","Incorrect password!","Your password is not correct, try again!");
         else{
             Stage stage=(Stage) fieldUsername.getScene().getWindow();
             stage.close();
@@ -47,9 +53,20 @@ public class LoginController {
             username=fieldUsername.getText();
         }
     }
+
+    /**
+     * static method which returns username, it is used in other controllers to recognize the user that logged in
+     * @return username
+     */
     public static String getUsername(){
         return username;
     }
+
+    /**
+     * method whichs switches scene and displays the registration display
+     * @param actionevent
+     * @throws IOException
+     */
     public void registerButton(ActionEvent actionevent) throws IOException {
         Stage stage1=(Stage) fieldUsername.getScene().getWindow();
         stage1.close();
