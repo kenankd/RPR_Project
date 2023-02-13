@@ -11,9 +11,16 @@ import java.sql.*;
 import java.util.*;
 
 public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implements PurchaseDao{
-    private Connection connection;
+    private static PurchaseDaoSQLImplementation instance = null;
     public PurchaseDaoSQLImplementation() {
         super("Purchase");
+    }
+    public static PurchaseDaoSQLImplementation getInstance(){
+        if(instance == null) instance = new PurchaseDaoSQLImplementation();
+        return instance;
+    }
+    public static void removeInstance(){
+        if(instance!=null) instance=null;
     }
 
     @Override
