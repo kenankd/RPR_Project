@@ -14,7 +14,10 @@ import java.io.IOException;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
-
+/**
+ * @author Kenan Dizdarevic
+ * Controller class which controlls everything happening behind the scenes for the Log In display
+ */
 public class LoginController {
     public TextField fieldUsername;
     public PasswordField fieldPassword;
