@@ -12,6 +12,9 @@ import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
@@ -36,29 +39,26 @@ public class RegisterController {
      * @throws IOException
      */
     public void buttonRegister(ActionEvent actionEvent) throws IOException {
-        if(buttonRegister.getText().trim().isEmpty() || fieldName.getText().trim().isEmpty() || fieldSurname.getText().trim().isEmpty() ||
-                fieldMail.getText().trim().isEmpty() || fieldUsername.getText().trim().isEmpty() || fieldPassword.getText().trim().isEmpty()) {
-            AlertDisplay.showAlert("Error", "Text field blank", "Text fields cannot be blank!");
+        try{
+            customerManager.checkFieldEmpty(new ArrayList<String>(Arrays.asList(fieldName.getText(),fieldSurname.getText(),
+                    fieldMail.getText(),fieldUsername.getText(),fieldPassword.getText())));
+            customerManager.checkUsernameForRegistration(fieldUsername.getText());
+            customerManager.checkPassword(fieldPassword.getText());
+        } catch (Exception e) {
+            AlertDisplay.showAlert("Error", "Registration failed", e.getMessage());
+            return;
         }
-        else if(fieldUsername.getText().trim().length()<5 || fieldUsername.getText().trim().length()>15)
-            AlertDisplay.showAlert("Error", "Username length invalid", "Username needs to be between 5 and 15 characters long!");
-        else if(fieldPassword.getText().trim().length()<8 || fieldPassword.getText().trim().length()>20)
-            AlertDisplay.showAlert("Error", "Password length invalid", "Password needs to be between 8 and 20 characters long!");
-        else if(customerManager.searchByUsername(fieldUsername.getText().trim()) != null)
-            AlertDisplay.showAlert("Error", "Username taken", "Someone has already registered with entered username");
-        else{
-            customerManager.add(new Customer(fieldName.getText().trim(),fieldSurname.getText().trim(),fieldMail.getText().trim(),fieldUsername.getText().trim(),fieldPassword.getText().trim()));
-            Stage stage=(Stage) fieldUsername.getScene().getWindow();
-            stage.close();
-            Stage stage1 = new Stage();
-            FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
-            Parent root = fxmlloader.load();
-            stage1.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
-            HomeController homecontroller = fxmlloader.getController();
-            homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+fieldUsername.getText() + "!");
-            stage1.show();
-            username=fieldUsername.getText().trim();
-        }
+        customerManager.add(new Customer(fieldName.getText().trim(),fieldSurname.getText().trim(),fieldMail.getText().trim(),fieldUsername.getText().trim(),fieldPassword.getText().trim()));
+        Stage stage=(Stage) fieldUsername.getScene().getWindow();
+        stage.close();
+        Stage stage1 = new Stage();
+        FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/home.fxml"));
+        Parent root = fxmlloader.load();
+        stage1.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+        HomeController homecontroller = fxmlloader.getController();
+        homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+fieldUsername.getText() + "!");
+        stage1.show();
+        username=fieldUsername.getText().trim();
     }
 
     /**
