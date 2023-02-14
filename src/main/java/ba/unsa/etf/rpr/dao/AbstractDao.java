@@ -17,19 +17,18 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
     private String tableName;
 
     public AbstractDao(String tableName) {
-        this.tableName = tableName;
         try {
-            FileReader fr = new FileReader("src/main/resources/properties");
+            this.tableName = tableName;
             Properties p = new Properties();
-            p.load(fr);
+            p.load(ClassLoader.getSystemResource("properties").openStream());
             String url = p.getProperty("url");
             String user = p.getProperty("user");
-            String pw = p.getProperty("pw");
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            connection = DriverManager.getConnection(url, user, pw);
+            String password = p.getProperty("pw");
+            this.connection = DriverManager.getConnection(url, user, password);
         } catch (Exception e) {
-            System.out.println("Konekcija na bazu nije uspjela");
+            System.out.println("Nemoguce uraditi konekciju na bazu");
             e.printStackTrace();
+
         }
     }
     public Connection getConnection() {
@@ -60,7 +59,7 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
         String query = "SELECT * FROM "+ tableName;
         List<T> results = new ArrayList<T>();
         try{
-            PreparedStatement stmt = getConnection().prepareStatement(query);
+            PreparedStatement stmt =   getConnection().prepareStatement(query);
             ResultSet rs = stmt.executeQuery();
             while (rs.next()){ // result set is iterator.
                 T object = row2object(rs);
