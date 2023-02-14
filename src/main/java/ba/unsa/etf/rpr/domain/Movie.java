@@ -99,8 +99,7 @@ public class Movie implements Idable{
     @Override
     public String toString() {
         return "Movie{" +
-                "id=" + id +
-                ", title=" + title +
+                "title=" + title +
                 ", release_date=" + release_date +
                 ", main_actor='" + main_actor + '\'' +
                 ", price=" + price +
