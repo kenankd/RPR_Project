@@ -1,11 +1,13 @@
 package ba.unsa.etf.rpr.controllers;
 
 import ba.unsa.etf.rpr.business.CustomerManager;
+import ba.unsa.etf.rpr.business.PurchaseManager;
 import ba.unsa.etf.rpr.domain.Customer;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
@@ -33,17 +35,12 @@ public class LoginController {
      */
 
     public void buttonLogIn(ActionEvent actionevent) throws IOException {
-
-        if (fieldUsername.getText().trim().isEmpty() || fieldPassword.getText().trim().isEmpty()) {
-            AlertDisplay.showAlert("Error","Text field blank","Text fields cannot be blank!");
+        try{
+            customerManager.checkLogIn(fieldUsername.getText(),fieldPassword.getText());
+        } catch (Exception e) {
+            AlertDisplay.showAlert("Error","Invalid input!",e.getMessage());
             return;
         }
-        Customer c = customerManager.searchByUsername(fieldUsername.getText());
-        if(c==null)
-            AlertDisplay.showAlert("Error","Username not found!","No user is registered with given username");
-        else if(!fieldPassword.getText().equals(c.getPw()))
-            AlertDisplay.showAlert("Error","Incorrect password!","Your password is not correct, try again!");
-        else{
             Stage stage=(Stage) fieldUsername.getScene().getWindow();
             stage.close();
             Stage stage1 = new Stage();
@@ -54,7 +51,6 @@ public class LoginController {
             homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+fieldUsername.getText() + "!");
             stage1.show();
             username=fieldUsername.getText();
-        }
     }
 
     /**
