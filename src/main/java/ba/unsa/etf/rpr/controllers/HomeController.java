@@ -39,7 +39,7 @@ public class HomeController{
         Parent root = fxmlloader.load();
         stage1.setTitle("Movies");
         //  stage.getIcons().add(new Image("/src/main/resources/img/download"));
-        stage1.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+        stage1.setScene(new Scene(root,600,390));
     }
 
     /**
@@ -52,7 +52,7 @@ public class HomeController{
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/mymovies.fxml"));
         Parent root = fxmlloader.load();
         stage1.setTitle("My Movies");
-        stage1.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+        stage1.setScene(new Scene(root,600,390));
     }
 
     /**
@@ -67,7 +67,6 @@ public class HomeController{
         Parent root = fxmlloader.load();
         stage.setTitle("Movie");
         stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
-        stage.close();
         stage.show();
     }
 

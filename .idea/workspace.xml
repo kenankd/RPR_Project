@@ -4,14 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="implemented basic methods for PurchaseManager">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/business/PurchaseTableViewModelManager.java" afterDir="false" />
+    <list default="true" id="30a08bb0-7797-4f5b-9d98-0f2645ee43bf" name="Changes" comment="changes">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/business/CustomerManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/business/CustomerManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MainFX.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/MainFX.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/business/MovieManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/business/MovieManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/business/PurchaseManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/business/PurchaseManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MoviesController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MyMoviesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/MyMoviesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/PurchaseTableViewModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/business/PurchaseTableViewModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/PurchaseDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/PurchaseDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/PurchaseDaoSQLImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/dao/PurchaseDaoSQLImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/RegisterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/controllers/RegisterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/domain/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/MANIFEST.MF" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/movies.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/movies.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/mymovies.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/mymovies.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ba/unsa/etf/rpr/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ba/unsa/etf/rpr/AppTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,21 +60,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "OverrideImplement.generate.javadoc": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ToolWindowRun.ShowToolbar": "false",
-    "last_opened_file_path": "C:/Users/PC/Desktop/aaasdsadfas/rpr-projekat-master",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.projectsettings.compiler.javacompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;OverrideImplement.generate.javadoc&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ToolWindowRun.ShowToolbar&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/PC/Desktop/projekti/quote-maker-main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.projectsettings.compiler.javacompiler&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\PC\IdeaProjects\Projekat\src\main\resources\img" />
@@ -101,13 +112,84 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="AppTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Projekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.AppTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.AlreadyRegistered" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Projekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.AppTest" />
+      <option name="METHOD_NAME" value="AlreadyRegistered" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.pwTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Projekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.AppTest" />
+      <option name="METHOD_NAME" value="pwTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AppTest.searchByCustomerName" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Projekat" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ba.unsa.etf.rpr.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ba.unsa.etf.rpr" />
+      <option name="MAIN_CLASS_NAME" value="ba.unsa.etf.rpr.AppTest" />
+      <option name="METHOD_NAME" value="searchByCustomerName" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="Application.App" />
       <item itemvalue="Application.MainFX" />
+      <item itemvalue="JUnit.AppTest" />
+      <item itemvalue="JUnit.AppTest.AlreadyRegistered" />
+      <item itemvalue="JUnit.AppTest.pwTest" />
+      <item itemvalue="JUnit.AppTest.searchByCustomerName" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.MainFX" />
+        <item itemvalue="JUnit.AppTest.pwTest" />
+        <item itemvalue="JUnit.AppTest" />
+        <item itemvalue="JUnit.AppTest.AlreadyRegistered" />
+        <item itemvalue="JUnit.AppTest.searchByCustomerName" />
       </list>
     </recent_temporary>
   </component>
@@ -119,258 +201,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1670772332253</updated>
-    </task>
-    <task id="LOCAL-00108" summary="added actionBuy method">
-      <created>1675880811662</created>
-      <option name="number" value="00108" />
-      <option name="presentableId" value="LOCAL-00108" />
-      <option name="project" value="LOCAL" />
-      <updated>1675880811663</updated>
-    </task>
-    <task id="LOCAL-00109" summary="fixed actionbuy id error">
-      <created>1676132902562</created>
-      <option name="number" value="00109" />
-      <option name="presentableId" value="LOCAL-00109" />
-      <option name="project" value="LOCAL" />
-      <updated>1676132902562</updated>
-    </task>
-    <task id="LOCAL-00110" summary="fixed bug going from movies to home">
-      <created>1676133175465</created>
-      <option name="number" value="00110" />
-      <option name="presentableId" value="LOCAL-00110" />
-      <option name="project" value="LOCAL" />
-      <updated>1676133175465</updated>
-    </task>
-    <task id="LOCAL-00111" summary="created mymovies fxml">
-      <created>1676133188667</created>
-      <option name="number" value="00111" />
-      <option name="presentableId" value="LOCAL-00111" />
-      <option name="project" value="LOCAL" />
-      <updated>1676133188667</updated>
-    </task>
-    <task id="LOCAL-00112" summary="updated mymovies fxml">
-      <created>1676133303310</created>
-      <option name="number" value="00112" />
-      <option name="presentableId" value="LOCAL-00112" />
-      <option name="project" value="LOCAL" />
-      <updated>1676133303310</updated>
-    </task>
-    <task id="LOCAL-00113" summary="created mymovies controller">
-      <created>1676133312160</created>
-      <option name="number" value="00113" />
-      <option name="presentableId" value="LOCAL-00113" />
-      <option name="project" value="LOCAL" />
-      <updated>1676133312160</updated>
-    </task>
-    <task id="LOCAL-00114" summary="updated mymovies">
-      <created>1676133575961</created>
-      <option name="number" value="00114" />
-      <option name="presentableId" value="LOCAL-00114" />
-      <option name="project" value="LOCAL" />
-      <updated>1676133575961</updated>
-    </task>
-    <task id="LOCAL-00115" summary="updated menubar on top for movies">
-      <created>1676134168421</created>
-      <option name="number" value="00115" />
-      <option name="presentableId" value="LOCAL-00115" />
-      <option name="project" value="LOCAL" />
-      <updated>1676134168421</updated>
-    </task>
-    <task id="LOCAL-00116" summary="updated mymovies.fxml">
-      <created>1676134266498</created>
-      <option name="number" value="00116" />
-      <option name="presentableId" value="LOCAL-00116" />
-      <option name="project" value="LOCAL" />
-      <updated>1676134266498</updated>
-    </task>
-    <task id="LOCAL-00117" summary="updated mymovies.fxml">
-      <created>1676135674917</created>
-      <option name="number" value="00117" />
-      <option name="presentableId" value="LOCAL-00117" />
-      <option name="project" value="LOCAL" />
-      <updated>1676135674917</updated>
-    </task>
-    <task id="LOCAL-00118" summary="updated mymovies.fxml">
-      <created>1676136128149</created>
-      <option name="number" value="00118" />
-      <option name="presentableId" value="LOCAL-00118" />
-      <option name="project" value="LOCAL" />
-      <updated>1676136128149</updated>
-    </task>
-    <task id="LOCAL-00119" summary="updated home to mymovies">
-      <created>1676136143864</created>
-      <option name="number" value="00119" />
-      <option name="presentableId" value="LOCAL-00119" />
-      <option name="project" value="LOCAL" />
-      <updated>1676136143864</updated>
-    </task>
-    <task id="LOCAL-00120" summary="updated MyMoviesController">
-      <created>1676136155357</created>
-      <option name="number" value="00120" />
-      <option name="presentableId" value="LOCAL-00120" />
-      <option name="project" value="LOCAL" />
-      <updated>1676136155357</updated>
-    </task>
-    <task id="LOCAL-00121" summary="added from movie to mymovies option">
-      <created>1676136440180</created>
-      <option name="number" value="00121" />
-      <option name="presentableId" value="LOCAL-00121" />
-      <option name="project" value="LOCAL" />
-      <updated>1676136440180</updated>
-    </task>
-    <task id="LOCAL-00122" summary="added id's for  movie to mymovies option">
-      <created>1676136450845</created>
-      <option name="number" value="00122" />
-      <option name="presentableId" value="LOCAL-00122" />
-      <option name="project" value="LOCAL" />
-      <updated>1676136450845</updated>
-    </task>
-    <task id="LOCAL-00123" summary="added from mymovies to home and movies options">
-      <created>1676136739822</created>
-      <option name="number" value="00123" />
-      <option name="presentableId" value="LOCAL-00123" />
-      <option name="project" value="LOCAL" />
-      <updated>1676136739822</updated>
-    </task>
-    <task id="LOCAL-00124" summary="updated movies.fxml, menu button bigger">
-      <created>1676137713133</created>
-      <option name="number" value="00124" />
-      <option name="presentableId" value="LOCAL-00124" />
-      <option name="project" value="LOCAL" />
-      <updated>1676137713133</updated>
-    </task>
-    <task id="LOCAL-00125" summary="removed right blank part of the window">
-      <created>1676137730555</created>
-      <option name="number" value="00125" />
-      <option name="presentableId" value="LOCAL-00125" />
-      <option name="project" value="LOCAL" />
-      <updated>1676137730555</updated>
-    </task>
-    <task id="LOCAL-00126" summary="updated switching scenes">
-      <created>1676137745612</created>
-      <option name="number" value="00126" />
-      <option name="presentableId" value="LOCAL-00126" />
-      <option name="project" value="LOCAL" />
-      <updated>1676137745612</updated>
-    </task>
-    <task id="LOCAL-00127" summary="added helping method for tableview for mymovies">
-      <created>1676160073996</created>
-      <option name="number" value="00127" />
-      <option name="presentableId" value="LOCAL-00127" />
-      <option name="project" value="LOCAL" />
-      <updated>1676160073997</updated>
-    </task>
-    <task id="LOCAL-00128" summary="added helping method for tableview for mymovies">
-      <created>1676160083307</created>
-      <option name="number" value="00128" />
-      <option name="presentableId" value="LOCAL-00128" />
-      <option name="project" value="LOCAL" />
-      <updated>1676160083307</updated>
-    </task>
-    <task id="LOCAL-00129" summary="fixed bug">
-      <created>1676160095577</created>
-      <option name="number" value="00129" />
-      <option name="presentableId" value="LOCAL-00129" />
-      <option name="project" value="LOCAL" />
-      <updated>1676160095577</updated>
-    </task>
-    <task id="LOCAL-00130" summary="fixed bug">
-      <created>1676160110094</created>
-      <option name="number" value="00130" />
-      <option name="presentableId" value="LOCAL-00130" />
-      <option name="project" value="LOCAL" />
-      <updated>1676160110094</updated>
-    </task>
-    <task id="LOCAL-00131" summary="fixed opening first window">
-      <created>1676160123979</created>
-      <option name="number" value="00131" />
-      <option name="presentableId" value="LOCAL-00131" />
-      <option name="project" value="LOCAL" />
-      <updated>1676160123979</updated>
-    </task>
-    <task id="LOCAL-00132" summary="implemented method for mymovie tableview">
-      <created>1676160154603</created>
-      <option name="number" value="00132" />
-      <option name="presentableId" value="LOCAL-00132" />
-      <option name="project" value="LOCAL" />
-      <updated>1676160154603</updated>
-    </task>
-    <task id="LOCAL-00133" summary="updated mymovies.fxml">
-      <created>1676161394186</created>
-      <option name="number" value="00133" />
-      <option name="presentableId" value="LOCAL-00133" />
-      <option name="project" value="LOCAL" />
-      <updated>1676161394186</updated>
-    </task>
-    <task id="LOCAL-00134" summary="added purchasetableview update">
-      <created>1676161405291</created>
-      <option name="number" value="00134" />
-      <option name="presentableId" value="LOCAL-00134" />
-      <option name="project" value="LOCAL" />
-      <updated>1676161405291</updated>
-    </task>
-    <task id="LOCAL-00135" summary="implemented mymovies tableview helper correctly">
-      <created>1676161424935</created>
-      <option name="number" value="00135" />
-      <option name="presentableId" value="LOCAL-00135" />
-      <option name="project" value="LOCAL" />
-      <updated>1676161424935</updated>
-    </task>
-    <task id="LOCAL-00136" summary="fixed purchase table">
-      <created>1676161438911</created>
-      <option name="number" value="00136" />
-      <option name="presentableId" value="LOCAL-00136" />
-      <option name="project" value="LOCAL" />
-      <updated>1676161438911</updated>
-    </task>
-    <task id="LOCAL-00137" summary="implemented tableview for bought movies">
-      <created>1676161458439</created>
-      <option name="number" value="00137" />
-      <option name="presentableId" value="LOCAL-00137" />
-      <option name="project" value="LOCAL" />
-      <updated>1676161458439</updated>
-    </task>
-    <task id="LOCAL-00138" summary="fixed bug in MoviesController">
-      <created>1676161472891</created>
-      <option name="number" value="00138" />
-      <option name="presentableId" value="LOCAL-00138" />
-      <option name="project" value="LOCAL" />
-      <updated>1676161472891</updated>
-    </task>
-    <task id="LOCAL-00139" summary="log in window not resizable">
-      <created>1676161484541</created>
-      <option name="number" value="00139" />
-      <option name="presentableId" value="LOCAL-00139" />
-      <option name="project" value="LOCAL" />
-      <updated>1676161484541</updated>
-    </task>
-    <task id="LOCAL-00140" summary="prohibited purchasing the same movie more than once">
-      <created>1676162125944</created>
-      <option name="number" value="00140" />
-      <option name="presentableId" value="LOCAL-00140" />
-      <option name="project" value="LOCAL" />
-      <updated>1676162125944</updated>
-    </task>
-    <task id="LOCAL-00141" summary="updated mymovies">
-      <created>1676162666402</created>
-      <option name="number" value="00141" />
-      <option name="presentableId" value="LOCAL-00141" />
-      <option name="project" value="LOCAL" />
-      <updated>1676162666402</updated>
-    </task>
-    <task id="LOCAL-00142" summary="updated moviescontroller">
-      <created>1676162678017</created>
-      <option name="number" value="00142" />
-      <option name="presentableId" value="LOCAL-00142" />
-      <option name="project" value="LOCAL" />
-      <updated>1676162678017</updated>
-    </task>
-    <task id="LOCAL-00143" summary="updated mymovies margin from bottom">
-      <created>1676162756200</created>
-      <option name="number" value="00143" />
-      <option name="presentableId" value="LOCAL-00143" />
-      <option name="project" value="LOCAL" />
-      <updated>1676162756200</updated>
     </task>
     <task id="LOCAL-00144" summary="WORKSPACE">
       <created>1676162837459</created>
@@ -463,7 +293,259 @@
       <option name="project" value="LOCAL" />
       <updated>1676232006202</updated>
     </task>
-    <option name="localTasksCounter" value="157" />
+    <task id="LOCAL-00157" summary="moved PurchaseTableViewModel to business package">
+      <created>1676232323464</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1676232323464</updated>
+    </task>
+    <task id="LOCAL-00158" summary="implemented necessary method for PurchaseTableViewModelManager">
+      <created>1676232345819</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1676232345819</updated>
+    </task>
+    <task id="LOCAL-00159" summary="small changes">
+      <created>1676232368474</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1676232368474</updated>
+    </task>
+    <task id="LOCAL-00160" summary="changed calling getmymovies from purchasetableviewmodelmanager">
+      <created>1676232449084</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1676232449084</updated>
+    </task>
+    <task id="LOCAL-00161" summary="created MovieManager">
+      <created>1676232523120</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1676232523120</updated>
+    </task>
+    <task id="LOCAL-00162" summary="implemented methods in MovieManager">
+      <created>1676232883633</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1676232883633</updated>
+    </task>
+    <task id="LOCAL-00163" summary="fixed calling managers instead of daofactory directly">
+      <created>1676233070501</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1676233070501</updated>
+    </task>
+    <task id="LOCAL-00164" summary="small change to home menu">
+      <created>1676233225880</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1676233225880</updated>
+    </task>
+    <task id="LOCAL-00165" summary="small change to movies menu">
+      <created>1676233237280</created>
+      <option name="number" value="00165" />
+      <option name="presentableId" value="LOCAL-00165" />
+      <option name="project" value="LOCAL" />
+      <updated>1676233237280</updated>
+    </task>
+    <task id="LOCAL-00166" summary="small change to mymovies menu">
+      <created>1676233323600</created>
+      <option name="number" value="00166" />
+      <option name="presentableId" value="LOCAL-00166" />
+      <option name="project" value="LOCAL" />
+      <updated>1676233323600</updated>
+    </task>
+    <task id="LOCAL-00167" summary="removed showHome from HomeController">
+      <created>1676233359685</created>
+      <option name="number" value="00167" />
+      <option name="presentableId" value="LOCAL-00167" />
+      <option name="project" value="LOCAL" />
+      <updated>1676233359685</updated>
+    </task>
+    <task id="LOCAL-00168" summary="added executequery and executequeryunique to AbstractDao">
+      <created>1676233907643</created>
+      <option name="number" value="00168" />
+      <option name="presentableId" value="LOCAL-00168" />
+      <option name="project" value="LOCAL" />
+      <updated>1676233907643</updated>
+    </task>
+    <task id="LOCAL-00169" summary="fixed error when registrating">
+      <created>1676235715730</created>
+      <option name="number" value="00169" />
+      <option name="presentableId" value="LOCAL-00169" />
+      <option name="project" value="LOCAL" />
+      <updated>1676235715730</updated>
+    </task>
+    <task id="LOCAL-00170" summary="fixed null username on home screen error">
+      <created>1676235872652</created>
+      <option name="number" value="00170" />
+      <option name="presentableId" value="LOCAL-00170" />
+      <option name="project" value="LOCAL" />
+      <updated>1676235872652</updated>
+    </task>
+    <task id="LOCAL-00171" summary="refactored code for CustomerDaoSQLImplementation">
+      <created>1676306996248</created>
+      <option name="number" value="00171" />
+      <option name="presentableId" value="LOCAL-00171" />
+      <option name="project" value="LOCAL" />
+      <updated>1676306996248</updated>
+    </task>
+    <task id="LOCAL-00172" summary="refactored code for MovieDaoSQLImplementation">
+      <created>1676307237470</created>
+      <option name="number" value="00172" />
+      <option name="presentableId" value="LOCAL-00172" />
+      <option name="project" value="LOCAL" />
+      <updated>1676307237470</updated>
+    </task>
+    <task id="LOCAL-00173" summary="refactored code for PurchaseDaoSQLImplementationDaoSQLImplementation">
+      <created>1676307298358</created>
+      <option name="number" value="00173" />
+      <option name="presentableId" value="LOCAL-00173" />
+      <option name="project" value="LOCAL" />
+      <updated>1676307298358</updated>
+    </task>
+    <task id="LOCAL-00174" summary="updated MovieDaoSQLImplementation to singleton for connection">
+      <created>1676308143436</created>
+      <option name="number" value="00174" />
+      <option name="presentableId" value="LOCAL-00174" />
+      <option name="project" value="LOCAL" />
+      <updated>1676308143436</updated>
+    </task>
+    <task id="LOCAL-00175" summary="updated PurchaseDaoSQLImplementation to singleton for connection">
+      <created>1676308155648</created>
+      <option name="number" value="00175" />
+      <option name="presentableId" value="LOCAL-00175" />
+      <option name="project" value="LOCAL" />
+      <updated>1676308155648</updated>
+    </task>
+    <task id="LOCAL-00176" summary="updated CustomerDaoSQLImplementation to singleton for connection">
+      <created>1676308214833</created>
+      <option name="number" value="00176" />
+      <option name="presentableId" value="LOCAL-00176" />
+      <option name="project" value="LOCAL" />
+      <updated>1676308214833</updated>
+    </task>
+    <task id="LOCAL-00177" summary="small fix in abstractdao for uniquequery">
+      <created>1676309316607</created>
+      <option name="number" value="00177" />
+      <option name="presentableId" value="LOCAL-00177" />
+      <option name="project" value="LOCAL" />
+      <updated>1676309316607</updated>
+    </task>
+    <task id="LOCAL-00178" summary="renamed class">
+      <created>1676309325616</created>
+      <option name="number" value="00178" />
+      <option name="presentableId" value="LOCAL-00178" />
+      <option name="project" value="LOCAL" />
+      <updated>1676309325616</updated>
+    </task>
+    <task id="LOCAL-00179" summary="added javadoc comments">
+      <created>1676309336579</created>
+      <option name="number" value="00179" />
+      <option name="presentableId" value="LOCAL-00179" />
+      <option name="project" value="LOCAL" />
+      <updated>1676309336579</updated>
+    </task>
+    <task id="LOCAL-00180" summary="added javadoc comments">
+      <created>1676309346752</created>
+      <option name="number" value="00180" />
+      <option name="presentableId" value="LOCAL-00180" />
+      <option name="project" value="LOCAL" />
+      <updated>1676309346752</updated>
+    </task>
+    <task id="LOCAL-00181" summary="added javadoc comments">
+      <created>1676310008819</created>
+      <option name="number" value="00181" />
+      <option name="presentableId" value="LOCAL-00181" />
+      <option name="project" value="LOCAL" />
+      <updated>1676310008820</updated>
+    </task>
+    <task id="LOCAL-00182" summary="fixed javadoc comments on LoginController">
+      <created>1676310073637</created>
+      <option name="number" value="00182" />
+      <option name="presentableId" value="LOCAL-00182" />
+      <option name="project" value="LOCAL" />
+      <updated>1676310073637</updated>
+    </task>
+    <task id="LOCAL-00183" summary="added javadoc comments">
+      <created>1676310225379</created>
+      <option name="number" value="00183" />
+      <option name="presentableId" value="LOCAL-00183" />
+      <option name="project" value="LOCAL" />
+      <updated>1676310225379</updated>
+    </task>
+    <task id="LOCAL-00184" summary="connection approach changed">
+      <created>1676374630756</created>
+      <option name="number" value="00184" />
+      <option name="presentableId" value="LOCAL-00184" />
+      <option name="project" value="LOCAL" />
+      <updated>1676374630756</updated>
+    </task>
+    <task id="LOCAL-00185" summary="pom.xml updated">
+      <created>1676374641880</created>
+      <option name="number" value="00185" />
+      <option name="presentableId" value="LOCAL-00185" />
+      <option name="project" value="LOCAL" />
+      <updated>1676374641880</updated>
+    </task>
+    <task id="LOCAL-00186" summary="cli version 1.0">
+      <created>1676374665657</created>
+      <option name="number" value="00186" />
+      <option name="presentableId" value="LOCAL-00186" />
+      <option name="project" value="LOCAL" />
+      <updated>1676374665657</updated>
+    </task>
+    <task id="LOCAL-00187" summary="updated ToString method for Movie">
+      <created>1676374795041</created>
+      <option name="number" value="00187" />
+      <option name="presentableId" value="LOCAL-00187" />
+      <option name="project" value="LOCAL" />
+      <updated>1676374795041</updated>
+    </task>
+    <task id="LOCAL-00188" summary="removed unnecessary">
+      <created>1676380756752</created>
+      <option name="number" value="00188" />
+      <option name="presentableId" value="LOCAL-00188" />
+      <option name="project" value="LOCAL" />
+      <updated>1676380756753</updated>
+    </task>
+    <task id="LOCAL-00189" summary="CLI FINISHED">
+      <created>1676386858463</created>
+      <option name="number" value="00189" />
+      <option name="presentableId" value="LOCAL-00189" />
+      <option name="project" value="LOCAL" />
+      <updated>1676386858463</updated>
+    </task>
+    <task id="LOCAL-00190" summary="added login and registration checks in CustomerManager">
+      <created>1676397837904</created>
+      <option name="number" value="00190" />
+      <option name="presentableId" value="LOCAL-00190" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397837904</updated>
+    </task>
+    <task id="LOCAL-00191" summary="simpler code, calling customermanager">
+      <created>1676397862696</created>
+      <option name="number" value="00191" />
+      <option name="presentableId" value="LOCAL-00191" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397862696</updated>
+    </task>
+    <task id="LOCAL-00192" summary="simpler code, calling customermanager">
+      <created>1676397867828</created>
+      <option name="number" value="00192" />
+      <option name="presentableId" value="LOCAL-00192" />
+      <option name="project" value="LOCAL" />
+      <updated>1676397867828</updated>
+    </task>
+    <option name="localTasksCounter" value="193" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -478,32 +560,32 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="fixed opening first window" />
-    <MESSAGE value="implemented method for mymovie tableview" />
-    <MESSAGE value="updated mymovies.fxml" />
-    <MESSAGE value="added purchasetableview update" />
-    <MESSAGE value="implemented mymovies tableview helper correctly" />
-    <MESSAGE value="fixed purchase table" />
-    <MESSAGE value="implemented tableview for bought movies" />
-    <MESSAGE value="fixed bug in MoviesController" />
-    <MESSAGE value="log in window not resizable" />
-    <MESSAGE value="prohibited purchasing the same movie more than once" />
-    <MESSAGE value="updated mymovies" />
-    <MESSAGE value="updated moviescontroller" />
-    <MESSAGE value="updated mymovies margin from bottom" />
-    <MESSAGE value="WORKSPACE" />
-    <MESSAGE value="added business package" />
-    <MESSAGE value="fixed home" />
-    <MESSAGE value="changed size of home window" />
-    <MESSAGE value="created CustomerManager class" />
-    <MESSAGE value="added getAll to CustomerManager" />
-    <MESSAGE value="added delete to CustomerManager" />
-    <MESSAGE value="added add to CustomerManager" />
-    <MESSAGE value="implemented rest of the methods for CustomerManager" />
-    <MESSAGE value="using customermanager instead of calling daofactory" />
-    <MESSAGE value="created PurchaseManager" />
-    <MESSAGE value="implemented basic methods for PurchaseManager" />
-    <option name="LAST_COMMIT_MESSAGE" value="implemented basic methods for PurchaseManager" />
+    <MESSAGE value="small change to mymovies menu" />
+    <MESSAGE value="removed showHome from HomeController" />
+    <MESSAGE value="added executequery and executequeryunique to AbstractDao" />
+    <MESSAGE value="fixed error when registrating" />
+    <MESSAGE value="fixed null username on home screen error" />
+    <MESSAGE value="refactored code for CustomerDaoSQLImplementation" />
+    <MESSAGE value="refactored code for MovieDaoSQLImplementation" />
+    <MESSAGE value="refactored code for PurchaseDaoSQLImplementationDaoSQLImplementation" />
+    <MESSAGE value="updated MovieDaoSQLImplementation to singleton for connection" />
+    <MESSAGE value="updated PurchaseDaoSQLImplementation to singleton for connection" />
+    <MESSAGE value="updated CustomerDaoSQLImplementation to singleton for connection" />
+    <MESSAGE value="small fix in abstractdao for uniquequery" />
+    <MESSAGE value="renamed class" />
+    <MESSAGE value="fixed javadoc comments on LoginController" />
+    <MESSAGE value="added javadoc comments" />
+    <MESSAGE value="big changes #1" />
+    <MESSAGE value="connection approach changed" />
+    <MESSAGE value="pom.xml updated" />
+    <MESSAGE value="cli version 1.0" />
+    <MESSAGE value="updated ToString method for Movie" />
+    <MESSAGE value="removed unnecessary" />
+    <MESSAGE value="CLI FINISHED" />
+    <MESSAGE value="added login and registration checks in CustomerManager" />
+    <MESSAGE value="simpler code, calling customermanager" />
+    <MESSAGE value="changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -516,15 +598,6 @@
             <option name="WATCH_EXIT" value="false" />
           </properties>
           <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-method">
-          <url>file://$PROJECT_DIR$/src/main/java/ba/unsa/etf/rpr/App.java</url>
-          <line>20</line>
-          <properties class="ba.unsa.etf.rpr.App" method="main">
-            <option name="EMULATED" value="true" />
-            <option name="WATCH_EXIT" value="false" />
-          </properties>
-          <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

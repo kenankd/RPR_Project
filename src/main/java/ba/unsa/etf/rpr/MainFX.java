@@ -8,6 +8,10 @@ import javafx.stage.Stage;
 
 import static javafx.scene.layout.Region.USE_COMPUTED_SIZE;
 
+/**
+ * @author Kenan Dizdarevic
+ * class for GUI
+ */
 public class MainFX extends Application {
 
     @Override

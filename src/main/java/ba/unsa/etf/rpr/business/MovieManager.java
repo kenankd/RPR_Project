@@ -20,4 +20,7 @@ public class MovieManager {
     public Movie update(Movie item) throws MovieException{
         return DaoFactory.movieDao().update(item);
     }
+    public List<Movie> searchByTitle(String title){
+        return DaoFactory.movieDao().searchByTitle(title);
+    }
 }

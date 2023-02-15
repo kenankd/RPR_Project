@@ -7,6 +7,7 @@ import ba.unsa.etf.rpr.dao.DaoFactory;
 import ba.unsa.etf.rpr.domain.Customer;
 import ba.unsa.etf.rpr.domain.Movie;
 import ba.unsa.etf.rpr.domain.Purchase;
+import ba.unsa.etf.rpr.exceptions.MovieException;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
@@ -64,7 +65,7 @@ public class MoviesController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        List<Movie> list = DaoFactory.movieDao().getAll();
+        List<Movie> list = movieManager.getAll();
         for(int i=0;i<list.size();i++){
             movieList.add(new Movie(list.get(i).getId(),list.get(i).getTitle(),list.get(i).getRelease_date(),list.get(i).getMain_actor(),list.get(i).getPrice(),list.get(i).getLength(),list.get(i).getGenre()));
         }
@@ -102,7 +103,7 @@ public class MoviesController implements Initializable {
         if(LoginController.getUsername() != null)
             homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getUsername() + "!");
         else homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+RegisterController.username + "!");
-        stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+        stage.setScene(new Scene(root,600,430));
     }
 
     /**
@@ -115,17 +116,17 @@ public class MoviesController implements Initializable {
             AlertDisplay.showAlert("Warning","No movies selected","Please select the movie that you want to purchase");
             return;
         }
-        List<Purchase> purchaseList=purchaseManager.getAll();
+
         Customer customer;
         if(LoginController.getUsername() != null)
             customer = customerManager.searchByUsername(LoginController.getUsername());
         else
             customer = customerManager.searchByUsername(RegisterController.username);
-        for(int i=0;i< purchaseList.size();i++){
-            if(purchaseList.get(i).getMovie().getId()==movie.getId() && purchaseList.get(i).getCustomer().getId()==customer.getId()) {
-                AlertDisplay.showAlert("Warning", "Movie purchase error", "You already purchased this movie");
-                return;
-            }
+        try{
+            PurchaseManager purchaseManager=new PurchaseManager();
+            purchaseManager.isPurchaseAlreadyMade(customer,movie);
+        } catch (MovieException e) {
+            AlertDisplay.showAlert("Warning", "Movie purchase error", "You already purchased this movie");
         }
         java.sql.Date date=new java.sql.Date(System.currentTimeMillis());
         purchaseManager.add(new Purchase(movie,customer,date));
@@ -141,6 +142,6 @@ public class MoviesController implements Initializable {
         FXMLLoader fxmlloader=new FXMLLoader(getClass().getResource("/fxml/mymovies.fxml"));
         Parent root = fxmlloader.load();
         stage.setTitle("My Movies");
-        stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+        stage.setScene(new Scene(root,600,430));
     }
 }

@@ -4,6 +4,7 @@ import java.util.Date;
 import java.util.Objects;
 
 /**
+ * @author Kenan Dizdarevic
  * Class that holds all avalaible movies
  */
 public class Movie implements Idable{

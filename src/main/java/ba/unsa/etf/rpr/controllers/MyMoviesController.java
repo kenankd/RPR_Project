@@ -53,7 +53,7 @@ public class MyMoviesController implements Initializable {
             homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+LoginController.getUsername() + "!");
             else homecontroller.labelWelcome.setText(homecontroller.labelWelcome.getText()+RegisterController.username + "!");
         }
-        stage.setScene(new Scene(root,USE_COMPUTED_SIZE,USE_COMPUTED_SIZE));
+        stage.setScene(new Scene(root,600,430));
     }
 
     /**
