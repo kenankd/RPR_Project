@@ -10,6 +10,7 @@ import java.util.*;
 /**
  * Abstract class that implements DAO methods for every entity
  * @param <T>
+ * @author Kenan Dizdarevic
  */
 
 public abstract class AbstractDao<T extends Idable> implements Dao<T> {
@@ -31,11 +32,28 @@ public abstract class AbstractDao<T extends Idable> implements Dao<T> {
 
         }
     }
+
+    /**
+     * method that returns the connection
+     * @return connection
+     */
     public Connection getConnection() {
         return connection;
     }
 
+    /**
+     * Method for mapping ResultSet into Object
+     * @param rs resultset from database
+     * @return object for specific table
+     * @throws MovieException
+     */
     public abstract T row2object(ResultSet rs) throws MovieException;
+
+    /**
+     * method for mapping Object into a map
+     * @param object
+     * @return map
+     */
 
     public abstract Map<String, Object> object2row(T object);
     public T getById(int id) throws MovieException {

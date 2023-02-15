@@ -9,7 +9,10 @@ import ba.unsa.etf.rpr.exceptions.MovieException;
 
 import java.sql.*;
 import java.util.*;
-
+/**
+ * Implementation of PurchaseDao
+ * @author Kenan Dizdarevic
+ */
 public class PurchaseDaoSQLImplementation extends AbstractDao<Purchase> implements PurchaseDao{
     private static PurchaseDaoSQLImplementation instance = null;
     public PurchaseDaoSQLImplementation() {

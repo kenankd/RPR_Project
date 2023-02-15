@@ -6,6 +6,10 @@ import ba.unsa.etf.rpr.exceptions.MovieException;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Dao interface for domain Movie
+ * @author Kenan Dizdarevic
+ */
 public interface MovieDao extends Dao<Movie> {
     /**
      * Returns all movies with given title

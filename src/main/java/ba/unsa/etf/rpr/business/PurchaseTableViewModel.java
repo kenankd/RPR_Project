@@ -2,6 +2,10 @@ package ba.unsa.etf.rpr.business;
 
 import java.util.Date;
 
+/**
+ * Helping class for TableView in MyMovies section
+ * @author Kenan Dizdarevic
+ */
 public class PurchaseTableViewModel {
     private String title,main_actor,genre;
      private Date purchase_date;

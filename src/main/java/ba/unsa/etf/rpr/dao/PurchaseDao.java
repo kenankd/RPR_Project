@@ -9,6 +9,10 @@ import ba.unsa.etf.rpr.exceptions.MovieException;
 import java.util.Date;
 import java.util.List;
 
+/**
+ * Dao interface for Purchase domain
+ * @author Kenan Dizdarevic
+ */
 public interface PurchaseDao extends Dao<Purchase> {
     /**
      * lists all purchases of a given movie

@@ -9,6 +9,10 @@ import java.util.List;
 import java.util.Map;
 import java.util.TreeMap;
 
+/**
+ * Implementation of CustomerDao
+ * @author Kenan Dizdarevic
+ */
 public class CustomerDaoSQLImplementation extends AbstractDao<Customer> implements CustomerDao {
     private static CustomerDaoSQLImplementation instance = null;
     public static CustomerDaoSQLImplementation getInstance(){

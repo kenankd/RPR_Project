@@ -28,7 +28,7 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
 /**
- * Unit test for simple App.
+ * Unit tests for Movie Online rent App.
  */
 public class AppTest 
 {
@@ -96,30 +96,7 @@ public class AppTest
         Customer c = customerManager.searchByUsername("edzeko1");
         assertEquals(c.getName(),"Edin");
     }
-    //@Test
-  //  public void AlreadyRegistered(){
-      /*   PurchaseDao purchaseDaoMock = mock(PurchaseDao.class);
-         MovieDao movieDaoMock = mock(MovieDao.class);
-         CustomerDao customerDaoMock=mock(CustomerDao.class);
-         MockedStatic<DaoFactory> daoFactory= Mockito.mockStatic(DaoFactory.class);
-         daoFactory.when(DaoFactory::purchaseDao).thenReturn(purchaseDaoMock);
-         daoFactory.when(DaoFactory::movieDao).thenReturn(movieDaoMock);
-         daoFactory.when(DaoFactory::customerDao).thenReturn(customerDaoMock);
-         Movie movie = new Movie();
-         movie.setTitle("aa"); movie.setLength(30); movie.setPrice(30); movie.setGenre("com"); movie.setRelease_date(Date.valueOf(LocalDate.now()));
-         movie.setMain_actor("dsdsd");
-         Customer customer = new Customer();
-         customer.setPw("dsadasdas"); customer.setName("a"); customer.setSurname("b"); customer.setMail("asdas"); customer.setUsername("dsadasdasd");
-         Purchase purchase = new Purchase();
-         purchase.setMovie(movie);
-         purchase.setCustomer(customer);
-         purchase.setDate_of_rent(Date.valueOf(LocalDate.now()));
-         List<Purchase> list1= new ArrayList<>();
-         list1.add(purchase);
-         when(purchaseDaoMock.getAll()).thenReturn(list1);
-         List<Purchase> list = purchaseManager.getAll();
-         assertEquals(list.get(0).getCustomer().getUsername(),purchase.getCustomer().getUsername());*/
-  //  }
+
     @Test
     public void pwTest() {
         CustomerManager cmm=new CustomerManager();

@@ -6,6 +6,10 @@ import ba.unsa.etf.rpr.exceptions.MovieException;
 
 import java.util.List;
 
+/**
+ * Dao interface for Customer domain
+ * @author Kenan Dizdarevic
+ */
 public interface CustomerDao extends Dao<Customer> {
     /**
      * Returns all customers with given name

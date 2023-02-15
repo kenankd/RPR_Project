@@ -6,7 +6,10 @@ import ba.unsa.etf.rpr.exceptions.MovieException;
 import java.sql.*;
 import java.sql.Date;
 import java.util.*;
-
+/**
+ * Implementation of movieDao
+ * @author Kenan Dizdarevic
+ */
 public class MovieDaoSQLImplementation extends AbstractDao<Movie> implements MovieDao {
     private static MovieDaoSQLImplementation instance = null;
     public static MovieDaoSQLImplementation getInstance(){

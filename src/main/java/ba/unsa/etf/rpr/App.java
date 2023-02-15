@@ -23,7 +23,7 @@ import java.util.*;
 import java.util.stream.Stream;
 
 /**
- * @author Nermin Obucina
+ * @author Kenan Dizdarevic
  * CLI (Command Line Interface) implementation in following class
  */
 public class App {
@@ -51,8 +51,8 @@ public class App {
 
 
     /**
-     *
-     * @param options
+     * Helping function which displays possible options for command line interface
+     * @param options available options
      *
      */
     public static void printFormattedOptions (Options options) {
@@ -84,7 +84,7 @@ public class App {
 
 
     /**
-     *
+     * Main function which controls the Command Line Interface
      * @param args
      * @throws Exception
      */
